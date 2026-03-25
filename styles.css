@@ -8,13 +8,13 @@ h1, h2, h3 {
 }
 
 .navbar {
-  border-bottom: 1px solid #D73F09;
+  border-bottom: 3px solid #D73F09;
 }
 
 .hero {
   padding: 60px 20px;
   text-align: center;
-  background: linear-gradient(to right, #0f4c75, #3282b8);
+  background: url("docs/img/P_20250411_103057.jpg");
   color: white;
   border-radius: 12px;
   margin-bottom: 40px;
