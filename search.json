@@ -1,14 +1,35 @@
 [
   {
-    "objectID": "slocum.html",
-    "href": "slocum.html",
+    "objectID": "slocum_gliders/slocum.html",
+    "href": "slocum_gliders/slocum.html",
     "title": "Slocum Gliders",
     "section": "",
     "text": "Slocum Gliders\n\n\n\n\nOverview\n\n\nDescription goes here.\n\n\n\n\nInstrumentation\n\n\nSensors and payloads.\n\n\n\n\nOperations\n\n\nHow they are deployed."
   },
   {
-    "objectID": "projects.html",
-    "href": "projects.html",
+    "objectID": "seagliders/refurbishment/refurbishment.html",
+    "href": "seagliders/refurbishment/refurbishment.html",
+    "title": "Seagliders",
+    "section": "",
+    "text": "Seagliders\n\n\n\n\nOverview\n\n\nDescription goes here.\n\n\n\n\nData\n\n\nInformation about datasets.\n\n\n\n\nMissions\n\n\nDeployment summaries."
+  },
+  {
+    "objectID": "seagliders/mission-planning/mission-planning.html",
+    "href": "seagliders/mission-planning/mission-planning.html",
+    "title": "Seagliders",
+    "section": "",
+    "text": "Seagliders\n\n\n\n\nOverview\n\n\nDescription goes here.\n\n\n\n\nData\n\n\nInformation about datasets.\n\n\n\n\nMissions\n\n\nDeployment summaries."
+  },
+  {
+    "objectID": "seagliders/basestation/basestation.html",
+    "href": "seagliders/basestation/basestation.html",
+    "title": "Seagliders",
+    "section": "",
+    "text": "Seagliders\n\n\n\n\nOverview\n\n\nDescription goes here.\n\n\n\n\nData\n\n\nInformation about datasets.\n\n\n\n\nMissions\n\n\nDeployment summaries."
+  },
+  {
+    "objectID": "projects/projects.html",
+    "href": "projects/projects.html",
     "title": "Projects",
     "section": "",
     "text": "Projects\n\n\n\n\nProject 1\n\n\nShort description.\n\n\n\n\nProject 2\n\n\nShort description.\n\n\n\n\nProject 3\n\n\nShort description."
@@ -35,22 +56,29 @@
     "text": "Highlights\n\n\n\nField Work\n\n\nOcean deployments and data collection.\n\n\n\n\nData Analysis\n\n\nProcessing and visualization pipelines.\n\n\n\n\nModeling\n\n\nUnderstanding ocean dynamics."
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site"
-  },
-  {
-    "objectID": "mission-planning.html",
-    "href": "mission-planning.html",
+    "objectID": "seagliders/ballasting/ballasting.html",
+    "href": "seagliders/ballasting/ballasting.html",
     "title": "Seagliders",
     "section": "",
     "text": "Seagliders\n\n\n\n\nOverview\n\n\nDescription goes here.\n\n\n\n\nData\n\n\nInformation about datasets.\n\n\n\n\nMissions\n\n\nDeployment summaries."
   },
   {
-    "objectID": "seagliders.html",
-    "href": "seagliders.html",
+    "objectID": "seagliders/manuals/manuals.html",
+    "href": "seagliders/manuals/manuals.html",
+    "title": "Seagliders",
+    "section": "",
+    "text": "Seagliders\n\n\n\n\nOverview\n\n\nDescription goes here.\n\n\n\n\nData\n\n\nInformation about datasets.\n\n\n\n\nMissions\n\n\nDeployment summaries."
+  },
+  {
+    "objectID": "seagliders/piloting/piloting.html",
+    "href": "seagliders/piloting/piloting.html",
+    "title": "Seagliders",
+    "section": "",
+    "text": "Seagliders\n\n\n\n\nOverview\n\n\nDescription goes here.\n\n\n\n\nData\n\n\nInformation about datasets.\n\n\n\n\nMissions\n\n\nDeployment summaries."
+  },
+  {
+    "objectID": "seagliders/seagliders.html",
+    "href": "seagliders/seagliders.html",
     "title": "Seagliders",
     "section": "",
     "text": "Seagliders\n\n\n\n\nOverview\n\n\nDescription goes here.\n\n\n\n\nData\n\n\nInformation about datasets.\n\n\n\n\nMissions\n\n\nDeployment summaries."
