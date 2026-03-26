@@ -63,11 +63,18 @@
     "text": "Seagliders\n\n\n\n\nOverview\n\n\nDescription goes here.\n\n\n\n\nData\n\n\nInformation about datasets.\n\n\n\n\nMissions\n\n\nDeployment summaries."
   },
   {
-    "objectID": "seagliders/manuals/manuals.html",
-    "href": "seagliders/manuals/manuals.html",
+    "objectID": "seagliders/manuals/manuals.html#available-manuals",
+    "href": "seagliders/manuals/manuals.html#available-manuals",
     "title": "Seagliders",
-    "section": "",
-    "text": "Seagliders\n\n\n\n\nLogdev Cnf Manual\n\n&lt;a href=\"seagliders/manuals/logdev_cnf.pdf\"&gt;&lt;/a&gt;\n\nManual for how to configure loggers.\n\n\n\n\nData\n\n\nInformation about datasets.\n\n\n\n\nMissions\n\n\nDeployment summaries."
+    "section": "Available Manuals",
+    "text": "Available Manuals\n\nLogdev Cnf Manual - Manual for how to configure loggers\nAdd Your Manual Title Here - Description of the manual\nAdd Another Manual - Description"
+  },
+  {
+    "objectID": "seagliders/manuals/manuals.html#additional-resources",
+    "href": "seagliders/manuals/manuals.html#additional-resources",
+    "title": "Seagliders",
+    "section": "Additional Resources",
+    "text": "Additional Resources\n\n\n\nLogdev Cnf Manual\n\n&lt;a href=\"ext/logdev_cnf.pdf\"&gt;&lt;/a&gt;\n\nManual for how to configure loggers.\n\n\n\n\nData\n\n\nInformation about datasets.\n\n\n\n\nMissions\n\n\nDeployment summaries."
   },
   {
     "objectID": "seagliders/piloting/piloting.html",
