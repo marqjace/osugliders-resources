@@ -7,15 +7,29 @@
     "text": "Slocum Gliders\n\n\n\n\nOverview\n\n\nDescription goes here.\n\n\n\n\nInstrumentation\n\n\nSensors and payloads.\n\n\n\n\nOperations\n\n\nHow they are deployed."
   },
   {
-    "objectID": "seagliders/refurbishment/refurbishment.html",
-    "href": "seagliders/refurbishment/refurbishment.html",
-    "title": "Seagliders",
+    "objectID": "seagliders/resources/resources.html",
+    "href": "seagliders/resources/resources.html",
+    "title": "Seaglider Resources",
     "section": "",
-    "text": "Seagliders\n\n\n\n\nOverview\n\n\nDescription goes here.\n\n\n\n\nData\n\n\nInformation about datasets.\n\n\n\n\nMissions\n\n\nDeployment summaries."
+    "text": "Logdev Cnf Manual - Manual for how to configure loggers\nParameter Reference Manual - All parameters and variables\nSeaglider Loitering - How to configure a loitering dive behavior\nRevE Hardware - Manual on the RevE motherboard"
   },
   {
-    "objectID": "seagliders/mission-planning/mission-planning.html",
-    "href": "seagliders/mission-planning/mission-planning.html",
+    "objectID": "seagliders/resources/resources.html#manuals",
+    "href": "seagliders/resources/resources.html#manuals",
+    "title": "Seaglider Resources",
+    "section": "",
+    "text": "Logdev Cnf Manual - Manual for how to configure loggers\nParameter Reference Manual - All parameters and variables\nSeaglider Loitering - How to configure a loitering dive behavior\nRevE Hardware - Manual on the RevE motherboard"
+  },
+  {
+    "objectID": "seagliders/resources/resources.html#additional-links",
+    "href": "seagliders/resources/resources.html#additional-links",
+    "title": "Seaglider Resources",
+    "section": "Additional Links",
+    "text": "Additional Links"
+  },
+  {
+    "objectID": "seagliders/piloting/piloting.html",
+    "href": "seagliders/piloting/piloting.html",
     "title": "Seagliders",
     "section": "",
     "text": "Seagliders\n\n\n\n\nOverview\n\n\nDescription goes here.\n\n\n\n\nData\n\n\nInformation about datasets.\n\n\n\n\nMissions\n\n\nDeployment summaries."
@@ -63,22 +77,15 @@
     "text": "Seagliders\n\n\n\n\nOverview\n\n\nDescription goes here.\n\n\n\n\nData\n\n\nInformation about datasets.\n\n\n\n\nMissions\n\n\nDeployment summaries."
   },
   {
-    "objectID": "seagliders/manuals/manuals.html",
-    "href": "seagliders/manuals/manuals.html",
+    "objectID": "seagliders/mission-planning/mission-planning.html",
+    "href": "seagliders/mission-planning/mission-planning.html",
     "title": "Seagliders",
     "section": "",
-    "text": "Logdev Cnf Manual - Manual for how to configure loggers\nParameter Reference Manual - All parameters and variables\nSeaglider Loitering - How to configure a loitering dive behavior\nRevE Hardware - Manual on the RevE motherboard"
+    "text": "Seagliders\n\n\n\n\nOverview\n\n\nDescription goes here.\n\n\n\n\nData\n\n\nInformation about datasets.\n\n\n\n\nMissions\n\n\nDeployment summaries."
   },
   {
-    "objectID": "seagliders/manuals/manuals.html#available-manuals",
-    "href": "seagliders/manuals/manuals.html#available-manuals",
-    "title": "Seagliders",
-    "section": "",
-    "text": "Logdev Cnf Manual - Manual for how to configure loggers\nParameter Reference Manual - All parameters and variables\nSeaglider Loitering - How to configure a loitering dive behavior\nRevE Hardware - Manual on the RevE motherboard"
-  },
-  {
-    "objectID": "seagliders/piloting/piloting.html",
-    "href": "seagliders/piloting/piloting.html",
+    "objectID": "seagliders/refurbishment/refurbishment.html",
+    "href": "seagliders/refurbishment/refurbishment.html",
     "title": "Seagliders",
     "section": "",
     "text": "Seagliders\n\n\n\n\nOverview\n\n\nDescription goes here.\n\n\n\n\nData\n\n\nInformation about datasets.\n\n\n\n\nMissions\n\n\nDeployment summaries."
