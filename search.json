@@ -14,13 +14,6 @@
     "text": "Projects\n\n\n\n\nProject 1\n\n\nShort description.\n\n\n\n\nProject 2\n\n\nShort description.\n\n\n\n\nProject 3\n\n\nShort description."
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site"
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "About",
@@ -40,6 +33,20 @@
     "title": "About",
     "section": "Highlights",
     "text": "Highlights\n\n\n\nField Work\n\n\nOcean deployments and data collection.\n\n\n\n\nData Analysis\n\n\nProcessing and visualization pipelines.\n\n\n\n\nModeling\n\n\nUnderstanding ocean dynamics."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  },
+  {
+    "objectID": "mission-planning.html",
+    "href": "mission-planning.html",
+    "title": "Seagliders",
+    "section": "",
+    "text": "Seagliders\n\n\n\n\nOverview\n\n\nDescription goes here.\n\n\n\n\nData\n\n\nInformation about datasets.\n\n\n\n\nMissions\n\n\nDeployment summaries."
   },
   {
     "objectID": "seagliders.html",
