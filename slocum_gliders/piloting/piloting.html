@@ -343,11 +343,18 @@ ul.task-list li input[type="checkbox"] {
 </ol></li>
 <li>After confirming the status.mi is successful:
 <ol type="a">
-<li><p><strong>send <em>.sbd </em>.tbd</strong> (this will send files to local computer directory)</p></li>
-<li><p><strong>exit reset</strong> (to reboot the glider)</p></li>
-<li><p>You should see glider status on the terminal window. Wait for the next lines:</p>
-<p>::: {.border} <code>&gt; Sequencing missions  &gt; load_mission(): Opening Mission file: initial.mi for execution once  &gt; load_mission(): Opening Mission file: lastgasp.mi for execution FOREVER  &gt; 1 mission specifiers - sequencing 1 total missions (not counting lastgasp.mi):  &gt; initial.mi  &gt; lastgasp.mi</code> :::</p></li>
-</ol></li>
+<li><strong>send <em>.sbd </em>.tbd</strong> (this will send files to local computer directory)</li>
+<li><strong>exit reset</strong> (to reboot the glider)</li>
+<li>You should see glider status on the terminal window. Wait for the next lines:</li>
+</ol>
+<div class="border">
+<pre><code>&gt; Sequencing missions
+&gt; load_mission(): Opening Mission file: initial.mi for execution once
+&gt; load_mission(): Opening Mission file: lastgasp.mi for execution FOREVER
+&gt; 1 mission specifiers - sequencing 1 total missions (not counting lastgasp.mi):
+&gt; initial.mi
+&gt; lastgasp.mi</code></pre>
+</div></li>
 <li>Get fresh lat/lon.
 <ol type="a">
 <li><strong>CTRL C</strong> to interrupt this process and exit to GliderDOS</li>
