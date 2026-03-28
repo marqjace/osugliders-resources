@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://marqjace.github.io/osugliders/slocum_gliders/slocum.html</loc>
-    <lastmod>2026-03-25T22:32:53.323Z</lastmod>
-  </url>
-  <url>
-    <loc>https://marqjace.github.io/osugliders/seagliders/resources/resources.html</loc>
-    <lastmod>2026-03-26T05:02:26.468Z</lastmod>
-  </url>
-  <url>
-    <loc>https://marqjace.github.io/osugliders/seagliders/piloting/piloting.html</loc>
-    <lastmod>2026-03-26T01:52:47.011Z</lastmod>
-  </url>
-  <url>
-    <loc>https://marqjace.github.io/osugliders/seagliders/basestation/basestation.html</loc>
-    <lastmod>2026-03-26T01:52:47.011Z</lastmod>
-  </url>
-  <url>
-    <loc>https://marqjace.github.io/osugliders/projects/projects.html</loc>
+    <loc>https://marqjace.github.io/osugliders/vmp/vmp.html</loc>
     <lastmod>2026-03-25T22:32:53.314Z</lastmod>
   </url>
   <url>
-    <loc>https://marqjace.github.io/osugliders/index.html</loc>
-    <lastmod>2026-03-26T01:58:06.920Z</lastmod>
+    <loc>https://marqjace.github.io/osugliders/vmp/configuration/configuration.html</loc>
+    <lastmod>2026-03-25T22:32:53.314Z</lastmod>
   </url>
   <url>
-    <loc>https://marqjace.github.io/osugliders/seagliders/ballasting/ballasting.html</loc>
+    <loc>https://marqjace.github.io/osugliders/slocum_gliders/sfmc/sfmc.html</loc>
+    <lastmod>2026-03-25T22:32:53.323Z</lastmod>
+  </url>
+  <url>
+    <loc>https://marqjace.github.io/osugliders/slocum_gliders/piloting/piloting.html</loc>
+    <lastmod>2026-03-25T22:32:53.323Z</lastmod>
+  </url>
+  <url>
+    <loc>https://marqjace.github.io/osugliders/slocum_gliders/maintenance/maintenance.html</loc>
+    <lastmod>2026-03-25T22:32:53.323Z</lastmod>
+  </url>
+  <url>
+    <loc>https://marqjace.github.io/osugliders/seagliders/seagliders.html</loc>
+    <lastmod>2026-03-26T05:13:35.201Z</lastmod>
+  </url>
+  <url>
+    <loc>https://marqjace.github.io/osugliders/seagliders/refurbishment/refurbishment.html</loc>
     <lastmod>2026-03-26T01:52:47.011Z</lastmod>
   </url>
   <url>
@@ -33,11 +33,63 @@
     <lastmod>2026-03-26T01:52:47.011Z</lastmod>
   </url>
   <url>
-    <loc>https://marqjace.github.io/osugliders/seagliders/refurbishment/refurbishment.html</loc>
+    <loc>https://marqjace.github.io/osugliders/seagliders/ballasting/ballasting.html</loc>
     <lastmod>2026-03-26T01:52:47.011Z</lastmod>
   </url>
   <url>
-    <loc>https://marqjace.github.io/osugliders/seagliders/seagliders.html</loc>
-    <lastmod>2026-03-26T05:13:35.201Z</lastmod>
+    <loc>https://marqjace.github.io/osugliders/microrider/microrider.html</loc>
+    <lastmod>2026-03-25T22:32:53.314Z</lastmod>
+  </url>
+  <url>
+    <loc>https://marqjace.github.io/osugliders/microrider/configuration/configuration.html</loc>
+    <lastmod>2026-03-25T22:32:53.314Z</lastmod>
+  </url>
+  <url>
+    <loc>https://marqjace.github.io/osugliders/calibrations/calibrations.html</loc>
+    <lastmod>2026-03-25T22:32:53.314Z</lastmod>
+  </url>
+  <url>
+    <loc>https://marqjace.github.io/osugliders/index.html</loc>
+    <lastmod>2026-03-26T01:58:06.920Z</lastmod>
+  </url>
+  <url>
+    <loc>https://marqjace.github.io/osugliders/microrider/maintenance/maintenance.html</loc>
+    <lastmod>2026-03-25T22:32:53.314Z</lastmod>
+  </url>
+  <url>
+    <loc>https://marqjace.github.io/osugliders/projects/projects.html</loc>
+    <lastmod>2026-03-25T22:32:53.314Z</lastmod>
+  </url>
+  <url>
+    <loc>https://marqjace.github.io/osugliders/seagliders/basestation/basestation.html</loc>
+    <lastmod>2026-03-26T01:52:47.011Z</lastmod>
+  </url>
+  <url>
+    <loc>https://marqjace.github.io/osugliders/seagliders/piloting/piloting.html</loc>
+    <lastmod>2026-03-26T01:52:47.011Z</lastmod>
+  </url>
+  <url>
+    <loc>https://marqjace.github.io/osugliders/seagliders/resources/resources.html</loc>
+    <lastmod>2026-03-26T05:02:26.468Z</lastmod>
+  </url>
+  <url>
+    <loc>https://marqjace.github.io/osugliders/slocum_gliders/ballasting/ballasting.html</loc>
+    <lastmod>2026-03-25T22:32:53.323Z</lastmod>
+  </url>
+  <url>
+    <loc>https://marqjace.github.io/osugliders/slocum_gliders/mission-planning/mission-planning.html</loc>
+    <lastmod>2026-03-25T22:32:53.323Z</lastmod>
+  </url>
+  <url>
+    <loc>https://marqjace.github.io/osugliders/slocum_gliders/resources/resources.html</loc>
+    <lastmod>2026-03-25T22:32:53.323Z</lastmod>
+  </url>
+  <url>
+    <loc>https://marqjace.github.io/osugliders/slocum_gliders/slocum.html</loc>
+    <lastmod>2026-03-25T22:32:53.323Z</lastmod>
+  </url>
+  <url>
+    <loc>https://marqjace.github.io/osugliders/vmp/maintenance/maintenance.html</loc>
+    <lastmod>2026-03-25T22:32:53.314Z</lastmod>
   </url>
 </urlset>

@@ -1,49 +1,84 @@
 [
   {
-    "objectID": "slocum_gliders/slocum.html",
-    "href": "slocum_gliders/slocum.html",
+    "objectID": "vmp/vmp.html",
+    "href": "vmp/vmp.html",
+    "title": "Projects",
+    "section": "",
+    "text": "Projects\n\n\n\n\nProject 1\n\n\nShort description.\n\n\n\n\nProject 2\n\n\nShort description.\n\n\n\n\nProject 3\n\n\nShort description."
+  },
+  {
+    "objectID": "vmp/configuration/configuration.html",
+    "href": "vmp/configuration/configuration.html",
+    "title": "Projects",
+    "section": "",
+    "text": "Projects\n\n\n\n\nProject 1\n\n\nShort description.\n\n\n\n\nProject 2\n\n\nShort description.\n\n\n\n\nProject 3\n\n\nShort description."
+  },
+  {
+    "objectID": "slocum_gliders/sfmc/sfmc.html",
+    "href": "slocum_gliders/sfmc/sfmc.html",
     "title": "Slocum Gliders",
     "section": "",
     "text": "Slocum Gliders\n\n\n\n\nOverview\n\n\nDescription goes here.\n\n\n\n\nInstrumentation\n\n\nSensors and payloads.\n\n\n\n\nOperations\n\n\nHow they are deployed."
   },
   {
-    "objectID": "seagliders/resources/resources.html",
-    "href": "seagliders/resources/resources.html",
-    "title": "Seaglider Resources",
+    "objectID": "slocum_gliders/piloting/piloting.html",
+    "href": "slocum_gliders/piloting/piloting.html",
+    "title": "Slocum Gliders",
     "section": "",
-    "text": "Logdev Cnf Manual - Manual for how to configure loggers\nParameter Reference Manual - All parameters and variables\nSeaglider Loitering - How to configure a loitering dive behavior\nRevE Hardware - Manual on the RevE motherboard"
+    "text": "Slocum Gliders\n\n\n\n\nOverview\n\n\nDescription goes here.\n\n\n\n\nInstrumentation\n\n\nSensors and payloads.\n\n\n\n\nOperations\n\n\nHow they are deployed."
   },
   {
-    "objectID": "seagliders/resources/resources.html#manuals",
-    "href": "seagliders/resources/resources.html#manuals",
-    "title": "Seaglider Resources",
+    "objectID": "slocum_gliders/maintenance/maintenance.html",
+    "href": "slocum_gliders/maintenance/maintenance.html",
+    "title": "Slocum Gliders",
     "section": "",
-    "text": "Logdev Cnf Manual - Manual for how to configure loggers\nParameter Reference Manual - All parameters and variables\nSeaglider Loitering - How to configure a loitering dive behavior\nRevE Hardware - Manual on the RevE motherboard"
+    "text": "Slocum Gliders\n\n\n\n\nOverview\n\n\nDescription goes here.\n\n\n\n\nInstrumentation\n\n\nSensors and payloads.\n\n\n\n\nOperations\n\n\nHow they are deployed."
   },
   {
-    "objectID": "seagliders/resources/resources.html#additional-links",
-    "href": "seagliders/resources/resources.html#additional-links",
-    "title": "Seaglider Resources",
-    "section": "Additional Links",
-    "text": "Additional Links\n\nOSU’s Seaglider.pub"
+    "objectID": "seagliders/seagliders.html",
+    "href": "seagliders/seagliders.html",
+    "title": "Seagliders",
+    "section": "",
+    "text": "Seagliders\n\n\n\n\n\nBallasting\n\nHow to properly ballast a Seaglider for a deployment.\n\n\n\n\n\nMission Planning\n\nChecklists and procedures for planning a deployment.\n\n\n\n\n\nBasestation\n\nHow to use the seaglider.pub basestation and helpful hints.\n\n\n\n\n\nPiloting\n\n\"Never tell me the odds!\" - Han Solo\n\n\n\n\n\nRefurbishment\n\nProcedures and checklists for refurbishment.\n\n\n\n\n\nResources\n\nAdditional manuals and links."
   },
   {
-    "objectID": "seagliders/piloting/piloting.html",
-    "href": "seagliders/piloting/piloting.html",
+    "objectID": "seagliders/refurbishment/refurbishment.html",
+    "href": "seagliders/refurbishment/refurbishment.html",
     "title": "Seagliders",
     "section": "",
     "text": "Seagliders\n\n\n\n\nOverview\n\n\nDescription goes here.\n\n\n\n\nData\n\n\nInformation about datasets.\n\n\n\n\nMissions\n\n\nDeployment summaries."
   },
   {
-    "objectID": "seagliders/basestation/basestation.html",
-    "href": "seagliders/basestation/basestation.html",
+    "objectID": "seagliders/mission-planning/mission-planning.html",
+    "href": "seagliders/mission-planning/mission-planning.html",
     "title": "Seagliders",
     "section": "",
     "text": "Seagliders\n\n\n\n\nOverview\n\n\nDescription goes here.\n\n\n\n\nData\n\n\nInformation about datasets.\n\n\n\n\nMissions\n\n\nDeployment summaries."
   },
   {
-    "objectID": "projects/projects.html",
-    "href": "projects/projects.html",
+    "objectID": "seagliders/ballasting/ballasting.html",
+    "href": "seagliders/ballasting/ballasting.html",
+    "title": "Seagliders",
+    "section": "",
+    "text": "Seagliders\n\n\n\n\nOverview\n\n\nDescription goes here.\n\n\n\n\nData\n\n\nInformation about datasets.\n\n\n\n\nMissions\n\n\nDeployment summaries."
+  },
+  {
+    "objectID": "microrider/microrider.html",
+    "href": "microrider/microrider.html",
+    "title": "Projects",
+    "section": "",
+    "text": "Projects\n\n\n\n\nProject 1\n\n\nShort description.\n\n\n\n\nProject 2\n\n\nShort description.\n\n\n\n\nProject 3\n\n\nShort description."
+  },
+  {
+    "objectID": "microrider/configuration/configuration.html",
+    "href": "microrider/configuration/configuration.html",
+    "title": "Projects",
+    "section": "",
+    "text": "Projects\n\n\n\n\nProject 1\n\n\nShort description.\n\n\n\n\nProject 2\n\n\nShort description.\n\n\n\n\nProject 3\n\n\nShort description."
+  },
+  {
+    "objectID": "calibrations/calibrations.html",
+    "href": "calibrations/calibrations.html",
     "title": "Projects",
     "section": "",
     "text": "Projects\n\n\n\n\nProject 1\n\n\nShort description.\n\n\n\n\nProject 2\n\n\nShort description.\n\n\n\n\nProject 3\n\n\nShort description."
@@ -70,31 +105,87 @@
     "text": "Highlights\n\n\n\nField Work\n\n\nOcean deployments and data collection.\n\n\n\n\nData Analysis\n\n\nProcessing and visualization pipelines.\n\n\n\n\nModeling\n\n\nUnderstanding ocean dynamics."
   },
   {
-    "objectID": "seagliders/ballasting/ballasting.html",
-    "href": "seagliders/ballasting/ballasting.html",
+    "objectID": "microrider/maintenance/maintenance.html",
+    "href": "microrider/maintenance/maintenance.html",
+    "title": "Projects",
+    "section": "",
+    "text": "Projects\n\n\n\n\nProject 1\n\n\nShort description.\n\n\n\n\nProject 2\n\n\nShort description.\n\n\n\n\nProject 3\n\n\nShort description."
+  },
+  {
+    "objectID": "projects/projects.html",
+    "href": "projects/projects.html",
+    "title": "Projects",
+    "section": "",
+    "text": "Projects\n\n\n\n\nProject 1\n\n\nShort description.\n\n\n\n\nProject 2\n\n\nShort description.\n\n\n\n\nProject 3\n\n\nShort description."
+  },
+  {
+    "objectID": "seagliders/basestation/basestation.html",
+    "href": "seagliders/basestation/basestation.html",
     "title": "Seagliders",
     "section": "",
     "text": "Seagliders\n\n\n\n\nOverview\n\n\nDescription goes here.\n\n\n\n\nData\n\n\nInformation about datasets.\n\n\n\n\nMissions\n\n\nDeployment summaries."
   },
   {
-    "objectID": "seagliders/mission-planning/mission-planning.html",
-    "href": "seagliders/mission-planning/mission-planning.html",
+    "objectID": "seagliders/piloting/piloting.html",
+    "href": "seagliders/piloting/piloting.html",
     "title": "Seagliders",
     "section": "",
     "text": "Seagliders\n\n\n\n\nOverview\n\n\nDescription goes here.\n\n\n\n\nData\n\n\nInformation about datasets.\n\n\n\n\nMissions\n\n\nDeployment summaries."
   },
   {
-    "objectID": "seagliders/refurbishment/refurbishment.html",
-    "href": "seagliders/refurbishment/refurbishment.html",
-    "title": "Seagliders",
+    "objectID": "seagliders/resources/resources.html",
+    "href": "seagliders/resources/resources.html",
+    "title": "Seaglider Resources",
     "section": "",
-    "text": "Seagliders\n\n\n\n\nOverview\n\n\nDescription goes here.\n\n\n\n\nData\n\n\nInformation about datasets.\n\n\n\n\nMissions\n\n\nDeployment summaries."
+    "text": "Logdev Cnf Manual - Manual for how to configure loggers\nParameter Reference Manual - All parameters and variables\nSeaglider Loitering - How to configure a loitering dive behavior\nRevE Hardware - Manual on the RevE motherboard"
   },
   {
-    "objectID": "seagliders/seagliders.html",
-    "href": "seagliders/seagliders.html",
-    "title": "Seagliders",
+    "objectID": "seagliders/resources/resources.html#manuals",
+    "href": "seagliders/resources/resources.html#manuals",
+    "title": "Seaglider Resources",
     "section": "",
-    "text": "Seagliders\n\n\n\n\n\nBallasting\n\nHow to properly ballast a Seaglider for a deployment.\n\n\n\n\n\nMission Planning\n\nChecklists and procedures for planning a deployment.\n\n\n\n\n\nBasestation\n\nHow to use the seaglider.pub basestation and helpful hints.\n\n\n\n\n\nPiloting\n\n\"Never tell me the odds!\" - Han Solo\n\n\n\n\n\nRefurbishment\n\nProcedures and checklists for refurbishment.\n\n\n\n\n\nResources\n\nAdditional manuals and links."
+    "text": "Logdev Cnf Manual - Manual for how to configure loggers\nParameter Reference Manual - All parameters and variables\nSeaglider Loitering - How to configure a loitering dive behavior\nRevE Hardware - Manual on the RevE motherboard"
+  },
+  {
+    "objectID": "seagliders/resources/resources.html#additional-links",
+    "href": "seagliders/resources/resources.html#additional-links",
+    "title": "Seaglider Resources",
+    "section": "Additional Links",
+    "text": "Additional Links\n\nOSU’s Seaglider.pub"
+  },
+  {
+    "objectID": "slocum_gliders/ballasting/ballasting.html",
+    "href": "slocum_gliders/ballasting/ballasting.html",
+    "title": "Slocum Gliders",
+    "section": "",
+    "text": "Slocum Gliders\n\n\n\n\nOverview\n\n\nDescription goes here.\n\n\n\n\nInstrumentation\n\n\nSensors and payloads.\n\n\n\n\nOperations\n\n\nHow they are deployed."
+  },
+  {
+    "objectID": "slocum_gliders/mission-planning/mission-planning.html",
+    "href": "slocum_gliders/mission-planning/mission-planning.html",
+    "title": "Slocum Gliders",
+    "section": "",
+    "text": "Slocum Gliders\n\n\n\n\nOverview\n\n\nDescription goes here.\n\n\n\n\nInstrumentation\n\n\nSensors and payloads.\n\n\n\n\nOperations\n\n\nHow they are deployed."
+  },
+  {
+    "objectID": "slocum_gliders/resources/resources.html",
+    "href": "slocum_gliders/resources/resources.html",
+    "title": "Slocum Gliders",
+    "section": "",
+    "text": "Slocum Gliders\n\n\n\n\nOverview\n\n\nDescription goes here.\n\n\n\n\nInstrumentation\n\n\nSensors and payloads.\n\n\n\n\nOperations\n\n\nHow they are deployed."
+  },
+  {
+    "objectID": "slocum_gliders/slocum.html",
+    "href": "slocum_gliders/slocum.html",
+    "title": "Slocum Gliders",
+    "section": "",
+    "text": "Slocum Gliders\n\n\n\n\nOverview\n\n\nDescription goes here.\n\n\n\n\nInstrumentation\n\n\nSensors and payloads.\n\n\n\n\nOperations\n\n\nHow they are deployed."
+  },
+  {
+    "objectID": "vmp/maintenance/maintenance.html",
+    "href": "vmp/maintenance/maintenance.html",
+    "title": "Projects",
+    "section": "",
+    "text": "Projects\n\n\n\n\nProject 1\n\n\nShort description.\n\n\n\n\nProject 2\n\n\nShort description.\n\n\n\n\nProject 3\n\n\nShort description."
   }
 ]
