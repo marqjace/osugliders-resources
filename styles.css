@@ -1,7 +1,7 @@
 /* css styles */
 body {
   font-family: "Segoe UI", sans-serif;
-  font-size: small;
+  font-size: x-small;
 }
 
 h1 {
@@ -28,7 +28,7 @@ h3 {
   text-align: center;
   background-image: url("img/IMG_3416.jpeg");
   background-size: cover;
-  background-position: center;
+  background-position: right;
   background-repeat: no-repeat;
   color: white;
   border-radius: 12px;
