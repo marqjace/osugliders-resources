@@ -23,6 +23,29 @@ h3 {
   border-bottom: 3px solid #D73F09;
 }
 
+/* Hide sidebar toc sub-items by default */
+#quarto-toc .toc-level-2,
+#quarto-toc .toc-level-3,
+#quarto-toc .toc-level-4 {
+  display: none;
+}
+
+#quarto-toc .toc-item.open > .toc-level-2,
+#quarto-toc .toc-item.open > .toc-level-3,
+#quarto-toc .toc-item.open > .toc-level-4 {
+  display: block;
+}
+
+/* Navbar dropdowns hidden by default; show on hover/focus */
+.navbar .dropdown-menu {
+  display: none !important;
+}
+
+.navbar .dropdown:hover > .dropdown-menu,
+.navbar .dropdown:focus-within > .dropdown-menu {
+  display: block !important;
+}
+
 .hero,
 .hero-1,
 .hero-2,

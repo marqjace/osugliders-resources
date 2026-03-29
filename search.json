@@ -147,7 +147,7 @@
     "href": "seagliders/basestation/basestation.html",
     "title": "Basestation",
     "section": "",
-    "text": "Instructions for accessing seaglider.pub:\n\nSSH into seaglider.pub: “ssh username@seaglider.pub” *Need to set up ssh keypair with APL-UW\nType “cd ..” to get out of your local directory. This will take you to /home/jails/osugrg/\nType “gcd sgXXX” to go the current directory of the specified glider\nType “cmdedit” to edit the cmdfile.\nType “i” to enter edit mode in vi. Make the changes. Hit ESC to exit edit mode.\nType “:wq” and hit Enter to exit vi.\nType yes, no, or edit to confirm, reject, or edit your new cmdfile.",
+    "text": "Instructions for accessing seaglider.pub:\n\nSSH into seaglider.pub: “ssh username@seaglider.pub”\n*Need to set up ssh keypair with APL-UW\nType “cd ..” to get out of your local directory. This will take you to /home/jails/osugrg/\nType “gcd sgXXX” to go the current directory of the specified glider\nType “cmdedit” to edit the cmdfile.\nType “i” to enter edit mode in vi. Make the changes. Hit ESC to exit edit mode.\nType “:wq” and hit Enter to exit vi.\nType yes, no, or edit to confirm, reject, or edit your new cmdfile.",
     "crumbs": [
       "Seagliders",
       "Basestation"
@@ -158,7 +158,7 @@
     "href": "seagliders/basestation/basestation.html#editing-the-cmdfile",
     "title": "Basestation",
     "section": "",
-    "text": "Instructions for accessing seaglider.pub:\n\nSSH into seaglider.pub: “ssh username@seaglider.pub” *Need to set up ssh keypair with APL-UW\nType “cd ..” to get out of your local directory. This will take you to /home/jails/osugrg/\nType “gcd sgXXX” to go the current directory of the specified glider\nType “cmdedit” to edit the cmdfile.\nType “i” to enter edit mode in vi. Make the changes. Hit ESC to exit edit mode.\nType “:wq” and hit Enter to exit vi.\nType yes, no, or edit to confirm, reject, or edit your new cmdfile.",
+    "text": "Instructions for accessing seaglider.pub:\n\nSSH into seaglider.pub: “ssh username@seaglider.pub”\n*Need to set up ssh keypair with APL-UW\nType “cd ..” to get out of your local directory. This will take you to /home/jails/osugrg/\nType “gcd sgXXX” to go the current directory of the specified glider\nType “cmdedit” to edit the cmdfile.\nType “i” to enter edit mode in vi. Make the changes. Hit ESC to exit edit mode.\nType “:wq” and hit Enter to exit vi.\nType yes, no, or edit to confirm, reject, or edit your new cmdfile.",
     "crumbs": [
       "Seagliders",
       "Basestation"
