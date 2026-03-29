@@ -16,12 +16,12 @@
   {
     "objectID": "slocum_gliders/sfmc/sfmc.html",
     "href": "slocum_gliders/sfmc/sfmc.html",
-    "title": "Slocum Gliders",
+    "title": "SFMC",
     "section": "",
     "text": "Slocum Gliders\n\n\n\n\nOverview\n\n\nDescription goes here.\n\n\n\n\nInstrumentation\n\n\nSensors and payloads.\n\n\n\n\nOperations\n\n\nHow they are deployed.",
     "crumbs": [
       "Slocum Gliders",
-      "Slocum Gliders"
+      "SFMC"
     ]
   },
   {
@@ -49,12 +49,12 @@
   {
     "objectID": "slocum_gliders/maintenance/maintenance.html",
     "href": "slocum_gliders/maintenance/maintenance.html",
-    "title": "Slocum Gliders",
+    "title": "Maintenance",
     "section": "",
     "text": "Slocum Gliders\n\n\n\n\nOverview\n\n\nDescription goes here.\n\n\n\n\nInstrumentation\n\n\nSensors and payloads.\n\n\n\n\nOperations\n\n\nHow they are deployed.",
     "crumbs": [
       "Slocum Gliders",
-      "Slocum Gliders"
+      "Maintenance"
     ]
   },
   {
@@ -120,6 +120,13 @@
     "title": "Projects",
     "section": "",
     "text": "Projects\n\n\n\n\nProject 1\n\n\nShort description.\n\n\n\n\nProject 2\n\n\nShort description.\n\n\n\n\nProject 3\n\n\nShort description."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "OSU GLIDERS RESOURCES PAGE",
+    "section": "",
+    "text": "OSU GLIDERS\n\n\n\n\nSeagliders\n\n\nInformation on our Seaglider fleet, including mission planning, piloting, and maintenance.\n\n\nLearn more\n\n\n\n\nSlocum Gliders\n\n\nInformation for Slocum gliders, covering fleet details, SFMC, and operational procedures.\n\n\nLearn more\n\n\n\n\nMicrorider\n\n\nDocumentation for Microrider instruments, including configuration and maintenance.\n\n\nLearn more\n\n\n\n\nVMP\n\n\nVertical Microstructure Profiler guides for setup, configuration, and upkeep.\n\n\nLearn more\n\n\n\n\nCalibrations\n\n\nProcedures and standards for calibrating our oceanographic sensors.\n\n\nLearn more\n\n\n\n\nProjects\n\n\nOverview of current and past research projects involving autonomous vehicles.\n\n\nLearn more"
   },
   {
     "objectID": "microrider/maintenance.html",
@@ -193,23 +200,23 @@
   {
     "objectID": "slocum_gliders/ballasting/ballasting.html",
     "href": "slocum_gliders/ballasting/ballasting.html",
-    "title": "Slocum Gliders",
+    "title": "Ballasting",
     "section": "",
     "text": "Slocum Gliders\n\n\n\n\nOverview\n\n\nDescription goes here.\n\n\n\n\nInstrumentation\n\n\nSensors and payloads.\n\n\n\n\nOperations\n\n\nHow they are deployed.",
     "crumbs": [
       "Slocum Gliders",
-      "Slocum Gliders"
+      "Ballasting"
     ]
   },
   {
     "objectID": "slocum_gliders/mission-planning/mission-planning.html",
     "href": "slocum_gliders/mission-planning/mission-planning.html",
-    "title": "Slocum Gliders",
+    "title": "Mission Planning",
     "section": "",
     "text": "Slocum Gliders\n\n\n\n\nOverview\n\n\nDescription goes here.\n\n\n\n\nInstrumentation\n\n\nSensors and payloads.\n\n\n\n\nOperations\n\n\nHow they are deployed.",
     "crumbs": [
       "Slocum Gliders",
-      "Slocum Gliders"
+      "Mission Planning"
     ]
   },
   {
