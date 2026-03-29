@@ -62,7 +62,7 @@
     "href": "seagliders/seagliders.html",
     "title": "Overview",
     "section": "",
-    "text": "Ballasting\n\nHow to properly ballast a Seaglider for a deployment.\n\n\n\n\n\nMission Planning\n\nChecklists and procedures for planning a deployment.\n\n\n\n\n\nBasestation\n\nHow to use the seaglider.pub basestation and helpful hints.\n\n\n\n\n\nPiloting\n\n\"Never tell me the odds!\" - Han Solo\n\n\n\n\n\nRefurbishment\n\nProcedures and checklists for refurbishment.\n\n\n\n\n\nResources\n\nAdditional manuals and links.",
+    "text": "Seagliders\n\n\n\n\nBallasting\n\nHow to properly ballast a Seaglider for a deployment.\n\n\n\n\n\nMission Planning\n\nChecklists and procedures for planning a deployment.\n\n\n\n\n\nBasestation\n\nHow to use the seaglider.pub basestation and helpful hints.\n\n\n\n\n\nPiloting\n\n\"Never tell me the odds!\" - Han Solo\n\n\n\n\n\nRefurbishment\n\nProcedures and checklists for refurbishment.\n\n\n\n\n\nResources\n\nAdditional manuals and links.",
     "crumbs": [
       "Seagliders"
     ]
@@ -124,14 +124,14 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "OSU GLIDERS RESOURCE PAGE",
+    "title": "OSU GLIDERS RESOURCES PAGE",
     "section": "",
     "text": "Information on our Seaglider fleet, including mission planning, piloting, and maintenance.\n\n\nLearn more\n\n\n\n\n\nInformation for Slocum gliders, covering fleet details, SFMC, and operational procedures.\n\n\nLearn more\n\n\n\n\n\nDocumentation for Microrider instruments, including configuration and maintenance.\n\n\nLearn more\n\n\n\n\n\nVertical Microstructure Profiler guides for setup, configuration, and upkeep.\n\n\nLearn more\n\n\n\n\n\nProcedures and standards for calibrating our oceanographic sensors.\n\n\nLearn more\n\n\n\n\n\nOverview of current and past research projects involving autonomous vehicles.\n\n\nLearn more"
   },
   {
-    "objectID": "index.html#resources",
-    "href": "index.html#resources",
-    "title": "OSU GLIDERS RESOURCE PAGE",
+    "objectID": "index.html#osu-gliders",
+    "href": "index.html#osu-gliders",
+    "title": "OSU GLIDERS RESOURCES PAGE",
     "section": "",
     "text": "Information on our Seaglider fleet, including mission planning, piloting, and maintenance.\n\n\nLearn more\n\n\n\n\n\nInformation for Slocum gliders, covering fleet details, SFMC, and operational procedures.\n\n\nLearn more\n\n\n\n\n\nDocumentation for Microrider instruments, including configuration and maintenance.\n\n\nLearn more\n\n\n\n\n\nVertical Microstructure Profiler guides for setup, configuration, and upkeep.\n\n\nLearn more\n\n\n\n\n\nProcedures and standards for calibrating our oceanographic sensors.\n\n\nLearn more\n\n\n\n\n\nOverview of current and past research projects involving autonomous vehicles.\n\n\nLearn more"
   },
