@@ -147,7 +147,7 @@
     "href": "seagliders/basestation/basestation.html",
     "title": "Basestation",
     "section": "",
-    "text": "To set up automatic GliderDAC processing, you must have the following files: - sgXXX.conf - sgXXX.yml - seaglider.yml - project.yml\nReprocess GliderDAC files within the glider’s current directory:\n\n/opt/basestation/bin/python /usr/local/basestation3/GliderDAC.py –config sgXXX.conf -m /home/jails/osugrg/gliderjail/home/sgXXX/current –verbose",
+    "text": "To set up automatic GliderDAC processing, you must have the following files:\n\nsgXXX.conf\nsgXXX.yml\nseaglider.yml\nproject.yml\n\nReprocess GliderDAC files within the glider’s current directory:\n\n/opt/basestation/bin/python /usr/local/basestation3/GliderDAC.py –config sgXXX.conf -m /home/jails/osugrg/gliderjail/home/sgXXX/current –verbose",
     "crumbs": [
       "Seagliders",
       "Basestation"
@@ -158,7 +158,7 @@
     "href": "seagliders/basestation/basestation.html#gliderdac",
     "title": "Basestation",
     "section": "",
-    "text": "To set up automatic GliderDAC processing, you must have the following files: - sgXXX.conf - sgXXX.yml - seaglider.yml - project.yml\nReprocess GliderDAC files within the glider’s current directory:\n\n/opt/basestation/bin/python /usr/local/basestation3/GliderDAC.py –config sgXXX.conf -m /home/jails/osugrg/gliderjail/home/sgXXX/current –verbose",
+    "text": "To set up automatic GliderDAC processing, you must have the following files:\n\nsgXXX.conf\nsgXXX.yml\nseaglider.yml\nproject.yml\n\nReprocess GliderDAC files within the glider’s current directory:\n\n/opt/basestation/bin/python /usr/local/basestation3/GliderDAC.py –config sgXXX.conf -m /home/jails/osugrg/gliderjail/home/sgXXX/current –verbose",
     "crumbs": [
       "Seagliders",
       "Basestation"
