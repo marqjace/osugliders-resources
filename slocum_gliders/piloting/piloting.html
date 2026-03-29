@@ -249,7 +249,7 @@ ul.task-list li input[type="checkbox"] {
 </ol></li>
 <li><p>Replace <strong>RED</strong> plug with <strong>GREEN</strong> plug in glider tail. Make sure that the glider tail with antenna is facing open skies and not obstructed by anything to get GPS from satellites. If you don’t see a readout in TeraTerm after inserting the Green plug, try connecting to another available COM port.</p></li>
 <li><p>After the glider is powered up you should see glider status on the terminal window. Wait for the next lines:</p>
-<p>:::{.border} <code>&gt; Sequencing missions  &gt; load_mission(): Opening Mission file: initial.mi for execution once  &gt; load_mission(): Opening Mission file: lastgasp.mi for execution FOREVER  &gt; 1 mission specifiers - sequencing 1 total missions (not counting astgasp.mi):  &gt; initial.mi  &gt; lastgasp.mi</code> :::</p></li>
+<p>::: {.border} <code>&gt; Sequencing missions  &gt; load_mission(): Opening Mission file: initial.mi for execution once  &gt; load_mission(): Opening Mission file: lastgasp.mi for execution FOREVER  &gt; 1 mission specifiers - sequencing 1 total missions (not counting astgasp.mi):  &gt; initial.mi  &gt; lastgasp.mi</code> :::</p></li>
 <li><p>Record the vacuum, battery, and reset the ocean pressure.</p>
 <ol type="a">
 <li><strong>CTRL C</strong> to interrupt this process and exit to GliderDOS.</li>
@@ -273,7 +273,7 @@ ul.task-list li input[type="checkbox"] {
 </ol></li>
 </ol></li>
 <li><p>(Optional) Check the current “<strong>goto_l30.ma</strong>” for correct way points, “<strong>surfac30.ma</strong>”, and “<strong>yo30.ma</strong>” settings by using the “<strong>type</strong>” command. For example:</p>
-<p>:::{.border} <code>&gt; cd mafiles  &gt; type surfac30.ma         (look for 15 minutes as the active time)</code> :::</p></li>
+<p>::: {.border} <code>&gt; cd mafiles  &gt; type surfac30.ma         (look for 15 minutes as the active time)</code> :::</p></li>
 <li><p>Usually after status.mi is completed, the glider will inflate the air bladder. You will need to deflate it. Type:</p>
 <ol type="a">
 <li><strong>put c_air_pump 0</strong></li>

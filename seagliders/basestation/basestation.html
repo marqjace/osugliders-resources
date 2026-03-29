@@ -242,11 +242,13 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>Reprocess.py</strong> Reprocess.py starts with the .log and .eng files and can regenerate netcdf files, run Flight Model and generate plots.</p>
 <p>Regenerate all netcdf files, run Flight Model and generate plots:</p>
 <div class="border">
-<pre><code>/opt/basestation/bin/python /usr/local/basestation3/Reprocess.py \
- --mission_dir &lt;seaglider_home_directory&gt; --force --reprocess_plots</code></pre>
+<pre><code>    /opt/basestation/bin/python /usr/local/basestation3/Reprocess.py \
+    --mission_dir &lt;seaglider_home_directory&gt; --force --reprocess_plots</code></pre>
+</div>
 <p>Regenerate the dive 100 through 102 netcdf files, not re-running Flight Model</p>
-<pre><code>/opt/basestation/bin/python /usr/local/basestation3/Reprocess.py \
- --mission_dir &lt;seaglider_home_directory&gt; --force --skip_flight_model 100:102</code></pre>
+<div class="border">
+<pre><code>    /opt/basestation/bin/python /usr/local/basestation3/Reprocess.py \
+    --mission_dir &lt;seaglider_home_directory&gt; --force --skip_flight_model 100:102</code></pre>
 </div>
 <p><strong>BaseDB.py</strong> The mission database is added to during the normal logout processing. If there was ever a need to regenerate the database:</p>
 <pre><code>/opt/basestation/bin/python /usr/local/basestation3/BaseDB.py \
