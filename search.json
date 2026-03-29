@@ -147,7 +147,18 @@
     "href": "seagliders/basestation/basestation.html",
     "title": "Basestation",
     "section": "",
-    "text": "To set up automatic GliderDAC processing, you must have the following files:\n\nsgXXX.conf\nsgXXX.yml\nseaglider.yml\nproject.yml\n\nReprocess GliderDAC files within the glider’s current directory:\n\n/opt/basestation/bin/python /usr/local/basestation3/GliderDAC.py –config sgXXX.conf -m /home/jails/osugrg/gliderjail/home/sgXXX/current –verbose",
+    "text": "Instructions for accessing seaglider.pub:\n\nSSH into seaglider.pub: “ssh username@seaglider.pub” *Need to set up ssh keypair with APL-UW\nType “cd ..” to get out of your local directory. This will take you to /home/jails/osugrg/\nType “gcd sgXXX” to go the current directory of the specified glider\nType “cmdedit” to edit the cmdfile.\nType “i” to enter edit mode in vi. Make the changes. Hit ESC to exit edit mode.\nType “:wq” and hit Enter to exit vi.\nType yes, no, or edit to confirm, reject, or edit your new cmdfile.",
+    "crumbs": [
+      "Seagliders",
+      "Basestation"
+    ]
+  },
+  {
+    "objectID": "seagliders/basestation/basestation.html#editing-the-cmdfile",
+    "href": "seagliders/basestation/basestation.html#editing-the-cmdfile",
+    "title": "Basestation",
+    "section": "",
+    "text": "Instructions for accessing seaglider.pub:\n\nSSH into seaglider.pub: “ssh username@seaglider.pub” *Need to set up ssh keypair with APL-UW\nType “cd ..” to get out of your local directory. This will take you to /home/jails/osugrg/\nType “gcd sgXXX” to go the current directory of the specified glider\nType “cmdedit” to edit the cmdfile.\nType “i” to enter edit mode in vi. Make the changes. Hit ESC to exit edit mode.\nType “:wq” and hit Enter to exit vi.\nType yes, no, or edit to confirm, reject, or edit your new cmdfile.",
     "crumbs": [
       "Seagliders",
       "Basestation"
@@ -157,8 +168,8 @@
     "objectID": "seagliders/basestation/basestation.html#gliderdac",
     "href": "seagliders/basestation/basestation.html#gliderdac",
     "title": "Basestation",
-    "section": "",
-    "text": "To set up automatic GliderDAC processing, you must have the following files:\n\nsgXXX.conf\nsgXXX.yml\nseaglider.yml\nproject.yml\n\nReprocess GliderDAC files within the glider’s current directory:\n\n/opt/basestation/bin/python /usr/local/basestation3/GliderDAC.py –config sgXXX.conf -m /home/jails/osugrg/gliderjail/home/sgXXX/current –verbose",
+    "section": "GliderDAC",
+    "text": "GliderDAC\nTo set up automatic GliderDAC processing, you must have the following files:\n\nsgXXX.conf\nsgXXX.yml\nseaglider.yml\nproject.yml\n\nReprocess GliderDAC files within the glider’s current directory:\n\n/opt/basestation/bin/python /usr/local/basestation3/GliderDAC.py –config sgXXX.conf -m /home/jails/osugrg/gliderjail/home/sgXXX/current –verbose",
     "crumbs": [
       "Seagliders",
       "Basestation"

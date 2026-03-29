@@ -219,7 +219,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#gliderdac" id="toc-gliderdac" class="nav-link active" data-scroll-target="#gliderdac">GliderDAC</a></li>
+  <li><a href="#editing-the-cmdfile" id="toc-editing-the-cmdfile" class="nav-link active" data-scroll-target="#editing-the-cmdfile">Editing the cmdfile</a></li>
+  <li><a href="#gliderdac" id="toc-gliderdac" class="nav-link" data-scroll-target="#gliderdac">GliderDAC</a></li>
   <li><a href="#basestation-scripts" id="toc-basestation-scripts" class="nav-link" data-scroll-target="#basestation-scripts">Basestation Scripts</a></li>
   </ul>
 </nav>
@@ -246,6 +247,19 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="editing-the-cmdfile" class="level2">
+<h2 class="anchored" data-anchor-id="editing-the-cmdfile">Editing the cmdfile</h2>
+<p>Instructions for accessing seaglider.pub:</p>
+<ol type="1">
+<li>SSH into seaglider.pub: “ssh username@seaglider.pub” *Need to set up ssh keypair with APL-UW</li>
+<li>Type “cd ..” to get out of your local directory. This will take you to /home/jails/osugrg/</li>
+<li>Type “gcd sgXXX” to go the current directory of the specified glider</li>
+<li>Type “cmdedit” to edit the cmdfile.</li>
+<li>Type “i” to enter edit mode in vi. Make the changes. Hit ESC to exit edit mode.</li>
+<li>Type “:wq” and hit Enter to exit vi.</li>
+<li>Type yes, no, or edit to confirm, reject, or edit your new cmdfile.</li>
+</ol>
+</section>
 <section id="gliderdac" class="level2">
 <h2 class="anchored" data-anchor-id="gliderdac">GliderDAC</h2>
 <p>To set up automatic GliderDAC processing, you must have the following files:</p>
