@@ -1,1 +1,1 @@
-Sitemap: https://marqjace.github.io/osugliders/sitemap.xml
+Sitemap: https://marqjace.github.io/osugliders-resources/sitemap.xml

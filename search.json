@@ -18,56 +18,87 @@
     "href": "slocum_gliders/sfmc/sfmc.html",
     "title": "Slocum Gliders",
     "section": "",
-    "text": "Slocum Gliders\n\n\n\n\nOverview\n\n\nDescription goes here.\n\n\n\n\nInstrumentation\n\n\nSensors and payloads.\n\n\n\n\nOperations\n\n\nHow they are deployed."
+    "text": "Slocum Gliders\n\n\n\n\nOverview\n\n\nDescription goes here.\n\n\n\n\nInstrumentation\n\n\nSensors and payloads.\n\n\n\n\nOperations\n\n\nHow they are deployed.",
+    "crumbs": [
+      "Slocum Gliders",
+      "Slocum Gliders"
+    ]
   },
   {
     "objectID": "slocum_gliders/piloting/piloting.html",
     "href": "slocum_gliders/piloting/piloting.html",
     "title": "Piloting",
     "section": "",
-    "text": "Mount Free Wave antenna outside on the rails of a boat as high as possible and connect cable to a Free Wave (RF) modem. Then, connect the serial port of the RF modem to a laptop running a terminal program (e.g., TeraTerm). Turn on and run the terminal software.\nIn TeraTerm, select Serial and then the correct COM Port.\n\nIf you want you can confirm the correct settings Setup -&gt; Serial Port:. COM port: correct COM#. Baud rate: 115200. P-D-S: N-8-1, flow control - none.\n\nReplace RED plug with GREEN plug in glider tail. Make sure that the glider tail with antenna is facing open skies and not obstructed by anything to get GPS from satellites. If you don’t see a readout in TeraTerm after inserting the Green plug, try connecting to another available COM port.\nAfter the glider is powered up you should see glider status on the terminal window. Wait for the next lines:\n::: {.border} &gt; Sequencing missions  &gt; load_mission(): Opening Mission file: initial.mi for execution once  &gt; load_mission(): Opening Mission file: lastgasp.mi for execution FOREVER  &gt; 1 mission specifiers - sequencing 1 total missions (not counting astgasp.mi):  &gt; initial.mi  &gt; lastgasp.mi :::\nRecord the vacuum, battery, and reset the ocean pressure.\n\nCTRL C to interrupt this process and exit to GliderDOS.\nput c_air_pump 0 command to release air from the air bladder.\ncallback 30 to stop glider from calling Iridium satellite for 30 minutes.\nget m_vacuum to check vacuum and confirm that it is normal (6 +/-0.2 inHg). Could be higher if in a colder environment (close to 7).\n\nIf it is too low (not enough vacuum) the buoyancy pump may be in the wrong position; wait, re-read vacuum.\nRecord this value.\n\nget m_battery; record the value.\nzero_ocean_pressure to make sure run status.mi works properly\n\nEnter “run status.mi” and wait for the message ‘MS_COMPLETED_NORMALLY (-1)’. Glider will get a GPS fix in the end, which you should confirm. Look for reports about vacuum, battery voltage, leak detect, and any abnormal messages.\n\ncallback 30\nput c_air_pump 0\n(optional) use\n\nTo check for installed devices in use on the glider\n\n\n(Optional) Check the current “goto_l30.ma” for correct way points, “surfac30.ma”, and “yo30.ma” settings by using the “type” command. For example:\n::: {.border} &gt; cd mafiles  &gt; type surfac30.ma         (look for 15 minutes as the active time) :::\nUsually after status.mi is completed, the glider will inflate the air bladder. You will need to deflate it. Type:\n\nput c_air_pump 0\nexit\nWhen you see a message saying that you can pull the GREEN plug, replace it with the RED one. Now you can leave the dock.\n\nWhen you leave the dock, Call or Text the Pilot, and indicate you are leaving the dock.\n\n\n\n\n\nUntie and set the glider on the vessel’s fantail, attach the wings. Make sure that laptop is on and terminal software (ProComm) is up and running on a laptop.\nReplace RED plug with the GREEN plug in the glider tail.\n\nMake sure that the glider tail with antenna is facing open skies and not abstracted by anything to get GPS from satellites.\n\nAfter the glider is powered up you should see glider status on the terminal window. Wait for the next lines:\n\n&gt; Sequencing missions\n&gt; load_mission(): Opening Mission file: initial.mi for execution once\n&gt; load_mission(): Opening Mission file: lastgasp.mi for execution FOREVER\n&gt; 1 mission specifiers - sequencing 1 total missions (not counting astgasp.mi):\n&gt; initial.mi\n&gt; lastgasp.mi\n\nRecord the vacuum again.\n\nCTRL C to interrupt this process and exit to GliderDOS.\nput c_air_pump 0 command to release air from the air bladder.\ncallback 30 to stop glider from calling Iridium satellite for 30 minutes.\nget m_vacuum to check vacuum and confirm that it is normal (6 +/-0.2 inHg). Could be higher if in a colder environment (close to 7).\n\nIf it is too low (not enough vacuum) the buoyancy pump may be in the wrong position; wait, re-read vacuum.\nRecord this value.\n\n\nEnter “run status.mi” and wait for the message ‘MS_COMPLETED_NORMALLY (-1)’. Glider will get a GPS fix in the end, which you should confirm. Look for reports about vacuum, battery voltage, leak detect, and any abnormal messages.\n\nPilot may dockzr -archive -f irid * to send files from to-glider SFMC to glider\nPilot may dockszr -archive . to send file from to-science to glider\nPilot will callback 30 and confirm with field tech\nuse (e.g., ‘use + attitude_rev’)\n\nIf the status.mi mission is successful, the glider is ready for deployment.\n\nDO NOT deflate the air bladder after status.mi on deck is completed. Air bladder must be inflated before the glider is deployed.\n\nDeploy the glider.\n\n\n\n\n\nWhen the glider is in the water, check for any suspicious pitch and roll. Glider’s tail must be reasonably sticking out above the water for Iridium, FreeWave, and GPS communications.\nrun status.mi and wait for the message ‘MS_COMPLETED_NORMALLY (-1)’. Glider will get a GPS fix in the end, which you should confirm. Look for any reports about vacuum, battery voltage, leak detect, and any abnormal messages.\n\ncallback 30\nuse\n\nAfter confirming the status.mi is successful:\n\nsend .sbd .tbd (this will send files to local computer directory)\nexit reset (to reboot the glider)\nYou should see glider status on the terminal window. Wait for the next lines:\n\n\n&gt; Sequencing missions\n&gt; load_mission(): Opening Mission file: initial.mi for execution once\n&gt; load_mission(): Opening Mission file: lastgasp.mi for execution FOREVER\n&gt; 1 mission specifiers - sequencing 1 total missions (not counting lastgasp.mi):\n&gt; initial.mi\n&gt; lastgasp.mi\n\nGet fresh lat/lon.\n\nCTRL C to interrupt this process and exit to GliderDOS\nIMPORTANT! DO NOT deflate the air bladder and do not disable the Iridium.\ncallback 3 (to get fresh lat/lon)\n\nPilot will take over control of the glider. Pilot will let you know when the glider receives the mission command.\n\nPilot will loadmission waterclr.mi to clear depth averaged currents records\nPilot will run mission (ex. run vem_azfp.mi or sequence vem_azfp.mi(5), nhg2test.mi (5 to run mission 5 times)\n\nGlider will start the mission. Keep the glider in sight and watch it dive. When glider dives report this to the pilot immediately since the pilot will be disconnected much earlier from the glider on the glider terminal over Iridium.\nIMPORTANT! After glider dives and pilot was informed, TURN OFF the FreeWave modem.\n\nIf the FreeWave modem is still on, the glider will never call Iridium and connect to Dockerver.\nPilot: change script to driftsh.xml or vemaz_sh.xml once glider has disconnected\n\nDeployment team must stick around for the first 15+ minutes to protect the glider when it surfaces for the first time. The pilot will call you back as soon as the glider is on the surface and data from the first 15 minutes of the mission are analyzed and the glider is sent for a longer period of surfacing time.\nGo home."
+    "text": "Mount Free Wave antenna outside on the rails of a boat as high as possible and connect cable to a Free Wave (RF) modem. Then, connect the serial port of the RF modem to a laptop running a terminal program (e.g., TeraTerm). Turn on and run the terminal software.\nIn TeraTerm, select Serial and then the correct COM Port.\n\nIf you want you can confirm the correct settings Setup -&gt; Serial Port:. COM port: correct COM#. Baud rate: 115200. P-D-S: N-8-1, flow control - none.\n\nReplace RED plug with GREEN plug in glider tail. Make sure that the glider tail with antenna is facing open skies and not obstructed by anything to get GPS from satellites. If you don’t see a readout in TeraTerm after inserting the Green plug, try connecting to another available COM port.\nAfter the glider is powered up you should see glider status on the terminal window. Wait for the next lines:\n::: {.border} &gt; Sequencing missions  &gt; load_mission(): Opening Mission file: initial.mi for execution once  &gt; load_mission(): Opening Mission file: lastgasp.mi for execution FOREVER  &gt; 1 mission specifiers - sequencing 1 total missions (not counting astgasp.mi):  &gt; initial.mi  &gt; lastgasp.mi :::\nRecord the vacuum, battery, and reset the ocean pressure.\n\nCTRL C to interrupt this process and exit to GliderDOS.\nput c_air_pump 0 command to release air from the air bladder.\ncallback 30 to stop glider from calling Iridium satellite for 30 minutes.\nget m_vacuum to check vacuum and confirm that it is normal (6 +/-0.2 inHg). Could be higher if in a colder environment (close to 7).\n\nIf it is too low (not enough vacuum) the buoyancy pump may be in the wrong position; wait, re-read vacuum.\nRecord this value.\n\nget m_battery; record the value.\nzero_ocean_pressure to make sure run status.mi works properly\n\nEnter “run status.mi” and wait for the message ‘MS_COMPLETED_NORMALLY (-1)’. Glider will get a GPS fix in the end, which you should confirm. Look for reports about vacuum, battery voltage, leak detect, and any abnormal messages.\n\ncallback 30\nput c_air_pump 0\n(optional) use\n\nTo check for installed devices in use on the glider\n\n\n(Optional) Check the current “goto_l30.ma” for correct way points, “surfac30.ma”, and “yo30.ma” settings by using the “type” command. For example:\n::: {.border} &gt; cd mafiles  &gt; type surfac30.ma         (look for 15 minutes as the active time) :::\nUsually after status.mi is completed, the glider will inflate the air bladder. You will need to deflate it. Type:\n\nput c_air_pump 0\nexit\nWhen you see a message saying that you can pull the GREEN plug, replace it with the RED one. Now you can leave the dock.\n\nWhen you leave the dock, Call or Text the Pilot, and indicate you are leaving the dock.\n\n\n\n\n\nUntie and set the glider on the vessel’s fantail, attach the wings. Make sure that laptop is on and terminal software (ProComm) is up and running on a laptop.\nReplace RED plug with the GREEN plug in the glider tail.\n\nMake sure that the glider tail with antenna is facing open skies and not abstracted by anything to get GPS from satellites.\n\nAfter the glider is powered up you should see glider status on the terminal window. Wait for the next lines:\n\n&gt; Sequencing missions\n&gt; load_mission(): Opening Mission file: initial.mi for execution once\n&gt; load_mission(): Opening Mission file: lastgasp.mi for execution FOREVER\n&gt; 1 mission specifiers - sequencing 1 total missions (not counting astgasp.mi):\n&gt; initial.mi\n&gt; lastgasp.mi\n\nRecord the vacuum again.\n\nCTRL C to interrupt this process and exit to GliderDOS.\nput c_air_pump 0 command to release air from the air bladder.\ncallback 30 to stop glider from calling Iridium satellite for 30 minutes.\nget m_vacuum to check vacuum and confirm that it is normal (6 +/-0.2 inHg). Could be higher if in a colder environment (close to 7).\n\nIf it is too low (not enough vacuum) the buoyancy pump may be in the wrong position; wait, re-read vacuum.\nRecord this value.\n\n\nEnter “run status.mi” and wait for the message ‘MS_COMPLETED_NORMALLY (-1)’. Glider will get a GPS fix in the end, which you should confirm. Look for reports about vacuum, battery voltage, leak detect, and any abnormal messages.\n\nPilot may dockzr -archive -f irid * to send files from to-glider SFMC to glider\nPilot may dockszr -archive . to send file from to-science to glider\nPilot will callback 30 and confirm with field tech\nuse (e.g., ‘use + attitude_rev’)\n\nIf the status.mi mission is successful, the glider is ready for deployment.\n\nDO NOT deflate the air bladder after status.mi on deck is completed. Air bladder must be inflated before the glider is deployed.\n\nDeploy the glider.\n\n\n\n\n\nWhen the glider is in the water, check for any suspicious pitch and roll. Glider’s tail must be reasonably sticking out above the water for Iridium, FreeWave, and GPS communications.\nrun status.mi and wait for the message ‘MS_COMPLETED_NORMALLY (-1)’. Glider will get a GPS fix in the end, which you should confirm. Look for any reports about vacuum, battery voltage, leak detect, and any abnormal messages.\n\ncallback 30\nuse\n\nAfter confirming the status.mi is successful:\n\nsend .sbd .tbd (this will send files to local computer directory)\nexit reset (to reboot the glider)\nYou should see glider status on the terminal window. Wait for the next lines:\n\n\n&gt; Sequencing missions\n&gt; load_mission(): Opening Mission file: initial.mi for execution once\n&gt; load_mission(): Opening Mission file: lastgasp.mi for execution FOREVER\n&gt; 1 mission specifiers - sequencing 1 total missions (not counting lastgasp.mi):\n&gt; initial.mi\n&gt; lastgasp.mi\n\nGet fresh lat/lon.\n\nCTRL C to interrupt this process and exit to GliderDOS\nIMPORTANT! DO NOT deflate the air bladder and do not disable the Iridium.\ncallback 3 (to get fresh lat/lon)\n\nPilot will take over control of the glider. Pilot will let you know when the glider receives the mission command.\n\nPilot will loadmission waterclr.mi to clear depth averaged currents records\nPilot will run mission (ex. run vem_azfp.mi or sequence vem_azfp.mi(5), nhg2test.mi (5 to run mission 5 times)\n\nGlider will start the mission. Keep the glider in sight and watch it dive. When glider dives report this to the pilot immediately since the pilot will be disconnected much earlier from the glider on the glider terminal over Iridium.\nIMPORTANT! After glider dives and pilot was informed, TURN OFF the FreeWave modem.\n\nIf the FreeWave modem is still on, the glider will never call Iridium and connect to Dockerver.\nPilot: change script to driftsh.xml or vemaz_sh.xml once glider has disconnected\n\nDeployment team must stick around for the first 15+ minutes to protect the glider when it surfaces for the first time. The pilot will call you back as soon as the glider is on the surface and data from the first 15 minutes of the mission are analyzed and the glider is sent for a longer period of surfacing time.\nGo home.",
+    "crumbs": [
+      "Slocum Gliders",
+      "Piloting"
+    ]
   },
   {
     "objectID": "slocum_gliders/piloting/piloting.html#deployment",
     "href": "slocum_gliders/piloting/piloting.html#deployment",
     "title": "Piloting",
     "section": "",
-    "text": "Mount Free Wave antenna outside on the rails of a boat as high as possible and connect cable to a Free Wave (RF) modem. Then, connect the serial port of the RF modem to a laptop running a terminal program (e.g., TeraTerm). Turn on and run the terminal software.\nIn TeraTerm, select Serial and then the correct COM Port.\n\nIf you want you can confirm the correct settings Setup -&gt; Serial Port:. COM port: correct COM#. Baud rate: 115200. P-D-S: N-8-1, flow control - none.\n\nReplace RED plug with GREEN plug in glider tail. Make sure that the glider tail with antenna is facing open skies and not obstructed by anything to get GPS from satellites. If you don’t see a readout in TeraTerm after inserting the Green plug, try connecting to another available COM port.\nAfter the glider is powered up you should see glider status on the terminal window. Wait for the next lines:\n::: {.border} &gt; Sequencing missions  &gt; load_mission(): Opening Mission file: initial.mi for execution once  &gt; load_mission(): Opening Mission file: lastgasp.mi for execution FOREVER  &gt; 1 mission specifiers - sequencing 1 total missions (not counting astgasp.mi):  &gt; initial.mi  &gt; lastgasp.mi :::\nRecord the vacuum, battery, and reset the ocean pressure.\n\nCTRL C to interrupt this process and exit to GliderDOS.\nput c_air_pump 0 command to release air from the air bladder.\ncallback 30 to stop glider from calling Iridium satellite for 30 minutes.\nget m_vacuum to check vacuum and confirm that it is normal (6 +/-0.2 inHg). Could be higher if in a colder environment (close to 7).\n\nIf it is too low (not enough vacuum) the buoyancy pump may be in the wrong position; wait, re-read vacuum.\nRecord this value.\n\nget m_battery; record the value.\nzero_ocean_pressure to make sure run status.mi works properly\n\nEnter “run status.mi” and wait for the message ‘MS_COMPLETED_NORMALLY (-1)’. Glider will get a GPS fix in the end, which you should confirm. Look for reports about vacuum, battery voltage, leak detect, and any abnormal messages.\n\ncallback 30\nput c_air_pump 0\n(optional) use\n\nTo check for installed devices in use on the glider\n\n\n(Optional) Check the current “goto_l30.ma” for correct way points, “surfac30.ma”, and “yo30.ma” settings by using the “type” command. For example:\n::: {.border} &gt; cd mafiles  &gt; type surfac30.ma         (look for 15 minutes as the active time) :::\nUsually after status.mi is completed, the glider will inflate the air bladder. You will need to deflate it. Type:\n\nput c_air_pump 0\nexit\nWhen you see a message saying that you can pull the GREEN plug, replace it with the RED one. Now you can leave the dock.\n\nWhen you leave the dock, Call or Text the Pilot, and indicate you are leaving the dock.\n\n\n\n\n\nUntie and set the glider on the vessel’s fantail, attach the wings. Make sure that laptop is on and terminal software (ProComm) is up and running on a laptop.\nReplace RED plug with the GREEN plug in the glider tail.\n\nMake sure that the glider tail with antenna is facing open skies and not abstracted by anything to get GPS from satellites.\n\nAfter the glider is powered up you should see glider status on the terminal window. Wait for the next lines:\n\n&gt; Sequencing missions\n&gt; load_mission(): Opening Mission file: initial.mi for execution once\n&gt; load_mission(): Opening Mission file: lastgasp.mi for execution FOREVER\n&gt; 1 mission specifiers - sequencing 1 total missions (not counting astgasp.mi):\n&gt; initial.mi\n&gt; lastgasp.mi\n\nRecord the vacuum again.\n\nCTRL C to interrupt this process and exit to GliderDOS.\nput c_air_pump 0 command to release air from the air bladder.\ncallback 30 to stop glider from calling Iridium satellite for 30 minutes.\nget m_vacuum to check vacuum and confirm that it is normal (6 +/-0.2 inHg). Could be higher if in a colder environment (close to 7).\n\nIf it is too low (not enough vacuum) the buoyancy pump may be in the wrong position; wait, re-read vacuum.\nRecord this value.\n\n\nEnter “run status.mi” and wait for the message ‘MS_COMPLETED_NORMALLY (-1)’. Glider will get a GPS fix in the end, which you should confirm. Look for reports about vacuum, battery voltage, leak detect, and any abnormal messages.\n\nPilot may dockzr -archive -f irid * to send files from to-glider SFMC to glider\nPilot may dockszr -archive . to send file from to-science to glider\nPilot will callback 30 and confirm with field tech\nuse (e.g., ‘use + attitude_rev’)\n\nIf the status.mi mission is successful, the glider is ready for deployment.\n\nDO NOT deflate the air bladder after status.mi on deck is completed. Air bladder must be inflated before the glider is deployed.\n\nDeploy the glider.\n\n\n\n\n\nWhen the glider is in the water, check for any suspicious pitch and roll. Glider’s tail must be reasonably sticking out above the water for Iridium, FreeWave, and GPS communications.\nrun status.mi and wait for the message ‘MS_COMPLETED_NORMALLY (-1)’. Glider will get a GPS fix in the end, which you should confirm. Look for any reports about vacuum, battery voltage, leak detect, and any abnormal messages.\n\ncallback 30\nuse\n\nAfter confirming the status.mi is successful:\n\nsend .sbd .tbd (this will send files to local computer directory)\nexit reset (to reboot the glider)\nYou should see glider status on the terminal window. Wait for the next lines:\n\n\n&gt; Sequencing missions\n&gt; load_mission(): Opening Mission file: initial.mi for execution once\n&gt; load_mission(): Opening Mission file: lastgasp.mi for execution FOREVER\n&gt; 1 mission specifiers - sequencing 1 total missions (not counting lastgasp.mi):\n&gt; initial.mi\n&gt; lastgasp.mi\n\nGet fresh lat/lon.\n\nCTRL C to interrupt this process and exit to GliderDOS\nIMPORTANT! DO NOT deflate the air bladder and do not disable the Iridium.\ncallback 3 (to get fresh lat/lon)\n\nPilot will take over control of the glider. Pilot will let you know when the glider receives the mission command.\n\nPilot will loadmission waterclr.mi to clear depth averaged currents records\nPilot will run mission (ex. run vem_azfp.mi or sequence vem_azfp.mi(5), nhg2test.mi (5 to run mission 5 times)\n\nGlider will start the mission. Keep the glider in sight and watch it dive. When glider dives report this to the pilot immediately since the pilot will be disconnected much earlier from the glider on the glider terminal over Iridium.\nIMPORTANT! After glider dives and pilot was informed, TURN OFF the FreeWave modem.\n\nIf the FreeWave modem is still on, the glider will never call Iridium and connect to Dockerver.\nPilot: change script to driftsh.xml or vemaz_sh.xml once glider has disconnected\n\nDeployment team must stick around for the first 15+ minutes to protect the glider when it surfaces for the first time. The pilot will call you back as soon as the glider is on the surface and data from the first 15 minutes of the mission are analyzed and the glider is sent for a longer period of surfacing time.\nGo home."
+    "text": "Mount Free Wave antenna outside on the rails of a boat as high as possible and connect cable to a Free Wave (RF) modem. Then, connect the serial port of the RF modem to a laptop running a terminal program (e.g., TeraTerm). Turn on and run the terminal software.\nIn TeraTerm, select Serial and then the correct COM Port.\n\nIf you want you can confirm the correct settings Setup -&gt; Serial Port:. COM port: correct COM#. Baud rate: 115200. P-D-S: N-8-1, flow control - none.\n\nReplace RED plug with GREEN plug in glider tail. Make sure that the glider tail with antenna is facing open skies and not obstructed by anything to get GPS from satellites. If you don’t see a readout in TeraTerm after inserting the Green plug, try connecting to another available COM port.\nAfter the glider is powered up you should see glider status on the terminal window. Wait for the next lines:\n::: {.border} &gt; Sequencing missions  &gt; load_mission(): Opening Mission file: initial.mi for execution once  &gt; load_mission(): Opening Mission file: lastgasp.mi for execution FOREVER  &gt; 1 mission specifiers - sequencing 1 total missions (not counting astgasp.mi):  &gt; initial.mi  &gt; lastgasp.mi :::\nRecord the vacuum, battery, and reset the ocean pressure.\n\nCTRL C to interrupt this process and exit to GliderDOS.\nput c_air_pump 0 command to release air from the air bladder.\ncallback 30 to stop glider from calling Iridium satellite for 30 minutes.\nget m_vacuum to check vacuum and confirm that it is normal (6 +/-0.2 inHg). Could be higher if in a colder environment (close to 7).\n\nIf it is too low (not enough vacuum) the buoyancy pump may be in the wrong position; wait, re-read vacuum.\nRecord this value.\n\nget m_battery; record the value.\nzero_ocean_pressure to make sure run status.mi works properly\n\nEnter “run status.mi” and wait for the message ‘MS_COMPLETED_NORMALLY (-1)’. Glider will get a GPS fix in the end, which you should confirm. Look for reports about vacuum, battery voltage, leak detect, and any abnormal messages.\n\ncallback 30\nput c_air_pump 0\n(optional) use\n\nTo check for installed devices in use on the glider\n\n\n(Optional) Check the current “goto_l30.ma” for correct way points, “surfac30.ma”, and “yo30.ma” settings by using the “type” command. For example:\n::: {.border} &gt; cd mafiles  &gt; type surfac30.ma         (look for 15 minutes as the active time) :::\nUsually after status.mi is completed, the glider will inflate the air bladder. You will need to deflate it. Type:\n\nput c_air_pump 0\nexit\nWhen you see a message saying that you can pull the GREEN plug, replace it with the RED one. Now you can leave the dock.\n\nWhen you leave the dock, Call or Text the Pilot, and indicate you are leaving the dock.\n\n\n\n\n\nUntie and set the glider on the vessel’s fantail, attach the wings. Make sure that laptop is on and terminal software (ProComm) is up and running on a laptop.\nReplace RED plug with the GREEN plug in the glider tail.\n\nMake sure that the glider tail with antenna is facing open skies and not abstracted by anything to get GPS from satellites.\n\nAfter the glider is powered up you should see glider status on the terminal window. Wait for the next lines:\n\n&gt; Sequencing missions\n&gt; load_mission(): Opening Mission file: initial.mi for execution once\n&gt; load_mission(): Opening Mission file: lastgasp.mi for execution FOREVER\n&gt; 1 mission specifiers - sequencing 1 total missions (not counting astgasp.mi):\n&gt; initial.mi\n&gt; lastgasp.mi\n\nRecord the vacuum again.\n\nCTRL C to interrupt this process and exit to GliderDOS.\nput c_air_pump 0 command to release air from the air bladder.\ncallback 30 to stop glider from calling Iridium satellite for 30 minutes.\nget m_vacuum to check vacuum and confirm that it is normal (6 +/-0.2 inHg). Could be higher if in a colder environment (close to 7).\n\nIf it is too low (not enough vacuum) the buoyancy pump may be in the wrong position; wait, re-read vacuum.\nRecord this value.\n\n\nEnter “run status.mi” and wait for the message ‘MS_COMPLETED_NORMALLY (-1)’. Glider will get a GPS fix in the end, which you should confirm. Look for reports about vacuum, battery voltage, leak detect, and any abnormal messages.\n\nPilot may dockzr -archive -f irid * to send files from to-glider SFMC to glider\nPilot may dockszr -archive . to send file from to-science to glider\nPilot will callback 30 and confirm with field tech\nuse (e.g., ‘use + attitude_rev’)\n\nIf the status.mi mission is successful, the glider is ready for deployment.\n\nDO NOT deflate the air bladder after status.mi on deck is completed. Air bladder must be inflated before the glider is deployed.\n\nDeploy the glider.\n\n\n\n\n\nWhen the glider is in the water, check for any suspicious pitch and roll. Glider’s tail must be reasonably sticking out above the water for Iridium, FreeWave, and GPS communications.\nrun status.mi and wait for the message ‘MS_COMPLETED_NORMALLY (-1)’. Glider will get a GPS fix in the end, which you should confirm. Look for any reports about vacuum, battery voltage, leak detect, and any abnormal messages.\n\ncallback 30\nuse\n\nAfter confirming the status.mi is successful:\n\nsend .sbd .tbd (this will send files to local computer directory)\nexit reset (to reboot the glider)\nYou should see glider status on the terminal window. Wait for the next lines:\n\n\n&gt; Sequencing missions\n&gt; load_mission(): Opening Mission file: initial.mi for execution once\n&gt; load_mission(): Opening Mission file: lastgasp.mi for execution FOREVER\n&gt; 1 mission specifiers - sequencing 1 total missions (not counting lastgasp.mi):\n&gt; initial.mi\n&gt; lastgasp.mi\n\nGet fresh lat/lon.\n\nCTRL C to interrupt this process and exit to GliderDOS\nIMPORTANT! DO NOT deflate the air bladder and do not disable the Iridium.\ncallback 3 (to get fresh lat/lon)\n\nPilot will take over control of the glider. Pilot will let you know when the glider receives the mission command.\n\nPilot will loadmission waterclr.mi to clear depth averaged currents records\nPilot will run mission (ex. run vem_azfp.mi or sequence vem_azfp.mi(5), nhg2test.mi (5 to run mission 5 times)\n\nGlider will start the mission. Keep the glider in sight and watch it dive. When glider dives report this to the pilot immediately since the pilot will be disconnected much earlier from the glider on the glider terminal over Iridium.\nIMPORTANT! After glider dives and pilot was informed, TURN OFF the FreeWave modem.\n\nIf the FreeWave modem is still on, the glider will never call Iridium and connect to Dockerver.\nPilot: change script to driftsh.xml or vemaz_sh.xml once glider has disconnected\n\nDeployment team must stick around for the first 15+ minutes to protect the glider when it surfaces for the first time. The pilot will call you back as soon as the glider is on the surface and data from the first 15 minutes of the mission are analyzed and the glider is sent for a longer period of surfacing time.\nGo home.",
+    "crumbs": [
+      "Slocum Gliders",
+      "Piloting"
+    ]
   },
   {
     "objectID": "slocum_gliders/maintenance/maintenance.html",
     "href": "slocum_gliders/maintenance/maintenance.html",
     "title": "Slocum Gliders",
     "section": "",
-    "text": "Slocum Gliders\n\n\n\n\nOverview\n\n\nDescription goes here.\n\n\n\n\nInstrumentation\n\n\nSensors and payloads.\n\n\n\n\nOperations\n\n\nHow they are deployed."
+    "text": "Slocum Gliders\n\n\n\n\nOverview\n\n\nDescription goes here.\n\n\n\n\nInstrumentation\n\n\nSensors and payloads.\n\n\n\n\nOperations\n\n\nHow they are deployed.",
+    "crumbs": [
+      "Slocum Gliders",
+      "Slocum Gliders"
+    ]
   },
   {
     "objectID": "seagliders/seagliders.html",
     "href": "seagliders/seagliders.html",
     "title": "Seagliders",
     "section": "",
-    "text": "Seagliders\n\n\n\n\n\nBallasting\n\nHow to properly ballast a Seaglider for a deployment.\n\n\n\n\n\nMission Planning\n\nChecklists and procedures for planning a deployment.\n\n\n\n\n\nBasestation\n\nHow to use the seaglider.pub basestation and helpful hints.\n\n\n\n\n\nPiloting\n\n\"Never tell me the odds!\" - Han Solo\n\n\n\n\n\nRefurbishment\n\nProcedures and checklists for refurbishment.\n\n\n\n\n\nResources\n\nAdditional manuals and links."
+    "text": "Seagliders\n\n\n\n\n\nBallasting\n\nHow to properly ballast a Seaglider for a deployment.\n\n\n\n\n\nMission Planning\n\nChecklists and procedures for planning a deployment.\n\n\n\n\n\nBasestation\n\nHow to use the seaglider.pub basestation and helpful hints.\n\n\n\n\n\nPiloting\n\n\"Never tell me the odds!\" - Han Solo\n\n\n\n\n\nRefurbishment\n\nProcedures and checklists for refurbishment.\n\n\n\n\n\nResources\n\nAdditional manuals and links.",
+    "crumbs": [
+      "Seagliders"
+    ]
   },
   {
     "objectID": "seagliders/refurbishment/refurbishment.html",
     "href": "seagliders/refurbishment/refurbishment.html",
     "title": "Seagliders",
     "section": "",
-    "text": "Seagliders\n\n\n\n\nOverview\n\n\nDescription goes here.\n\n\n\n\nData\n\n\nInformation about datasets.\n\n\n\n\nMissions\n\n\nDeployment summaries."
+    "text": "Seagliders\n\n\n\n\nOverview\n\n\nDescription goes here.\n\n\n\n\nData\n\n\nInformation about datasets.\n\n\n\n\nMissions\n\n\nDeployment summaries.",
+    "crumbs": [
+      "Seagliders",
+      "Seagliders"
+    ]
   },
   {
     "objectID": "seagliders/mission-planning/mission-planning.html",
     "href": "seagliders/mission-planning/mission-planning.html",
     "title": "Seagliders",
     "section": "",
-    "text": "Seagliders\n\n\n\n\nOverview\n\n\nDescription goes here.\n\n\n\n\nData\n\n\nInformation about datasets.\n\n\n\n\nMissions\n\n\nDeployment summaries."
+    "text": "Seagliders\n\n\n\n\nOverview\n\n\nDescription goes here.\n\n\n\n\nData\n\n\nInformation about datasets.\n\n\n\n\nMissions\n\n\nDeployment summaries.",
+    "crumbs": [
+      "Seagliders",
+      "Seagliders"
+    ]
   },
   {
     "objectID": "seagliders/ballasting/ballasting.html",
     "href": "seagliders/ballasting/ballasting.html",
     "title": "Seagliders",
     "section": "",
-    "text": "Seagliders\n\n\n\n\nOverview\n\n\nDescription goes here.\n\n\n\n\nData\n\n\nInformation about datasets.\n\n\n\n\nMissions\n\n\nDeployment summaries."
+    "text": "Seagliders\n\n\n\n\nOverview\n\n\nDescription goes here.\n\n\n\n\nData\n\n\nInformation about datasets.\n\n\n\n\nMissions\n\n\nDeployment summaries.",
+    "crumbs": [
+      "Seagliders",
+      "Seagliders"
+    ]
   },
   {
     "objectID": "microrider/microrider.html",
@@ -123,70 +154,109 @@
     "href": "seagliders/basestation/basestation.html",
     "title": "Seagliders",
     "section": "",
-    "text": "Seagliders\n\n\n\n\nOverview\n\n\nDescription goes here.\n\n\n\n\nData\n\n\nInformation about datasets.\n\n\n\n\nMissions\n\n\nDeployment summaries."
+    "text": "Seagliders\n\n\n\n\nOverview\n\n\nDescription goes here.\n\n\n\n\nData\n\n\nInformation about datasets.\n\n\n\n\nMissions\n\n\nDeployment summaries.",
+    "crumbs": [
+      "Seagliders",
+      "Seagliders"
+    ]
   },
   {
     "objectID": "seagliders/piloting/piloting.html",
     "href": "seagliders/piloting/piloting.html",
     "title": "Seagliders",
     "section": "",
-    "text": "Seagliders\n\n\n\n\nOverview\n\n\nDescription goes here.\n\n\n\n\nData\n\n\nInformation about datasets.\n\n\n\n\nMissions\n\n\nDeployment summaries."
+    "text": "Seagliders\n\n\n\n\nOverview\n\n\nDescription goes here.\n\n\n\n\nData\n\n\nInformation about datasets.\n\n\n\n\nMissions\n\n\nDeployment summaries.",
+    "crumbs": [
+      "Seagliders",
+      "Seagliders"
+    ]
   },
   {
     "objectID": "seagliders/resources/resources.html",
     "href": "seagliders/resources/resources.html",
     "title": "Seaglider Resources",
     "section": "",
-    "text": "Logdev Cnf Manual - Manual for how to configure loggers\nParameter Reference Manual - All parameters and variables\nSeaglider Loitering - How to configure a loitering dive behavior\nRevE Hardware - Manual on the RevE motherboard"
+    "text": "Logdev Cnf Manual - Manual for how to configure loggers\nParameter Reference Manual - All parameters and variables\nSeaglider Loitering - How to configure a loitering dive behavior\nRevE Hardware - Manual on the RevE motherboard",
+    "crumbs": [
+      "Seagliders",
+      "Seaglider Resources"
+    ]
   },
   {
     "objectID": "seagliders/resources/resources.html#manuals",
     "href": "seagliders/resources/resources.html#manuals",
     "title": "Seaglider Resources",
     "section": "",
-    "text": "Logdev Cnf Manual - Manual for how to configure loggers\nParameter Reference Manual - All parameters and variables\nSeaglider Loitering - How to configure a loitering dive behavior\nRevE Hardware - Manual on the RevE motherboard"
+    "text": "Logdev Cnf Manual - Manual for how to configure loggers\nParameter Reference Manual - All parameters and variables\nSeaglider Loitering - How to configure a loitering dive behavior\nRevE Hardware - Manual on the RevE motherboard",
+    "crumbs": [
+      "Seagliders",
+      "Seaglider Resources"
+    ]
   },
   {
     "objectID": "seagliders/resources/resources.html#additional-links",
     "href": "seagliders/resources/resources.html#additional-links",
     "title": "Seaglider Resources",
     "section": "Additional Links",
-    "text": "Additional Links\n\nOSU’s Seaglider.pub"
+    "text": "Additional Links\n\nOSU’s Seaglider.pub",
+    "crumbs": [
+      "Seagliders",
+      "Seaglider Resources"
+    ]
   },
   {
     "objectID": "slocum_gliders/ballasting/ballasting.html",
     "href": "slocum_gliders/ballasting/ballasting.html",
     "title": "Slocum Gliders",
     "section": "",
-    "text": "Slocum Gliders\n\n\n\n\nOverview\n\n\nDescription goes here.\n\n\n\n\nInstrumentation\n\n\nSensors and payloads.\n\n\n\n\nOperations\n\n\nHow they are deployed."
+    "text": "Slocum Gliders\n\n\n\n\nOverview\n\n\nDescription goes here.\n\n\n\n\nInstrumentation\n\n\nSensors and payloads.\n\n\n\n\nOperations\n\n\nHow they are deployed.",
+    "crumbs": [
+      "Slocum Gliders",
+      "Slocum Gliders"
+    ]
   },
   {
     "objectID": "slocum_gliders/mission-planning/mission-planning.html",
     "href": "slocum_gliders/mission-planning/mission-planning.html",
     "title": "Slocum Gliders",
     "section": "",
-    "text": "Slocum Gliders\n\n\n\n\nOverview\n\n\nDescription goes here.\n\n\n\n\nInstrumentation\n\n\nSensors and payloads.\n\n\n\n\nOperations\n\n\nHow they are deployed."
+    "text": "Slocum Gliders\n\n\n\n\nOverview\n\n\nDescription goes here.\n\n\n\n\nInstrumentation\n\n\nSensors and payloads.\n\n\n\n\nOperations\n\n\nHow they are deployed.",
+    "crumbs": [
+      "Slocum Gliders",
+      "Slocum Gliders"
+    ]
   },
   {
     "objectID": "slocum_gliders/resources/resources.html",
     "href": "slocum_gliders/resources/resources.html",
     "title": "Slocum Gliders",
     "section": "",
-    "text": "Bench Test Microrider through Science Computer - How to bench test a microrider through the Slocum science computer. This is to verify that the glider is able to generate p files on the microrider via comms through the science bay.\nHigh Speed Data Offload - Instructions for how to download data off the glider using 921600 baud rate.\nAbort Behaviors - Basic instructions for how to respond to an abort.\nBattery Charging - How to charge G3S lithium rechargeable batteries."
+    "text": "Bench Test Microrider through Science Computer - How to bench test a microrider through the Slocum science computer. This is to verify that the glider is able to generate p files on the microrider via comms through the science bay.\nHigh Speed Data Offload - Instructions for how to download data off the glider using 921600 baud rate.\nAbort Behaviors - Basic instructions for how to respond to an abort.\nBattery Charging - How to charge G3S lithium rechargeable batteries.",
+    "crumbs": [
+      "Slocum Gliders",
+      "Slocum Gliders"
+    ]
   },
   {
     "objectID": "slocum_gliders/resources/resources.html#manuals",
     "href": "slocum_gliders/resources/resources.html#manuals",
     "title": "Slocum Gliders",
     "section": "",
-    "text": "Bench Test Microrider through Science Computer - How to bench test a microrider through the Slocum science computer. This is to verify that the glider is able to generate p files on the microrider via comms through the science bay.\nHigh Speed Data Offload - Instructions for how to download data off the glider using 921600 baud rate.\nAbort Behaviors - Basic instructions for how to respond to an abort.\nBattery Charging - How to charge G3S lithium rechargeable batteries."
+    "text": "Bench Test Microrider through Science Computer - How to bench test a microrider through the Slocum science computer. This is to verify that the glider is able to generate p files on the microrider via comms through the science bay.\nHigh Speed Data Offload - Instructions for how to download data off the glider using 921600 baud rate.\nAbort Behaviors - Basic instructions for how to respond to an abort.\nBattery Charging - How to charge G3S lithium rechargeable batteries.",
+    "crumbs": [
+      "Slocum Gliders",
+      "Slocum Gliders"
+    ]
   },
   {
     "objectID": "slocum_gliders/slocum.html",
     "href": "slocum_gliders/slocum.html",
     "title": "Slocum Fleet",
     "section": "",
-    "text": "Table 1: Current condition\n\n\n\n\n\nGlider\nLast Deployment\nNext Deployment\n\n\n\n\nSL551\n?\nN/A\n\n\nSL592\nSep 2025\nSep 2026\n\n\nSL683\n?\n?\n\n\nSL684\nMar 2026\nJul 2026\n\n\nSL685\nMar 2026\nJul 2026\n\n\nSL1138\nJul 2025\nMay 2026\n\n\nSL1267\nFeb 2026\nJul 2026?\n\n\nSLNNNN\n?\n?"
+    "text": "Table 1: Current condition\n\n\n\n\n\nGlider\nLast Deployment\nNext Deployment\n\n\n\n\nSL551\n?\nN/A\n\n\nSL592\nSep 2025\nSep 2026\n\n\nSL683\n?\n?\n\n\nSL684\nMar 2026\nJul 2026\n\n\nSL685\nMar 2026\nJul 2026\n\n\nSL1138\nJul 2025\nMay 2026\n\n\nSL1267\nFeb 2026\nJul 2026?\n\n\nSLNNNN\n?\n?",
+    "crumbs": [
+      "Slocum Gliders"
+    ]
   },
   {
     "objectID": "vmp/maintenance/maintenance.html",
