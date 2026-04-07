@@ -265,14 +265,14 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="gliderdac">GliderDAC</h2>
 <p>To set up automatic GliderDAC processing, you must have the following files:</p>
 <ul>
-<li>sgXXX.conf</li>
-<li>sgXXX.yml</li>
-<li>seaglider.yml</li>
-<li>project.yml</li>
+<li>sgXXX/current/sgXXX.conf</li>
+<li>sgXXX/current/sgXXX.yml</li>
+<li>sgXXX/seaglider.yml</li>
+<li>sgXXX/project.yml</li>
 </ul>
 <p>Reprocess GliderDAC files within the glider’s current directory:</p>
 <blockquote class="blockquote">
-<p>/opt/basestation/bin/python /usr/local/basestation3/GliderDAC.py –config sgXXX.conf -m /home/jails/osugrg/gliderjail/home/sgXXX/current –verbose</p>
+<p><code>/opt/basestation/bin/python /usr/local/basestation3/GliderDAC.py --config  sgXXX.conf -m /home/jails/osugrg/gliderjail/home/sgXXX/current --verbose</code></p>
 </blockquote>
 </section>
 <section id="basestation-scripts" class="level2">
@@ -281,50 +281,42 @@ ul.task-list li input[type="checkbox"] {
 <p>Reprocess.py starts with the .log and .eng files and can regenerate netcdf files, run Flight Model and generate plots.</p>
 <p>Regenerate all netcdf files, run Flight Model and generate plots:</p>
 <blockquote class="blockquote">
-<p>/opt/basestation/bin/python /usr/local/basestation3/Reprocess.py<br>
-–mission_dir <seaglider_home_directory> –force –reprocess_plots</seaglider_home_directory></p>
+<p><code>/opt/basestation/bin/python /usr/local/basestation3/Reprocess.py \ --mission_dir &lt;seaglider_home_directory&gt; --force --reprocess_plots</code></p>
 </blockquote>
 <p>Regenerate the dive 100 through 102 netcdf files, not re-running Flight Model</p>
 <blockquote class="blockquote">
-<p>/opt/basestation/bin/python /usr/local/basestation3/Reprocess.py<br>
-–mission_dir <seaglider_home_directory> –force –skip_flight_model 100:102</seaglider_home_directory></p>
+<p><code>/opt/basestation/bin/python /usr/local/basestation3/Reprocess.py \ --mission_dir &lt;seaglider_home_directory&gt; --force --skip_flight_model 100:102</code></p>
 </blockquote>
 <p><strong>BaseDB.py</strong></p>
 <p>The mission database is added to during the normal logout processing. If there was ever a need to regenerate the database:</p>
 <blockquote class="blockquote">
-<p>/opt/basestation/bin/python /usr/local/basestation3/BaseDB.py<br>
-–mission_dir <seaglider_home_directory> addncfs</seaglider_home_directory></p>
+<p><code>/opt/basestation/bin/python /usr/local/basestation3/BaseDB.py \ --mission_dir &lt;seaglider_home_directory&gt; addncfs</code></p>
 </blockquote>
 <p><strong>BasePlot.py</strong></p>
 <p>Any of the plots may be generated outside of the normal logout processing.</p>
 <p>To generate all the plots for dive 100, generating stand-alone html files, in addition to the normal output:</p>
 <blockquote class="blockquote">
-<p>/opt/basestation/bin/python /usr/local/basestation3/BasePlot.py<br>
-–mission_dir <seaglider_home_directory> –plot_types dives –full_html p0010100.nc</seaglider_home_directory></p>
+<p><code>/opt/basestation/bin/python /usr/local/basestation3/BasePlot.py \ --mission_dir &lt;seaglider_home_directory&gt;  --plot_types dives --full_html p0010100.nc</code></p>
 </blockquote>
 <p>To regenerate the whole mission plots:</p>
 <blockquote class="blockquote">
-<p>/opt/basestation/bin/python /usr/local/basestation3/BasePlot.py<br>
-–mission_dir <seaglider_home_directory> –plot_types mission</seaglider_home_directory></p>
+<p><code>/opt/basestation/bin/python /usr/local/basestation3/BasePlot.py \ --mission_dir &lt;seaglider_home_directory&gt;  --plot_types mission</code></p>
 </blockquote>
 <p><strong>MoveData.py</strong></p>
 <p>MoveData.py is used to clean up a Seaglider’s home directory prior to a new deployment.</p>
 <blockquote class="blockquote">
-<p>/opt/basestation/bin/python /usr/local/basestation3/MoveData.py<br>
-–mission_dir <seaglider_home_directory> -t <target_directory> –verbose</target_directory></seaglider_home_directory></p>
+<p><code>/opt/basestation/bin/python /usr/local/basestation3/MoveData.py \ --mission_dir &lt;seaglider_home_directory&gt; -t &lt;target_directory&gt; --verbose</code></p>
 </blockquote>
 <p><strong>BaseCtrlFiles.py</strong></p>
 <p>BaseCtrlFiles.py contains the low-level routines that send notifications sent via the pagers.yml configuration files. For debugging purposes, these routines can be accessed directly, but they may not generate meaningful content. Additionally, it is possible to dump the merged pagers.yml dictionary.</p>
 <p>To execute a low-level notification, simply supply one of the low-level notification tags:</p>
 <blockquote class="blockquote">
-<p>/opt/basestation/bin/python /usr/local/basestation3/BaseCtrlFiles.py<br>
-–mission_dir <seaglider_home_directory> [–group_etc <group_etc_directory>] [divetar,upload,lategps,errors,drift,comp,tracebackrecov,alerts,gps,critical]</group_etc_directory></seaglider_home_directory></p>
+<p><code>/opt/basestation/bin/python /usr/local/basestation3/BaseCtrlFiles.py \ --mission_dir &lt;seaglider_home_directory&gt; [--group_etc &lt;group_etc_directory&gt;] [divetar,upload,lategps,errors,drift,comp,tracebackrecov,alerts,gps,critical]</code></p>
 </blockquote>
 <p>For example, gps will dispatch the GPS position found in the last comm session in the comm.log to those users subscribing to gps notifications.</p>
 <p>To dump the merged pagers.yml dictionary:</p>
 <blockquote class="blockquote">
-<p>/opt/basestation/bin/python /usr/local/basestation3/BaseCtrlFiles.py<br>
-–mission_dir <seaglider_home_directory> [–group_etc <group_etc_directory>] dump_pagers_yml</group_etc_directory></seaglider_home_directory></p>
+<p><code>/opt/basestation/bin/python /usr/local/basestation3/BaseCtrlFiles.py \ --mission_dir &lt;seaglider_home_directory&gt; [--group_etc &lt;group_etc_directory&gt;] dump_pagers_yml</code></p>
 </blockquote>
 
 
