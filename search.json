@@ -21,8 +21,8 @@
     ]
   },
   {
-    "objectID": "slocum_gliders/sfmc/sfmc.html",
-    "href": "slocum_gliders/sfmc/sfmc.html",
+    "objectID": "slocum_gliders/sfmc.html",
+    "href": "slocum_gliders/sfmc.html",
     "title": "SFMC",
     "section": "",
     "text": "Slocum Gliders\n\n\n\n\nOverview\n\n\nDescription goes here.\n\n\n\n\nInstrumentation\n\n\nSensors and payloads.\n\n\n\n\nOperations\n\n\nHow they are deployed.",
@@ -32,30 +32,30 @@
     ]
   },
   {
-    "objectID": "slocum_gliders/piloting/piloting.html",
-    "href": "slocum_gliders/piloting/piloting.html",
+    "objectID": "slocum_gliders/piloting.html",
+    "href": "slocum_gliders/piloting.html",
     "title": "Piloting",
     "section": "",
-    "text": "Slocum Deployment Checklist",
+    "text": "Slocum Deployment Checklist\nPilot Log",
     "crumbs": [
       "Slocum Gliders",
       "Piloting"
     ]
   },
   {
-    "objectID": "slocum_gliders/piloting/piloting.html#links",
-    "href": "slocum_gliders/piloting/piloting.html#links",
+    "objectID": "slocum_gliders/piloting.html#links",
+    "href": "slocum_gliders/piloting.html#links",
     "title": "Piloting",
     "section": "",
-    "text": "Slocum Deployment Checklist",
+    "text": "Slocum Deployment Checklist\nPilot Log",
     "crumbs": [
       "Slocum Gliders",
       "Piloting"
     ]
   },
   {
-    "objectID": "slocum_gliders/piloting/piloting.html#deployment",
-    "href": "slocum_gliders/piloting/piloting.html#deployment",
+    "objectID": "slocum_gliders/piloting.html#deployment",
+    "href": "slocum_gliders/piloting.html#deployment",
     "title": "Piloting",
     "section": "Deployment",
     "text": "Deployment\n\nDockside\n\nMount Free Wave antenna outside on the rails of a boat as high as possible and connect cable to a Free Wave (RF) modem. Then, connect the serial port of the RF modem to a laptop running a terminal program (e.g., TeraTerm). Turn on and run the terminal software.\nIn TeraTerm, select Serial and then the correct COM Port.\n\nIf you want you can confirm the correct settings Setup -&gt; Serial Port:. COM port: correct COM#. Baud rate: 115200. P-D-S: N-8-1, flow control - none.\n\nReplace RED plug with GREEN plug in glider tail. Make sure that the glider tail with antenna is facing open skies and not obstructed by anything to get GPS from satellites. If you don’t see a readout in TeraTerm after inserting the Green plug, try connecting to another available COM port.\nAfter the glider is powered up you should see glider status on the terminal window. Wait for the next lines:\n\n\n&gt; Sequencing missions\n&gt; load_mission(): Opening Mission file: initial.mi for execution once\n&gt; load_mission(): Opening Mission file: lastgasp.mi for execution FOREVER\n&gt; 1 mission specifiers - sequencing 1 total missions (not counting astgasp.mi):\n&gt; initial.mi\n&gt; lastgasp.mi\n\n\nRecord the vacuum, battery, and reset the ocean pressure.\n\nCTRL C to interrupt this process and exit to GliderDOS.\nput c_air_pump 0 command to release air from the air bladder.\ncallback 30 to stop glider from calling Iridium satellite for 30 minutes.\nget m_vacuum to check vacuum and confirm that it is normal (6 +/-0.2 inHg). Could be higher if in a colder environment (close to 7).\n\nIf it is too low (not enough vacuum) the buoyancy pump may be in the wrong position; wait, re-read vacuum.\nRecord this value.\n\nget m_battery; record the value.\nzero_ocean_pressure to make sure run status.mi works properly\n\nEnter “run status.mi” and wait for the message ‘MS_COMPLETED_NORMALLY (-1)’. Glider will get a GPS fix in the end, which you should confirm. Look for reports about vacuum, battery voltage, leak detect, and any abnormal messages.\n\ncallback 30\nput c_air_pump 0\n(optional) use\n\nTo check for installed devices in use on the glider\n\n\n(Optional) Check the current “goto_l30.ma” for correct way points, “surfac30.ma”, and “yo30.ma” settings by using the “type” command. For example:\n\n\n&gt; cd mafiles\n&gt; type surfac30.ma         (look for 15 minutes as the active time)\n\n\nUsually after status.mi is completed, the glider will inflate the air bladder. You will need to deflate it. Type:\n\nput c_air_pump 0\nexit\nWhen you see a message saying that you can pull the GREEN plug, replace it with the RED one. Now you can leave the dock.\n\nWhen you leave the dock, Call or Text the Pilot, and indicate you are leaving the dock.\n\n\n\nAt Drop Location\n\nUntie and set the glider on the vessel’s fantail, attach the wings. Make sure that laptop is on and terminal software (ProComm) is up and running on a laptop.\nReplace RED plug with the GREEN plug in the glider tail.\n\nMake sure that the glider tail with antenna is facing open skies and not abstracted by anything to get GPS from satellites.\n\nAfter the glider is powered up you should see glider status on the terminal window. Wait for the next lines:\n\n\n&gt; Sequencing missions\n&gt; load_mission(): Opening Mission file: initial.mi for execution once\n&gt; load_mission(): Opening Mission file: lastgasp.mi for execution FOREVER\n&gt; 1 mission specifiers - sequencing 1 total missions (not counting astgasp.mi):\n&gt; initial.mi\n&gt; lastgasp.mi\n\n\nRecord the vacuum again.\n\nCTRL C to interrupt this process and exit to GliderDOS.\nput c_air_pump 0 command to release air from the air bladder.\ncallback 30 to stop glider from calling Iridium satellite for 30 minutes.\nget m_vacuum to check vacuum and confirm that it is normal (6 +/-0.2 inHg). Could be higher if in a colder environment (close to 7).\n\nIf it is too low (not enough vacuum) the buoyancy pump may be in the wrong position; wait, re-read vacuum.\nRecord this value.\n\n\nEnter “run status.mi” and wait for the message ‘MS_COMPLETED_NORMALLY (-1)’. Glider will get a GPS fix in the end, which you should confirm. Look for reports about vacuum, battery voltage, leak detect, and any abnormal messages.\n\nPilot may dockzr -archive -f irid * to send files from to-glider SFMC to glider\nPilot may dockszr -archive . to send file from to-science to glider\nPilot will callback 30 and confirm with field tech\nuse (e.g., ‘use + attitude_rev’)\n\nIf the status.mi mission is successful, the glider is ready for deployment.\n\nDO NOT deflate the air bladder after status.mi on deck is completed. Air bladder must be inflated before the glider is deployed.\n\nDeploy the glider.\n\n\n\nIn the Water\n\nWhen the glider is in the water, check for any suspicious pitch and roll. Glider’s tail must be reasonably sticking out above the water for Iridium, FreeWave, and GPS communications.\nrun status.mi and wait for the message ‘MS_COMPLETED_NORMALLY (-1)’. Glider will get a GPS fix in the end, which you should confirm. Look for any reports about vacuum, battery voltage, leak detect, and any abnormal messages.\n\ncallback 30\nuse\n\nAfter confirming the status.mi is successful:\n\nsend .sbd .tbd (this will send files to local computer directory)\nexit reset (to reboot the glider)\nYou should see glider status on the terminal window. Wait for the next lines:\n\n\n\n&gt; Sequencing missions\n&gt; load_mission(): Opening Mission file: initial.mi for execution once\n&gt; load_mission(): Opening Mission file: lastgasp.mi for execution FOREVER\n&gt; 1 mission specifiers - sequencing 1 total missions (not counting lastgasp.mi):\n&gt; initial.mi\n&gt; lastgasp.mi\n\n\nGet fresh lat/lon.\n\nCTRL C to interrupt this process and exit to GliderDOS\nIMPORTANT! DO NOT deflate the air bladder and do not disable the Iridium.\ncallback 3 (to get fresh lat/lon)\n\nPilot will take over control of the glider. Pilot will let you know when the glider receives the mission command.\n\nPilot will loadmission waterclr.mi to clear depth averaged currents records\nPilot will run mission (ex. run vem_azfp.mi or sequence vem_azfp.mi(5), nhg2test.mi (5 to run mission 5 times)\n\nGlider will start the mission. Keep the glider in sight and watch it dive. When glider dives report this to the pilot immediately since the pilot will be disconnected much earlier from the glider on the glider terminal over Iridium.\nIMPORTANT! After glider dives and pilot was informed, TURN OFF the FreeWave modem.\n\nIf the FreeWave modem is still on, the glider will never call Iridium and connect to Dockerver.\nPilot: change script to driftsh.xml or vemaz_sh.xml once glider has disconnected\n\nDeployment team must stick around for the first 15+ minutes to protect the glider when it surfaces for the first time. The pilot will call you back as soon as the glider is on the surface and data from the first 15 minutes of the mission are analyzed and the glider is sent for a longer period of surfacing time.\nGo home.",
@@ -65,8 +65,8 @@
     ]
   },
   {
-    "objectID": "slocum_gliders/maintenance/maintenance.html",
-    "href": "slocum_gliders/maintenance/maintenance.html",
+    "objectID": "slocum_gliders/maintenance.html",
+    "href": "slocum_gliders/maintenance.html",
     "title": "Maintenance",
     "section": "",
     "text": "Slocum Gliders\n\n\n\n\nOverview\n\n\nDescription goes here.\n\n\n\n\nInstrumentation\n\n\nSensors and payloads.\n\n\n\n\nOperations\n\n\nHow they are deployed.",
@@ -86,8 +86,8 @@
     ]
   },
   {
-    "objectID": "seagliders/refurbishment/refurbishment.html",
-    "href": "seagliders/refurbishment/refurbishment.html",
+    "objectID": "seagliders/refurbishment.html",
+    "href": "seagliders/refurbishment.html",
     "title": "Refurbishment",
     "section": "",
     "text": "Seagliders\n\n\n\n\nOverview\n\n\nDescription goes here.\n\n\n\n\nData\n\n\nInformation about datasets.\n\n\n\n\nMissions\n\n\nDeployment summaries.",
@@ -97,8 +97,8 @@
     ]
   },
   {
-    "objectID": "seagliders/mission-planning/mission-planning.html",
-    "href": "seagliders/mission-planning/mission-planning.html",
+    "objectID": "seagliders/mission-planning.html",
+    "href": "seagliders/mission-planning.html",
     "title": "Mission Planning",
     "section": "",
     "text": "Seagliders\n\n\n\n\nOverview\n\n\nDescription goes here.\n\n\n\n\nData\n\n\nInformation about datasets.\n\n\n\n\nMissions\n\n\nDeployment summaries.",
@@ -108,8 +108,8 @@
     ]
   },
   {
-    "objectID": "seagliders/ballasting/ballasting.html",
-    "href": "seagliders/ballasting/ballasting.html",
+    "objectID": "seagliders/ballasting.html",
+    "href": "seagliders/ballasting.html",
     "title": "Ballasting",
     "section": "",
     "text": "Seagliders\n\n\n\n\nOverview\n\n\nDescription goes here.\n\n\n\n\nData\n\n\nInformation about datasets.\n\n\n\n\nMissions\n\n\nDeployment summaries.",
@@ -201,8 +201,8 @@
     ]
   },
   {
-    "objectID": "seagliders/basestation/basestation.html",
-    "href": "seagliders/basestation/basestation.html",
+    "objectID": "seagliders/basestation.html",
+    "href": "seagliders/basestation.html",
     "title": "Basestation",
     "section": "",
     "text": "Instructions for accessing seaglider.pub:\n\nSSH into seaglider.pub: “ssh username@seaglider.pub”\n*Need to set up ssh keypair with APL-UW\nType “cd ..” to get out of your local directory. This will take you to /home/jails/osugrg/\nType “gcd sgXXX” to go the current directory of the specified glider\nType “cmdedit” to edit the cmdfile.\nType “i” to enter edit mode in vi. Make the changes. Hit ESC to exit edit mode.\nType “:wq” and hit Enter to exit vi.\nType yes, no, or edit to confirm, reject, or edit your new cmdfile.",
@@ -212,8 +212,8 @@
     ]
   },
   {
-    "objectID": "seagliders/basestation/basestation.html#editing-the-cmdfile",
-    "href": "seagliders/basestation/basestation.html#editing-the-cmdfile",
+    "objectID": "seagliders/basestation.html#editing-the-cmdfile",
+    "href": "seagliders/basestation.html#editing-the-cmdfile",
     "title": "Basestation",
     "section": "",
     "text": "Instructions for accessing seaglider.pub:\n\nSSH into seaglider.pub: “ssh username@seaglider.pub”\n*Need to set up ssh keypair with APL-UW\nType “cd ..” to get out of your local directory. This will take you to /home/jails/osugrg/\nType “gcd sgXXX” to go the current directory of the specified glider\nType “cmdedit” to edit the cmdfile.\nType “i” to enter edit mode in vi. Make the changes. Hit ESC to exit edit mode.\nType “:wq” and hit Enter to exit vi.\nType yes, no, or edit to confirm, reject, or edit your new cmdfile.",
@@ -223,8 +223,8 @@
     ]
   },
   {
-    "objectID": "seagliders/basestation/basestation.html#gliderdac",
-    "href": "seagliders/basestation/basestation.html#gliderdac",
+    "objectID": "seagliders/basestation.html#gliderdac",
+    "href": "seagliders/basestation.html#gliderdac",
     "title": "Basestation",
     "section": "GliderDAC",
     "text": "GliderDAC\nTo set up automatic GliderDAC processing, you must have the following files:\n\nsgXXX/current/sgXXX.conf\nsgXXX/current/sgXXX.yml\nsgXXX/seaglider.yml\nsgXXX/project.yml\n\nReprocess GliderDAC files within the glider’s current directory:\n\n/opt/basestation/bin/python /usr/local/basestation3/GliderDAC.py --config  sgXXX.conf -m /home/jails/osugrg/gliderjail/home/sgXXX/current --verbose",
@@ -234,8 +234,8 @@
     ]
   },
   {
-    "objectID": "seagliders/basestation/basestation.html#basestation-scripts",
-    "href": "seagliders/basestation/basestation.html#basestation-scripts",
+    "objectID": "seagliders/basestation.html#basestation-scripts",
+    "href": "seagliders/basestation.html#basestation-scripts",
     "title": "Basestation",
     "section": "Basestation Scripts",
     "text": "Basestation Scripts\nReprocess.py\nReprocess.py starts with the .log and .eng files and can regenerate netcdf files, run Flight Model and generate plots.\nRegenerate all netcdf files, run Flight Model and generate plots:\n\n/opt/basestation/bin/python /usr/local/basestation3/Reprocess.py \\ --mission_dir &lt;seaglider_home_directory&gt; --force --reprocess_plots\n\nRegenerate the dive 100 through 102 netcdf files, not re-running Flight Model\n\n/opt/basestation/bin/python /usr/local/basestation3/Reprocess.py \\ --mission_dir &lt;seaglider_home_directory&gt; --force --skip_flight_model 100:102\n\nBaseDB.py\nThe mission database is added to during the normal logout processing. If there was ever a need to regenerate the database:\n\n/opt/basestation/bin/python /usr/local/basestation3/BaseDB.py \\ --mission_dir &lt;seaglider_home_directory&gt; addncfs\n\nBasePlot.py\nAny of the plots may be generated outside of the normal logout processing.\nTo generate all the plots for dive 100, generating stand-alone html files, in addition to the normal output:\n\n/opt/basestation/bin/python /usr/local/basestation3/BasePlot.py \\ --mission_dir &lt;seaglider_home_directory&gt;  --plot_types dives --full_html p0010100.nc\n\nTo regenerate the whole mission plots:\n\n/opt/basestation/bin/python /usr/local/basestation3/BasePlot.py \\ --mission_dir &lt;seaglider_home_directory&gt;  --plot_types mission\n\nMoveData.py\nMoveData.py is used to clean up a Seaglider’s home directory prior to a new deployment.\n\n/opt/basestation/bin/python /usr/local/basestation3/MoveData.py \\ --mission_dir &lt;seaglider_home_directory&gt; -t &lt;target_directory&gt; --verbose\n\nBaseCtrlFiles.py\nBaseCtrlFiles.py contains the low-level routines that send notifications sent via the pagers.yml configuration files. For debugging purposes, these routines can be accessed directly, but they may not generate meaningful content. Additionally, it is possible to dump the merged pagers.yml dictionary.\nTo execute a low-level notification, simply supply one of the low-level notification tags:\n\n/opt/basestation/bin/python /usr/local/basestation3/BaseCtrlFiles.py \\ --mission_dir &lt;seaglider_home_directory&gt; [--group_etc &lt;group_etc_directory&gt;] [divetar,upload,lategps,errors,drift,comp,tracebackrecov,alerts,gps,critical]\n\nFor example, gps will dispatch the GPS position found in the last comm session in the comm.log to those users subscribing to gps notifications.\nTo dump the merged pagers.yml dictionary:\n\n/opt/basestation/bin/python /usr/local/basestation3/BaseCtrlFiles.py \\ --mission_dir &lt;seaglider_home_directory&gt; [--group_etc &lt;group_etc_directory&gt;] dump_pagers_yml",
@@ -245,8 +245,8 @@
     ]
   },
   {
-    "objectID": "seagliders/piloting/piloting.html",
-    "href": "seagliders/piloting/piloting.html",
+    "objectID": "seagliders/piloting.html",
+    "href": "seagliders/piloting.html",
     "title": "Piloting",
     "section": "",
     "text": "Pre-Deployment Simulation Checklist\nPilot Log",
@@ -256,8 +256,8 @@
     ]
   },
   {
-    "objectID": "seagliders/piloting/piloting.html#links",
-    "href": "seagliders/piloting/piloting.html#links",
+    "objectID": "seagliders/piloting.html#links",
+    "href": "seagliders/piloting.html#links",
     "title": "Piloting",
     "section": "",
     "text": "Pre-Deployment Simulation Checklist\nPilot Log",
@@ -267,8 +267,8 @@
     ]
   },
   {
-    "objectID": "seagliders/piloting/piloting.html#general-piloting-tips",
-    "href": "seagliders/piloting/piloting.html#general-piloting-tips",
+    "objectID": "seagliders/piloting.html#general-piloting-tips",
+    "href": "seagliders/piloting.html#general-piloting-tips",
     "title": "Piloting",
     "section": "General Piloting Tips",
     "text": "General Piloting Tips\n\nDive Plots\n\nGood dive profile: “V” shape dive. If something is out of whack, it will be very noticeable on this plot. A good thing to look for is that the heading (red + symbols) matches the desired heading (red dashed line). If that’s off look at the compass plot and roll plot.\n\nVBD plot: Check that CC_surf_min is less than CC_SM. Look for a good box structure on the VBD plot. If it is close to or above CC_SM, adjust $SM_CC in the cmdfile.\n\nPitch plot: We want to see that the black line crosses at 0,0 denoted by the red +. C_Pitch is shown on the figure, as well as the Implied Pitch Center. C_Pitch should be close to the Implied Pitch Center, however when making adjustments, adjust $C_PITCH halfway to the Implied Pitch Center and keep working your way to the implied value until it is crossing the red +.\n\nRoll plot: There are two lines on this graph, one for dive and one for climb. We want both of these lines to go through the black +. Similar to the pitch plot, there are our actual center values and implied center values. Adjust halfway until satisfactory.\n\nEnergy plots: Watch for something draining too much power. You’ll see the consumption for something be much higher than normal.\n\nHumidity & Pressure plot: 50-60 Humidity is good, 8-9 Pressure is good. Just make sure that nothing changes dramatically.\n\n\n\n\nDive Table\n\nDepth and Time: Make sure the length of time and depth match what you expect.\nDistances and Targets: DOG (distance over ground) – this is the distance you covered from start to finish on a dive. COG (course over ground) – this is the direction of travel from start to finish on a dive. DTW (distance to waypoint) – whether flying by heading or by targets, waypoints will be automatically set at a certain distance away from the start. CTW (course to waypoint) – direction of travel to the waypoint. DTG (distance to target) – the distance to the target that is set. When flying by targets, it will be the next target; when flying by heading, it will be roughly 20 km. CTG (course to target) – direction to the next target.\nCurrent: Umag (current magnitude) and Udir (current direction). Watch these numbers to see if the current is potentially pushing the glider around.\nBatteries: Watch the battery voltages as well as the energy consumption and capacity. Fluctuating voltages might indicate a battery issue.",
@@ -278,8 +278,8 @@
     ]
   },
   {
-    "objectID": "seagliders/piloting/piloting.html#inshore-th-line-piloting",
-    "href": "seagliders/piloting/piloting.html#inshore-th-line-piloting",
+    "objectID": "seagliders/piloting.html#inshore-th-line-piloting",
+    "href": "seagliders/piloting.html#inshore-th-line-piloting",
     "title": "Piloting",
     "section": "Inshore TH Line Piloting",
     "text": "Inshore TH Line Piloting\nWhen piloting inshore, we want to get the most out of our dives as possible. This means getting as close to the bottom as we can while at the same time conserving battery usage by only setting the altimeter on as we need it. This means that once we get to the 1000 m isobath, you need to be paying closer attention to each dive and planning your next moves.\nTips:\n\nPlan a dive ahead. Oftentimes you are making changes to the cmdfile right after the glider has surfaced and dove, so you will be waiting until the next surfacing for the glider to receive your changed cmdfile. Once it has received it, then it will proceed to dive under the changes you made.\nSet $ALTIM_PING_DEPTH 100-200 m above the estimated bottom depth. When setting $ALTIM_PING_DEPTH, you should keep in mind that the glider dives in a V-pattern. The bottom depth at the point where the glider surfaces does not reflect the bottom depth at the point of apogee. Using OpenCPN or other bathymetry software, estimate the bottom depth at the next apogee point and use that as the reference to set $ALTIM_PING_DEPTH.\n\nFor example, if I estimate the bottom depth at the next apogee point to be 750 m, I will set it to $ALTIM_PING_DEPTH, 500.\nAnother reason we set the altimeter to start pinging 100-200 m above the bottom and not constantly is because the altimeter can pick up false readings during the dive phase and prematurely initiate apogee, thus not giving us a complete dive profile.\n\nPay attention to the current. The current will very likely pick up speed closer to shore, so make sure to take that into account when setting the $ALTIM_PING_DEPTH. It’s possible the glider could be swept into shallower depths and risk hitting the bottom before the altimeter turns on.\nWatch the time between dives. As you get shallower, the time between dives will continue to shorten. Around 1000 m, you will have ~5 hrs between dives; around 200 m, you will have &lt;1 hr between dives.\nTurn it around at 150-250 m bottom depth. Once the glider starts having dives in the low 200 m range, you can go ahead and turn it around by creating a pdoscmds.bat file with the contents “target oTrH35” to go to TH35, for example. To view target names, read the “targets_TrH14” file. OTRH refers to outbound, iTRH refers to inboard. For instance, if turning the glider inshore the pdoscmds.bat might say “target iTrH175” so that the glider flies to the target at 175.\nFly by heading adjusted in cmdfile. To fly by heading, change the $HEADING parameter in the cmdfile to your desired course. To change it back to targets, change $HEADING to -1 and create a pdoscmds.bat file with the desired target.",
@@ -289,8 +289,8 @@
     ]
   },
   {
-    "objectID": "seagliders/piloting/piloting.html#faqs",
-    "href": "seagliders/piloting/piloting.html#faqs",
+    "objectID": "seagliders/piloting.html#faqs",
+    "href": "seagliders/piloting.html#faqs",
     "title": "Piloting",
     "section": "FAQ’s",
     "text": "FAQ’s\nWhat happens if I forgot to change $ALTIM_PING_DEPTH and it’s set deeper than the estimated bottom depth?\nThe glider has a built-in bathymetry map that it follows in addition to using the on-board altimeter. If the altimeter is turned on, the glider will wait for one of two things to happen: 1) The altimeter pings the bottom, or 2) The bathymetry map knows that it is close to the bottom. If the altimeter isn’t sensing the bottom, but the bathymetry shows that the glider is close, then the glider will initiate apogee and begin climbing. So, if $ALTIM_PING_DEPTH is set wrong, it will likely not hit the bottom.\nWhat if the glider does hit the bottom and what does that look like from a piloting standpoint?\nThe glider is traveling slow (~25 cm/s) so any hit to the bottom would be a soft landing. We don’t really need to worry about it damaging the glider but rather we do worry about it getting stuck in random junk on the bottom. If it gets caught in a net or something, it won’t be able to climb back to the surface.\nA glider hitting the bottom will look like a hockey stick. The depth will have the normal dive shape, but then flatten out and not form the classic “V” dive shape. Notice how the “W” vertical speed (solid blue line) goes to “0” indicating no vertical motion. Similarly with the horizontal speed (solid cyan line), notice how it hovers around 0, indicating very little horizontal motion. When it hits the bottom, it will wait there until the dive time reaches half of $T_MISSION (desired time in minutes for mission), then initiate apogee and start climbing. So, if it does hit the bottom in shallow water (~100 m), expect the dive to take longer because it will stay on the bottom until ½ of $T_MISSION.",
@@ -300,8 +300,8 @@
     ]
   },
   {
-    "objectID": "seagliders/resources/resources.html",
-    "href": "seagliders/resources/resources.html",
+    "objectID": "seagliders/resources.html",
+    "href": "seagliders/resources.html",
     "title": "Resources",
     "section": "",
     "text": "Logdev Cnf Manual - Manual for how to configure loggers\nParameter Reference Manual - All parameters and variables\nSeaglider Loitering - How to configure a loitering dive behavior\nRevE Hardware - Manual on the RevE motherboard",
@@ -311,8 +311,8 @@
     ]
   },
   {
-    "objectID": "seagliders/resources/resources.html#manuals",
-    "href": "seagliders/resources/resources.html#manuals",
+    "objectID": "seagliders/resources.html#manuals",
+    "href": "seagliders/resources.html#manuals",
     "title": "Resources",
     "section": "",
     "text": "Logdev Cnf Manual - Manual for how to configure loggers\nParameter Reference Manual - All parameters and variables\nSeaglider Loitering - How to configure a loitering dive behavior\nRevE Hardware - Manual on the RevE motherboard",
@@ -322,8 +322,8 @@
     ]
   },
   {
-    "objectID": "seagliders/resources/resources.html#additional-links",
-    "href": "seagliders/resources/resources.html#additional-links",
+    "objectID": "seagliders/resources.html#additional-links",
+    "href": "seagliders/resources.html#additional-links",
     "title": "Resources",
     "section": "Additional Links",
     "text": "Additional Links\n\nOSU’s Seaglider.pub",
@@ -333,8 +333,8 @@
     ]
   },
   {
-    "objectID": "slocum_gliders/ballasting/ballasting.html",
-    "href": "slocum_gliders/ballasting/ballasting.html",
+    "objectID": "slocum_gliders/ballasting.html",
+    "href": "slocum_gliders/ballasting.html",
     "title": "Ballasting",
     "section": "",
     "text": "Slocum Gliders\n\n\n\n\nOverview\n\n\nDescription goes here.\n\n\n\n\nInstrumentation\n\n\nSensors and payloads.\n\n\n\n\nOperations\n\n\nHow they are deployed.",
@@ -344,8 +344,8 @@
     ]
   },
   {
-    "objectID": "slocum_gliders/mission-planning/mission-planning.html",
-    "href": "slocum_gliders/mission-planning/mission-planning.html",
+    "objectID": "slocum_gliders/mission-planning.html",
+    "href": "slocum_gliders/mission-planning.html",
     "title": "Mission Planning",
     "section": "",
     "text": "Slocum Gliders\n\n\n\n\nOverview\n\n\nDescription goes here.\n\n\n\n\nInstrumentation\n\n\nSensors and payloads.\n\n\n\n\nOperations\n\n\nHow they are deployed.",
@@ -355,8 +355,8 @@
     ]
   },
   {
-    "objectID": "slocum_gliders/resources/resources.html",
-    "href": "slocum_gliders/resources/resources.html",
+    "objectID": "slocum_gliders/resources.html",
+    "href": "slocum_gliders/resources.html",
     "title": "Resources",
     "section": "",
     "text": "Bench Test Microrider through Science Computer - How to bench test a microrider through the Slocum science computer. This is to verify that the glider is able to generate p files on the microrider via comms through the science bay.\nHigh Speed Data Offload - Instructions for how to download data off the glider using 921600 baud rate.\nAbort Behaviors - Basic instructions for how to respond to an abort.\nBattery Charging - How to charge G3S lithium rechargeable batteries.",
@@ -366,8 +366,8 @@
     ]
   },
   {
-    "objectID": "slocum_gliders/resources/resources.html#manuals",
-    "href": "slocum_gliders/resources/resources.html#manuals",
+    "objectID": "slocum_gliders/resources.html#manuals",
+    "href": "slocum_gliders/resources.html#manuals",
     "title": "Resources",
     "section": "",
     "text": "Bench Test Microrider through Science Computer - How to bench test a microrider through the Slocum science computer. This is to verify that the glider is able to generate p files on the microrider via comms through the science bay.\nHigh Speed Data Offload - Instructions for how to download data off the glider using 921600 baud rate.\nAbort Behaviors - Basic instructions for how to respond to an abort.\nBattery Charging - How to charge G3S lithium rechargeable batteries.",

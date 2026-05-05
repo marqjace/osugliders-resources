@@ -46,10 +46,18 @@ h3 {
   display: block !important;
 }
 
+/* Hero sections
+hero - about page
+hero-1 - seaglider
+hero-2 - slocum
+hero-3 - vmp
+hero-4 - microrider */
+
 .hero,
 .hero-1,
 .hero-2,
-.hero-3 {
+.hero-3,
+.hero-4 {
   padding: 60px 20px;
   text-align: center;
   background-size: cover;
@@ -69,13 +77,22 @@ h3 {
 }
 
 .hero-2 {
-  background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url("img/IMG_3416.jpeg");
+  background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url("img/IMG_1567.PNG");
+}
+
+.hero-3 {
+  background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url("img/IMG_4227.jpeg");
+}
+
+.hero-4 {
+  background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url("img/IMG_6344.jpeg");
 }
 
 .hero h1,
 .hero-1 h1,
 .hero-2 h1,
-.hero-3 h1 {
+.hero-3 h1,
+.hero-4 h1 {
   color: white;
 }
 
