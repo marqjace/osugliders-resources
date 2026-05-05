@@ -2,22 +2,22 @@
   {
     "objectID": "vmp/vmp.html",
     "href": "vmp/vmp.html",
-    "title": "Projects",
+    "title": "VMP",
     "section": "",
-    "text": "Projects\n\n\n\n\nProject 1\n\n\nShort description.\n\n\n\n\nProject 2\n\n\nShort description.\n\n\n\n\nProject 3\n\n\nShort description.",
+    "text": "VMP\n\n\n\n\nProject 1\n\n\nShort description.\n\n\n\n\nProject 2\n\n\nShort description.\n\n\n\n\nProject 3\n\n\nShort description.",
     "crumbs": [
       "VMP"
     ]
   },
   {
-    "objectID": "vmp/configuration/configuration.html",
-    "href": "vmp/configuration/configuration.html",
-    "title": "Projects",
+    "objectID": "vmp/configuration.html",
+    "href": "vmp/configuration.html",
+    "title": "Configuration",
     "section": "",
-    "text": "Projects\n\n\n\n\nProject 1\n\n\nShort description.\n\n\n\n\nProject 2\n\n\nShort description.\n\n\n\n\nProject 3\n\n\nShort description.",
+    "text": "Configuration\n\n\n\n\nProject 1\n\n\nShort description.\n\n\n\n\nProject 2\n\n\nShort description.\n\n\n\n\nProject 3\n\n\nShort description.",
     "crumbs": [
       "VMP",
-      "Projects"
+      "Configuration"
     ]
   },
   {
@@ -110,9 +110,9 @@
   {
     "objectID": "microrider/microrider.html",
     "href": "microrider/microrider.html",
-    "title": "Projects",
+    "title": "Microrider",
     "section": "",
-    "text": "Projects\n\n\n\n\nProject 1\n\n\nShort description.\n\n\n\n\nProject 2\n\n\nShort description.\n\n\n\n\nProject 3\n\n\nShort description.",
+    "text": "Microrider\n\n\n\n\nProject 1\n\n\nShort description.\n\n\n\n\nProject 2\n\n\nShort description.\n\n\n\n\nProject 3\n\n\nShort description.",
     "crumbs": [
       "Microrider"
     ]
@@ -120,12 +120,12 @@
   {
     "objectID": "microrider/configuration.html",
     "href": "microrider/configuration.html",
-    "title": "Projects",
+    "title": "Configuration",
     "section": "",
-    "text": "Projects\n\n\n\n\nProject 1\n\n\nShort description.\n\n\n\n\nProject 2\n\n\nShort description.\n\n\n\n\nProject 3\n\n\nShort description.",
+    "text": "Configuration\n\n\n\n\nProject 1\n\n\nShort description.\n\n\n\n\nProject 2\n\n\nShort description.\n\n\n\n\nProject 3\n\n\nShort description.",
     "crumbs": [
       "Microrider",
-      "Projects"
+      "Configuration"
     ]
   },
   {
@@ -133,27 +133,27 @@
     "href": "calibrations/calibrations.html",
     "title": "Calibrations",
     "section": "",
-    "text": "Last Updated: May 5, 2026\n\n\n\nTable 1: Current Seaglider calibrations\n\n\n\n\n\n\n\n\n\n\n\n\nGlider\nCTD\nOptode\nECO Puck\nHydrophone\n\n\n\n\nSG266\nMar 2026\nMar 2027\nApr 2024\nMar 2026\n\n\nSG646\n?\n?\n?\nN/A\n\n\nSG686\nNov 2024\nMay 2025\nApr 2022\n?\n\n\nSG607\n?\n?\n?\n?\n\n\nSG639\n?\n?\n?\n?\n\n\nSG679\n?\n?\n?\n?\n\n\nSG680\n?\n?\n?\n?",
+    "text": "Last Updated: May 5, 2026",
     "crumbs": [
       "Calibrations"
     ]
   },
   {
-    "objectID": "calibrations/calibrations.html#seaglider-calibration-dates",
-    "href": "calibrations/calibrations.html#seaglider-calibration-dates",
+    "objectID": "calibrations/calibrations.html#seaglider",
+    "href": "calibrations/calibrations.html#seaglider",
     "title": "Calibrations",
-    "section": "",
-    "text": "Last Updated: May 5, 2026\n\n\n\nTable 1: Current Seaglider calibrations\n\n\n\n\n\n\n\n\n\n\n\n\nGlider\nCTD\nOptode\nECO Puck\nHydrophone\n\n\n\n\nSG266\nMar 2026\nMar 2027\nApr 2024\nMar 2026\n\n\nSG646\n?\n?\n?\nN/A\n\n\nSG686\nNov 2024\nMay 2025\nApr 2022\n?\n\n\nSG607\n?\n?\n?\n?\n\n\nSG639\n?\n?\n?\n?\n\n\nSG679\n?\n?\n?\n?\n\n\nSG680\n?\n?\n?\n?",
+    "section": "Seaglider",
+    "text": "Seaglider\n\n\n\nTable 1: Current Seaglider calibrations\n\n\n\n\n\n\n\n\n\n\n\n\nGlider\nCTD\nOptode\nECO Puck\nHydrophone\n\n\n\n\nSG266\nMar 2026\nMar 2027\nApr 2024\nMar 2026\n\n\nSG646\n?\n?\n?\nN/A\n\n\nSG686\nNov 2024\nMay 2025\nApr 2022\n?\n\n\nSG607\n?\n?\n?\n?\n\n\nSG639\n?\n?\n?\n?\n\n\nSG679\n?\n?\n?\n?\n\n\nSG680\n?\n?\n?\n?",
     "crumbs": [
       "Calibrations"
     ]
   },
   {
-    "objectID": "calibrations/calibrations.html#slocum-glider-calibration-dates",
-    "href": "calibrations/calibrations.html#slocum-glider-calibration-dates",
+    "objectID": "calibrations/calibrations.html#slocum-glider",
+    "href": "calibrations/calibrations.html#slocum-glider",
     "title": "Calibrations",
-    "section": "Slocum Glider Calibration Dates",
-    "text": "Slocum Glider Calibration Dates\nLast Updated: May 5, 2026\n\n\n\nTable 2: Current Slocum calibrations\n\n\n\n\n\n\n\n\n\n\n\n\nGlider\nCTD\nOptode\nECO Puck\nHydrophone\n\n\n\n\nSL551\n?\n?\n?\n?\n\n\nSL592\n?\n?\n?\n?\n\n\nSL683\n?\n?\n?\n?\n\n\nSL684\n?\n?\n?\n?\n\n\nSL685\n?\n?\n?\n?\n\n\nSL1138\n?\n?\n?\n?\n\n\nSL1267\n?\n?\n?\n?\n\n\nSLNNNN\n?\n?\n?\n?",
+    "section": "Slocum Glider",
+    "text": "Slocum Glider\n\n\n\nTable 2: Current Slocum calibrations\n\n\n\n\n\n\n\n\n\n\n\n\nGlider\nCTD\nOptode\nECO Puck\nHydrophone\n\n\n\n\nSL551\n?\n?\n?\n?\n\n\nSL592\n?\n?\n?\n?\n\n\nSL683\n?\n?\n?\n?\n\n\nSL684\n?\n?\n?\n?\n\n\nSL685\n?\n?\n?\n?\n\n\nSL1138\n?\n?\n?\n?\n\n\nSL1267\n?\n?\n?\n?\n\n\nSLNNNN\n?\n?\n?\n?",
     "crumbs": [
       "Calibrations"
     ]
@@ -171,12 +171,12 @@
   {
     "objectID": "microrider/maintenance.html",
     "href": "microrider/maintenance.html",
-    "title": "Projects",
+    "title": "Maintenance",
     "section": "",
-    "text": "Projects\n\n\n\n\nProject 1\n\n\nShort description.\n\n\n\n\nProject 2\n\n\nShort description.\n\n\n\n\nProject 3\n\n\nShort description.",
+    "text": "Maintenance\n\n\n\n\nProject 1\n\n\nShort description.\n\n\n\n\nProject 2\n\n\nShort description.\n\n\n\n\nProject 3\n\n\nShort description.",
     "crumbs": [
       "Microrider",
-      "Projects"
+      "Maintenance"
     ]
   },
   {
@@ -365,14 +365,14 @@
     ]
   },
   {
-    "objectID": "vmp/maintenance/maintenance.html",
-    "href": "vmp/maintenance/maintenance.html",
-    "title": "Projects",
+    "objectID": "vmp/maintenance.html",
+    "href": "vmp/maintenance.html",
+    "title": "Maintenance",
     "section": "",
-    "text": "Projects\n\n\n\n\nProject 1\n\n\nShort description.\n\n\n\n\nProject 2\n\n\nShort description.\n\n\n\n\nProject 3\n\n\nShort description.",
+    "text": "Maintenance\n\n\n\n\nProject 1\n\n\nShort description.\n\n\n\n\nProject 2\n\n\nShort description.\n\n\n\n\nProject 3\n\n\nShort description.",
     "crumbs": [
       "VMP",
-      "Projects"
+      "Maintenance"
     ]
   }
 ]

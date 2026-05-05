@@ -2,11 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://marqjace.github.io/osugliders-resources/vmp/vmp.html</loc>
-    <lastmod>2026-03-25T22:32:53.314Z</lastmod>
+    <lastmod>2026-05-05T18:46:45.921Z</lastmod>
   </url>
   <url>
-    <loc>https://marqjace.github.io/osugliders-resources/vmp/configuration/configuration.html</loc>
-    <lastmod>2026-03-25T22:32:53.314Z</lastmod>
+    <loc>https://marqjace.github.io/osugliders-resources/vmp/configuration.html</loc>
+    <lastmod>2026-05-05T18:46:51.201Z</lastmod>
   </url>
   <url>
     <loc>https://marqjace.github.io/osugliders-resources/slocum_gliders/sfmc/sfmc.html</loc>
@@ -38,11 +38,11 @@
   </url>
   <url>
     <loc>https://marqjace.github.io/osugliders-resources/microrider/microrider.html</loc>
-    <lastmod>2026-03-25T22:32:53.314Z</lastmod>
+    <lastmod>2026-05-05T18:46:05.280Z</lastmod>
   </url>
   <url>
     <loc>https://marqjace.github.io/osugliders-resources/microrider/configuration.html</loc>
-    <lastmod>2026-03-25T22:32:53.314Z</lastmod>
+    <lastmod>2026-05-05T18:45:52.218Z</lastmod>
   </url>
   <url>
     <loc>https://marqjace.github.io/osugliders-resources/calibrations/calibrations.html</loc>
@@ -54,7 +54,7 @@
   </url>
   <url>
     <loc>https://marqjace.github.io/osugliders-resources/microrider/maintenance.html</loc>
-    <lastmod>2026-03-25T22:32:53.314Z</lastmod>
+    <lastmod>2026-05-05T18:45:56.750Z</lastmod>
   </url>
   <url>
     <loc>https://marqjace.github.io/osugliders-resources/projects/projects.html</loc>
@@ -89,7 +89,7 @@
     <lastmod>2026-05-05T18:28:11.170Z</lastmod>
   </url>
   <url>
-    <loc>https://marqjace.github.io/osugliders-resources/vmp/maintenance/maintenance.html</loc>
-    <lastmod>2026-03-25T22:32:53.314Z</lastmod>
+    <loc>https://marqjace.github.io/osugliders-resources/vmp/maintenance.html</loc>
+    <lastmod>2026-05-05T18:46:56.732Z</lastmod>
   </url>
 </urlset>
