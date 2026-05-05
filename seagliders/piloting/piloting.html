@@ -209,6 +209,74 @@ ul.task-list li input[type="checkbox"] {
 </li>
       </ul>
   </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../microrider/microrider.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Microrider</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+ <span class="menu-text">microrider/configuration/configuration.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">microrider/maintenance/maintenance.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../vmp/vmp.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">VMP</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+ <span class="menu-text">vmp/configuration.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">vmp/maintenance.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../calibrations/calibrations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Calibrations</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../calibrations/calibrations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Calibrations</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../projects/projects.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Projects</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../projects/projects.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Projects</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
@@ -256,12 +324,18 @@ ul.task-list li input[type="checkbox"] {
 <section id="dive-plots" class="level3">
 <h3 class="anchored" data-anchor-id="dive-plots">Dive Plots</h3>
 <ul>
-<li><p><u>Good dive profile:</u> “V” shape dive. If something is out of whack, it will be very noticeable on this plot. A good thing to look for is that the heading (red + symbols) matches the desired heading (red dashed line). If that’s off look at the compass plot and roll plot. <img src="../../img/dive_plot.png" class="img-fluid" style="width:70.0%"></p></li>
-<li><p><u>VBD plot:</u> Check that CC_surf_min is less than CC_SM. Look for a good box structure on the VBD plot. If it is close to or above CC_SM, adjust $SM_CC in the cmdfile. <img src="../../img/vbd_plot.png" class="img-fluid" style="width:70.0%"></p></li>
-<li><p><u>Pitch plot:</u> We want to see that the black line crosses at 0,0 denoted by the red +. C_Pitch is shown on the figure, as well as the Implied Pitch Center. C_Pitch should be close to the Implied Pitch Center, however when making adjustments, adjust $C_PITCH halfway to the Implied Pitch Center and keep working your way to the implied value until it is crossing the red +. <img src="../../img/pitch_plot.png" class="img-fluid" style="width:70.0%"></p></li>
-<li><p><u>Roll plot:</u> There are two lines on this graph, one for dive and one for climb. We want both of these lines to go through the black +. Similar to the pitch plot, there are our actual center values and implied center values. Adjust halfway until satisfactory. <img src="../../img/roll_plot.png" class="img-fluid" style="width:70.0%"></p></li>
-<li><p><u>Energy plots:</u> Watch for something draining too much power. You’ll see the consumption for something be much higher than normal. <img src="../../img/energy_plot.png" class="img-fluid" style="width:70.0%"></p></li>
-<li><p><u>Humidity &amp; Pressure plot:</u> 50-60 Humidity is good, 8-9 Pressure is good. Just make sure that nothing changes dramatically. <img src="../../img/humidity_pressure_plot.png" class="img-fluid" style="width:70.0%"></p></li>
+<li><p><u>Good dive profile:</u> “V” shape dive. If something is out of whack, it will be very noticeable on this plot. A good thing to look for is that the heading (red + symbols) matches the desired heading (red dashed line). If that’s off look at the compass plot and roll plot.</p></li>
+<li><p><img src="../../img/dive_plot.png" class="img-fluid" style="width:80.0%"></p></li>
+<li><p><u>VBD plot:</u> Check that CC_surf_min is less than CC_SM. Look for a good box structure on the VBD plot. If it is close to or above CC_SM, adjust $SM_CC in the cmdfile.</p></li>
+<li><p><img src="../../img/vbd_plot.png" class="img-fluid" style="width:80.0%"></p></li>
+<li><p><u>Pitch plot:</u> We want to see that the black line crosses at 0,0 denoted by the red +. C_Pitch is shown on the figure, as well as the Implied Pitch Center. C_Pitch should be close to the Implied Pitch Center, however when making adjustments, adjust $C_PITCH halfway to the Implied Pitch Center and keep working your way to the implied value until it is crossing the red +.</p></li>
+<li><p><img src="../../img/pitch_plot.png" class="img-fluid" style="width:80.0%"></p></li>
+<li><p><u>Roll plot:</u> There are two lines on this graph, one for dive and one for climb. We want both of these lines to go through the black +. Similar to the pitch plot, there are our actual center values and implied center values. Adjust halfway until satisfactory.</p></li>
+<li><p><img src="../../img/roll_plot.png" class="img-fluid" style="width:80.0%"></p></li>
+<li><p><u>Energy plots:</u> Watch for something draining too much power. You’ll see the consumption for something be much higher than normal.</p></li>
+<li><p><img src="../../img/energy_plot.png" class="img-fluid" style="width:80.0%"></p></li>
+<li><p><u>Humidity &amp; Pressure plot:</u> 50-60 Humidity is good, 8-9 Pressure is good. Just make sure that nothing changes dramatically.</p></li>
+<li><p><img src="../../img/humidity_pressure_plot.png" class="img-fluid" style="width:80.0%"></p></li>
 </ul>
 </section>
 <section id="dive-table" class="level3">
@@ -270,7 +344,8 @@ ul.task-list li input[type="checkbox"] {
 <li><p><u>Depth and Time:</u> Make sure the length of time and depth match what you expect.</p></li>
 <li><p><u>Distances and Targets:</u> DOG (distance over ground) – this is the distance you covered from start to finish on a dive. COG (course over ground) – this is the direction of travel from start to finish on a dive. DTW (distance to waypoint) – whether flying by heading or by targets, waypoints will be automatically set at a certain distance away from the start. CTW (course to waypoint) – direction of travel to the waypoint. DTG (distance to target) – the distance to the target that is set. When flying by targets, it will be the next target; when flying by heading, it will be roughly 20 km. CTG (course to target) – direction to the next target.</p></li>
 <li><p><u>Current:</u> Umag (current magnitude) and Udir (current direction). Watch these numbers to see if the current is potentially pushing the glider around.</p></li>
-<li><p><u>Batteries:</u> Watch the battery voltages as well as the energy consumption and capacity. Fluctuating voltages might indicate a battery issue. <img src="../../img/dive_table.png" class="img-fluid" style="width:70.0%"></p></li>
+<li><p><u>Batteries:</u> Watch the battery voltages as well as the energy consumption and capacity. Fluctuating voltages might indicate a battery issue.</p></li>
+<li><p><img src="../../img/dive_table.png" class="img-fluid" style="width:80.0%"></p></li>
 </ul>
 </section>
 </section>

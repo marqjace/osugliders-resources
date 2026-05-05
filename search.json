@@ -4,7 +4,10 @@
     "href": "vmp/vmp.html",
     "title": "Projects",
     "section": "",
-    "text": "Projects\n\n\n\n\nProject 1\n\n\nShort description.\n\n\n\n\nProject 2\n\n\nShort description.\n\n\n\n\nProject 3\n\n\nShort description."
+    "text": "Projects\n\n\n\n\nProject 1\n\n\nShort description.\n\n\n\n\nProject 2\n\n\nShort description.\n\n\n\n\nProject 3\n\n\nShort description.",
+    "crumbs": [
+      "VMP"
+    ]
   },
   {
     "objectID": "vmp/configuration/configuration.html",
@@ -62,7 +65,7 @@
     "href": "seagliders/seagliders.html",
     "title": "Overview",
     "section": "",
-    "text": "Seagliders\n\n\n\n\nTable 1: Current condition\n\n\n\n\n\nGlider\nLast Deployment\nNext Deployment\n\n\n\n\nSG266\nMar 2026\nMar 2027\n\n\nSG646\nJul 2022\n?\n\n\nSG686\nNov 2025\nAug 2026\n\n\nSG607\nJan 2026\nJan 2027\n\n\nSG639\nJan 2026\nJan 2027\n\n\nSG679\nJan 2026\nJan 2027\n\n\nSG680\nSep 2024\nJan 2027",
+    "text": "Seagliders\n\n\n\n\nTable 1: Current Seaglider fleet condition\n\n\n\n\n\nGlider\nLast Deployment\nNext Deployment\n\n\n\n\nSG266\nMar 2026\nMar 2027\n\n\nSG646\nJul 2022\n?\n\n\nSG686\nNov 2025\nAug 2026\n\n\nSG607\nJan 2026\nJan 2027\n\n\nSG639\nJan 2026\nJan 2027\n\n\nSG679\nJan 2026\nJan 2027\n\n\nSG680\nSep 2024\nJan 2027",
     "crumbs": [
       "Seagliders"
     ]
@@ -105,7 +108,10 @@
     "href": "microrider/microrider.html",
     "title": "Projects",
     "section": "",
-    "text": "Projects\n\n\n\n\nProject 1\n\n\nShort description.\n\n\n\n\nProject 2\n\n\nShort description.\n\n\n\n\nProject 3\n\n\nShort description."
+    "text": "Projects\n\n\n\n\nProject 1\n\n\nShort description.\n\n\n\n\nProject 2\n\n\nShort description.\n\n\n\n\nProject 3\n\n\nShort description.",
+    "crumbs": [
+      "Microrider"
+    ]
   },
   {
     "objectID": "microrider/configuration.html",
@@ -117,9 +123,12 @@
   {
     "objectID": "calibrations/calibrations.html",
     "href": "calibrations/calibrations.html",
-    "title": "Projects",
+    "title": "Calibrations",
     "section": "",
-    "text": "Projects\n\n\n\n\nProject 1\n\n\nShort description.\n\n\n\n\nProject 2\n\n\nShort description.\n\n\n\n\nProject 3\n\n\nShort description."
+    "text": "Seaglider Calibration Dates\nLast Updated: May 5, 2026\n\n\n\nTable 1: Current Seaglider calibration conditions\n\n\n\n\n\n\n\n\n\n\n\n\nGlider\nCTD\nOptode\nECO Puck\nHydrophone\n\n\n\n\nSG266\nMar 2026\nMar 2027\nApr 2024\nMar 2026\n\n\nSG646\n?\n?\n?\nN/A\n\n\nSG686\nNov 2024\nMay 2025\nApr 2022\n?\n\n\nSG607\n?\n?\n?\n?\n\n\nSG639\n?\n?\n?\n?\n\n\nSG679\n?\n?\n?\n?\n\n\nSG680\n?\n?\n?\n?\n\n\n\n\n\n\n\n\nSlocum Glider Calibration Dates\nLast Updated: May 5, 2026\n\n\n\nTable 2: Current Slocum calibration conditions\n\n\n\n\n\n\n\n\n\n\n\n\nGlider\nCTD\nOptode\nECO Puck\nHydrophone\n\n\n\n\nSL551\n?\n?\n?\n?\n\n\nSL592\n?\n?\n?\n?\n\n\nSL683\n?\n?\n?\n?\n\n\nSL684\n?\n?\n?\n?\n\n\nSL685\n?\n?\n?\n?\n\n\nSL1138\n?\n?\n?\n?\n\n\nSL1267\n?\n?\n?\n?\n\n\nSLNNNN\n?\n?\n?\n?",
+    "crumbs": [
+      "Calibrations"
+    ]
   },
   {
     "objectID": "index.html",
@@ -140,7 +149,10 @@
     "href": "projects/projects.html",
     "title": "Projects",
     "section": "",
-    "text": "Projects\n\n\n\n\nProject 1\n\n\nShort description.\n\n\n\n\nProject 2\n\n\nShort description.\n\n\n\n\nProject 3\n\n\nShort description."
+    "text": "Projects\n\n\n\n\nProject 1\n\n\nShort description.\n\n\n\n\nProject 2\n\n\nShort description.\n\n\n\n\nProject 3\n\n\nShort description.",
+    "crumbs": [
+      "Projects"
+    ]
   },
   {
     "objectID": "seagliders/basestation/basestation.html",
@@ -191,7 +203,7 @@
     "href": "seagliders/piloting/piloting.html",
     "title": "Piloting",
     "section": "",
-    "text": "Good dive profile: “V” shape dive. If something is out of whack, it will be very noticeable on this plot. A good thing to look for is that the heading (red + symbols) matches the desired heading (red dashed line). If that’s off look at the compass plot and roll plot. \nVBD plot: Check that CC_surf_min is less than CC_SM. Look for a good box structure on the VBD plot. If it is close to or above CC_SM, adjust $SM_CC in the cmdfile. \nPitch plot: We want to see that the black line crosses at 0,0 denoted by the red +. C_Pitch is shown on the figure, as well as the Implied Pitch Center. C_Pitch should be close to the Implied Pitch Center, however when making adjustments, adjust $C_PITCH halfway to the Implied Pitch Center and keep working your way to the implied value until it is crossing the red +. \nRoll plot: There are two lines on this graph, one for dive and one for climb. We want both of these lines to go through the black +. Similar to the pitch plot, there are our actual center values and implied center values. Adjust halfway until satisfactory. \nEnergy plots: Watch for something draining too much power. You’ll see the consumption for something be much higher than normal. \nHumidity & Pressure plot: 50-60 Humidity is good, 8-9 Pressure is good. Just make sure that nothing changes dramatically. \n\n\n\n\n\nDepth and Time: Make sure the length of time and depth match what you expect.\nDistances and Targets: DOG (distance over ground) – this is the distance you covered from start to finish on a dive. COG (course over ground) – this is the direction of travel from start to finish on a dive. DTW (distance to waypoint) – whether flying by heading or by targets, waypoints will be automatically set at a certain distance away from the start. CTW (course to waypoint) – direction of travel to the waypoint. DTG (distance to target) – the distance to the target that is set. When flying by targets, it will be the next target; when flying by heading, it will be roughly 20 km. CTG (course to target) – direction to the next target.\nCurrent: Umag (current magnitude) and Udir (current direction). Watch these numbers to see if the current is potentially pushing the glider around.\nBatteries: Watch the battery voltages as well as the energy consumption and capacity. Fluctuating voltages might indicate a battery issue.",
+    "text": "Good dive profile: “V” shape dive. If something is out of whack, it will be very noticeable on this plot. A good thing to look for is that the heading (red + symbols) matches the desired heading (red dashed line). If that’s off look at the compass plot and roll plot.\n\nVBD plot: Check that CC_surf_min is less than CC_SM. Look for a good box structure on the VBD plot. If it is close to or above CC_SM, adjust $SM_CC in the cmdfile.\n\nPitch plot: We want to see that the black line crosses at 0,0 denoted by the red +. C_Pitch is shown on the figure, as well as the Implied Pitch Center. C_Pitch should be close to the Implied Pitch Center, however when making adjustments, adjust $C_PITCH halfway to the Implied Pitch Center and keep working your way to the implied value until it is crossing the red +.\n\nRoll plot: There are two lines on this graph, one for dive and one for climb. We want both of these lines to go through the black +. Similar to the pitch plot, there are our actual center values and implied center values. Adjust halfway until satisfactory.\n\nEnergy plots: Watch for something draining too much power. You’ll see the consumption for something be much higher than normal.\n\nHumidity & Pressure plot: 50-60 Humidity is good, 8-9 Pressure is good. Just make sure that nothing changes dramatically.\n\n\n\n\n\n\nDepth and Time: Make sure the length of time and depth match what you expect.\nDistances and Targets: DOG (distance over ground) – this is the distance you covered from start to finish on a dive. COG (course over ground) – this is the direction of travel from start to finish on a dive. DTW (distance to waypoint) – whether flying by heading or by targets, waypoints will be automatically set at a certain distance away from the start. CTW (course to waypoint) – direction of travel to the waypoint. DTG (distance to target) – the distance to the target that is set. When flying by targets, it will be the next target; when flying by heading, it will be roughly 20 km. CTG (course to target) – direction to the next target.\nCurrent: Umag (current magnitude) and Udir (current direction). Watch these numbers to see if the current is potentially pushing the glider around.\nBatteries: Watch the battery voltages as well as the energy consumption and capacity. Fluctuating voltages might indicate a battery issue.",
     "crumbs": [
       "Seagliders",
       "Piloting"
@@ -202,7 +214,7 @@
     "href": "seagliders/piloting/piloting.html#general-piloting-tips",
     "title": "Piloting",
     "section": "",
-    "text": "Good dive profile: “V” shape dive. If something is out of whack, it will be very noticeable on this plot. A good thing to look for is that the heading (red + symbols) matches the desired heading (red dashed line). If that’s off look at the compass plot and roll plot. \nVBD plot: Check that CC_surf_min is less than CC_SM. Look for a good box structure on the VBD plot. If it is close to or above CC_SM, adjust $SM_CC in the cmdfile. \nPitch plot: We want to see that the black line crosses at 0,0 denoted by the red +. C_Pitch is shown on the figure, as well as the Implied Pitch Center. C_Pitch should be close to the Implied Pitch Center, however when making adjustments, adjust $C_PITCH halfway to the Implied Pitch Center and keep working your way to the implied value until it is crossing the red +. \nRoll plot: There are two lines on this graph, one for dive and one for climb. We want both of these lines to go through the black +. Similar to the pitch plot, there are our actual center values and implied center values. Adjust halfway until satisfactory. \nEnergy plots: Watch for something draining too much power. You’ll see the consumption for something be much higher than normal. \nHumidity & Pressure plot: 50-60 Humidity is good, 8-9 Pressure is good. Just make sure that nothing changes dramatically. \n\n\n\n\n\nDepth and Time: Make sure the length of time and depth match what you expect.\nDistances and Targets: DOG (distance over ground) – this is the distance you covered from start to finish on a dive. COG (course over ground) – this is the direction of travel from start to finish on a dive. DTW (distance to waypoint) – whether flying by heading or by targets, waypoints will be automatically set at a certain distance away from the start. CTW (course to waypoint) – direction of travel to the waypoint. DTG (distance to target) – the distance to the target that is set. When flying by targets, it will be the next target; when flying by heading, it will be roughly 20 km. CTG (course to target) – direction to the next target.\nCurrent: Umag (current magnitude) and Udir (current direction). Watch these numbers to see if the current is potentially pushing the glider around.\nBatteries: Watch the battery voltages as well as the energy consumption and capacity. Fluctuating voltages might indicate a battery issue.",
+    "text": "Good dive profile: “V” shape dive. If something is out of whack, it will be very noticeable on this plot. A good thing to look for is that the heading (red + symbols) matches the desired heading (red dashed line). If that’s off look at the compass plot and roll plot.\n\nVBD plot: Check that CC_surf_min is less than CC_SM. Look for a good box structure on the VBD plot. If it is close to or above CC_SM, adjust $SM_CC in the cmdfile.\n\nPitch plot: We want to see that the black line crosses at 0,0 denoted by the red +. C_Pitch is shown on the figure, as well as the Implied Pitch Center. C_Pitch should be close to the Implied Pitch Center, however when making adjustments, adjust $C_PITCH halfway to the Implied Pitch Center and keep working your way to the implied value until it is crossing the red +.\n\nRoll plot: There are two lines on this graph, one for dive and one for climb. We want both of these lines to go through the black +. Similar to the pitch plot, there are our actual center values and implied center values. Adjust halfway until satisfactory.\n\nEnergy plots: Watch for something draining too much power. You’ll see the consumption for something be much higher than normal.\n\nHumidity & Pressure plot: 50-60 Humidity is good, 8-9 Pressure is good. Just make sure that nothing changes dramatically.\n\n\n\n\n\n\nDepth and Time: Make sure the length of time and depth match what you expect.\nDistances and Targets: DOG (distance over ground) – this is the distance you covered from start to finish on a dive. COG (course over ground) – this is the direction of travel from start to finish on a dive. DTW (distance to waypoint) – whether flying by heading or by targets, waypoints will be automatically set at a certain distance away from the start. CTW (course to waypoint) – direction of travel to the waypoint. DTG (distance to target) – the distance to the target that is set. When flying by targets, it will be the next target; when flying by heading, it will be roughly 20 km. CTG (course to target) – direction to the next target.\nCurrent: Umag (current magnitude) and Udir (current direction). Watch these numbers to see if the current is potentially pushing the glider around.\nBatteries: Watch the battery voltages as well as the energy consumption and capacity. Fluctuating voltages might indicate a battery issue.",
     "crumbs": [
       "Seagliders",
       "Piloting"
@@ -312,7 +324,7 @@
     "href": "slocum_gliders/slocum.html",
     "title": "Overview",
     "section": "",
-    "text": "Table 1: Current condition\n\n\n\n\n\nGlider\nLast Deployment\nNext Deployment\n\n\n\n\nSL551\n?\nN/A\n\n\nSL592\nSep 2025\nSep 2026\n\n\nSL683\n?\n?\n\n\nSL684\nMar 2026\nJul 2026\n\n\nSL685\nMar 2026\nJul 2026\n\n\nSL1138\nJul 2025\nMay 2026\n\n\nSL1267\nFeb 2026\nJul 2026?\n\n\nSLNNNN\n?\n?",
+    "text": "Table 1: Current Slocum fleet condition\n\n\n\n\n\nGlider\nLast Deployment\nNext Deployment\n\n\n\n\nSL551\n?\nN/A\n\n\nSL592\nSep 2025\nSep 2026\n\n\nSL683\n?\n?\n\n\nSL684\nMar 2026\nJul 2026\n\n\nSL685\nMar 2026\nJul 2026\n\n\nSL1138\nJul 2025\nMay 2026\n\n\nSL1267\nFeb 2026\nJul 2026?\n\n\nSLNNNN\n?\n?",
     "crumbs": [
       "Slocum Gliders"
     ]
