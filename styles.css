@@ -61,15 +61,15 @@ h3 {
 }
 
 .hero {
-  background-image: url("img/IMG_4318.PNG");
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("img/IMG_4318.PNG");
 }
 
 .hero-1 {
-  background-image: url("img/IMG_8235.jpeg");
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("img/IMG_8235.jpeg");
 }
 
 .hero-2 {
-  background-image: url("img/IMG_3416.jpeg");
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("img/IMG_3416.jpeg");
 }
 
 .hero h1,
