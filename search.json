@@ -69,7 +69,7 @@
     "href": "seagliders/seagliders.html",
     "title": "Overview",
     "section": "",
-    "text": "Seagliders\n\n\n\n\nTable 1: Current Seaglider fleet condition\n\n\n\n\n\nGlider\nLast Deployment\nNext Deployment\n\n\n\n\nSG266\nMar 2026\nMar 2027\n\n\nSG646\nJul 2022\n?\n\n\nSG686\nNov 2025\nAug 2026\n\n\nSG607\nJan 2026\nJan 2027\n\n\nSG639\nJan 2026\nJan 2027\n\n\nSG679\nJan 2026\nJan 2027\n\n\nSG680\nSep 2024\nJan 2027\n\n\n\n\n\n\n\n\n\nSG266\n\n\nView Dashboard\n\n\n\n\nSG646\n\n\nView Dashboard\n\n\n\n\nSG686\n\n\nView Dashboard\n\n\n\n\nSG607\n\n\nView Dashboard\n\n\n\n\nSG639\n\n\nView Dashboard\n\n\n\n\nSG679\n\n\nView Dashboard\n\n\n\n\nSG680\n\n\nView Dashboard",
+    "text": "Seagliders\n\n\n\n\nSG266\n\n\nView Dashboard\n\n\n\n\nSG646\n\n\nView Dashboard\n\n\n\n\nSG686\n\n\nView Dashboard\n\n\n\n\nSG607\n\n\nView Dashboard\n\n\n\n\nSG639\n\n\nView Dashboard\n\n\n\n\nSG679\n\n\nView Dashboard\n\n\n\n\nSG680\n\n\nView Dashboard\n\n\n\n\n\n\nTable 1: Current Seaglider fleet condition\n\n\n\n\n\nGlider\nLast Deployment\nNext Deployment\n\n\n\n\nSG266\nMar 2026\nMar 2027\n\n\nSG646\nJul 2022\n?\n\n\nSG686\nNov 2025\nAug 2026\n\n\nSG607\nJan 2026\nJan 2027\n\n\nSG639\nJan 2026\nJan 2027\n\n\nSG679\nJan 2026\nJan 2027\n\n\nSG680\nSep 2024\nJan 2027",
     "crumbs": [
       "Seagliders"
     ]
@@ -163,7 +163,7 @@
     "href": "index.html",
     "title": "OSU GLIDERS RESOURCES",
     "section": "",
-    "text": "About\n\n\n\n\nSeagliders\n\n\nInformation on our Seaglider fleet, including mission planning, piloting, and maintenance.\n\n\nLearn more\n\n\n\n\nSlocum Gliders\n\n\nInformation for Slocum gliders, covering fleet details, SFMC, and operational procedures.\n\n\nLearn more\n\n\n\n\nMicrorider\n\n\nDocumentation for Microrider instruments, including configuration and maintenance.\n\n\nLearn more\n\n\n\n\nVMP\n\n\nVertical Microstructure Profiler guides for setup, configuration, and upkeep.\n\n\nLearn more\n\n\n\n\nCalibrations\n\n\nProcedures and standards for calibrating our oceanographic sensors.\n\n\nLearn more\n\n\n\n\nProjects\n\n\nOverview of current and past research projects involving autonomous vehicles.\n\n\nLearn more",
+    "text": "Documentation\n\n\n\n\nSeagliders\n\n\nDocumentation for Seagliders.\n\n\nLearn more\n\n\n\n\nSlocum Gliders\n\n\nDocumentation for Slocum gliders.\n\n\nLearn more\n\n\n\n\nMicrorider\n\n\nDocumentation for Microrider instruments.\n\n\nLearn more\n\n\n\n\nVMP\n\n\nDocumentation for Vertical Microstructure Profiler (VMP) instruments.\n\n\nLearn more\n\n\n\n\nCalibrations\n\n\nProcedures and standards for calibrating our equipment.\n\n\nLearn more\n\n\n\n\nProjects\n\n\nCurrent and past research projects.\n\n\nLearn more",
     "crumbs": [
       "About"
     ]
