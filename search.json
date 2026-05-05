@@ -14,7 +14,11 @@
     "href": "vmp/configuration/configuration.html",
     "title": "Projects",
     "section": "",
-    "text": "Projects\n\n\n\n\nProject 1\n\n\nShort description.\n\n\n\n\nProject 2\n\n\nShort description.\n\n\n\n\nProject 3\n\n\nShort description."
+    "text": "Projects\n\n\n\n\nProject 1\n\n\nShort description.\n\n\n\n\nProject 2\n\n\nShort description.\n\n\n\n\nProject 3\n\n\nShort description.",
+    "crumbs": [
+      "VMP",
+      "Projects"
+    ]
   },
   {
     "objectID": "slocum_gliders/sfmc/sfmc.html",
@@ -118,14 +122,38 @@
     "href": "microrider/configuration.html",
     "title": "Projects",
     "section": "",
-    "text": "Projects\n\n\n\n\nProject 1\n\n\nShort description.\n\n\n\n\nProject 2\n\n\nShort description.\n\n\n\n\nProject 3\n\n\nShort description."
+    "text": "Projects\n\n\n\n\nProject 1\n\n\nShort description.\n\n\n\n\nProject 2\n\n\nShort description.\n\n\n\n\nProject 3\n\n\nShort description.",
+    "crumbs": [
+      "Microrider",
+      "Projects"
+    ]
   },
   {
     "objectID": "calibrations/calibrations.html",
     "href": "calibrations/calibrations.html",
     "title": "Calibrations",
     "section": "",
-    "text": "Seaglider Calibration Dates\nLast Updated: May 5, 2026\n\n\n\nTable 1: Current Seaglider calibration conditions\n\n\n\n\n\n\n\n\n\n\n\n\nGlider\nCTD\nOptode\nECO Puck\nHydrophone\n\n\n\n\nSG266\nMar 2026\nMar 2027\nApr 2024\nMar 2026\n\n\nSG646\n?\n?\n?\nN/A\n\n\nSG686\nNov 2024\nMay 2025\nApr 2022\n?\n\n\nSG607\n?\n?\n?\n?\n\n\nSG639\n?\n?\n?\n?\n\n\nSG679\n?\n?\n?\n?\n\n\nSG680\n?\n?\n?\n?\n\n\n\n\n\n\n\n\nSlocum Glider Calibration Dates\nLast Updated: May 5, 2026\n\n\n\nTable 2: Current Slocum calibration conditions\n\n\n\n\n\n\n\n\n\n\n\n\nGlider\nCTD\nOptode\nECO Puck\nHydrophone\n\n\n\n\nSL551\n?\n?\n?\n?\n\n\nSL592\n?\n?\n?\n?\n\n\nSL683\n?\n?\n?\n?\n\n\nSL684\n?\n?\n?\n?\n\n\nSL685\n?\n?\n?\n?\n\n\nSL1138\n?\n?\n?\n?\n\n\nSL1267\n?\n?\n?\n?\n\n\nSLNNNN\n?\n?\n?\n?",
+    "text": "Last Updated: May 5, 2026\n\n\n\nTable 1: Current Seaglider calibrations\n\n\n\n\n\n\n\n\n\n\n\n\nGlider\nCTD\nOptode\nECO Puck\nHydrophone\n\n\n\n\nSG266\nMar 2026\nMar 2027\nApr 2024\nMar 2026\n\n\nSG646\n?\n?\n?\nN/A\n\n\nSG686\nNov 2024\nMay 2025\nApr 2022\n?\n\n\nSG607\n?\n?\n?\n?\n\n\nSG639\n?\n?\n?\n?\n\n\nSG679\n?\n?\n?\n?\n\n\nSG680\n?\n?\n?\n?",
+    "crumbs": [
+      "Calibrations"
+    ]
+  },
+  {
+    "objectID": "calibrations/calibrations.html#seaglider-calibration-dates",
+    "href": "calibrations/calibrations.html#seaglider-calibration-dates",
+    "title": "Calibrations",
+    "section": "",
+    "text": "Last Updated: May 5, 2026\n\n\n\nTable 1: Current Seaglider calibrations\n\n\n\n\n\n\n\n\n\n\n\n\nGlider\nCTD\nOptode\nECO Puck\nHydrophone\n\n\n\n\nSG266\nMar 2026\nMar 2027\nApr 2024\nMar 2026\n\n\nSG646\n?\n?\n?\nN/A\n\n\nSG686\nNov 2024\nMay 2025\nApr 2022\n?\n\n\nSG607\n?\n?\n?\n?\n\n\nSG639\n?\n?\n?\n?\n\n\nSG679\n?\n?\n?\n?\n\n\nSG680\n?\n?\n?\n?",
+    "crumbs": [
+      "Calibrations"
+    ]
+  },
+  {
+    "objectID": "calibrations/calibrations.html#slocum-glider-calibration-dates",
+    "href": "calibrations/calibrations.html#slocum-glider-calibration-dates",
+    "title": "Calibrations",
+    "section": "Slocum Glider Calibration Dates",
+    "text": "Slocum Glider Calibration Dates\nLast Updated: May 5, 2026\n\n\n\nTable 2: Current Slocum calibrations\n\n\n\n\n\n\n\n\n\n\n\n\nGlider\nCTD\nOptode\nECO Puck\nHydrophone\n\n\n\n\nSL551\n?\n?\n?\n?\n\n\nSL592\n?\n?\n?\n?\n\n\nSL683\n?\n?\n?\n?\n\n\nSL684\n?\n?\n?\n?\n\n\nSL685\n?\n?\n?\n?\n\n\nSL1138\n?\n?\n?\n?\n\n\nSL1267\n?\n?\n?\n?\n\n\nSLNNNN\n?\n?\n?\n?",
     "crumbs": [
       "Calibrations"
     ]
@@ -135,14 +163,21 @@
     "href": "index.html",
     "title": "OSU GLIDERS RESOURCES PAGE",
     "section": "",
-    "text": "OSU GLIDERS\n\n\n\n\nSeagliders\n\n\nInformation on our Seaglider fleet, including mission planning, piloting, and maintenance.\n\n\nLearn more\n\n\n\n\nSlocum Gliders\n\n\nInformation for Slocum gliders, covering fleet details, SFMC, and operational procedures.\n\n\nLearn more\n\n\n\n\nMicrorider\n\n\nDocumentation for Microrider instruments, including configuration and maintenance.\n\n\nLearn more\n\n\n\n\nVMP\n\n\nVertical Microstructure Profiler guides for setup, configuration, and upkeep.\n\n\nLearn more\n\n\n\n\nCalibrations\n\n\nProcedures and standards for calibrating our oceanographic sensors.\n\n\nLearn more\n\n\n\n\nProjects\n\n\nOverview of current and past research projects involving autonomous vehicles.\n\n\nLearn more"
+    "text": "OSU GLIDERS\n\n\n\n\nSeagliders\n\n\nInformation on our Seaglider fleet, including mission planning, piloting, and maintenance.\n\n\nLearn more\n\n\n\n\nSlocum Gliders\n\n\nInformation for Slocum gliders, covering fleet details, SFMC, and operational procedures.\n\n\nLearn more\n\n\n\n\nMicrorider\n\n\nDocumentation for Microrider instruments, including configuration and maintenance.\n\n\nLearn more\n\n\n\n\nVMP\n\n\nVertical Microstructure Profiler guides for setup, configuration, and upkeep.\n\n\nLearn more\n\n\n\n\nCalibrations\n\n\nProcedures and standards for calibrating our oceanographic sensors.\n\n\nLearn more\n\n\n\n\nProjects\n\n\nOverview of current and past research projects involving autonomous vehicles.\n\n\nLearn more",
+    "crumbs": [
+      "About"
+    ]
   },
   {
     "objectID": "microrider/maintenance.html",
     "href": "microrider/maintenance.html",
     "title": "Projects",
     "section": "",
-    "text": "Projects\n\n\n\n\nProject 1\n\n\nShort description.\n\n\n\n\nProject 2\n\n\nShort description.\n\n\n\n\nProject 3\n\n\nShort description."
+    "text": "Projects\n\n\n\n\nProject 1\n\n\nShort description.\n\n\n\n\nProject 2\n\n\nShort description.\n\n\n\n\nProject 3\n\n\nShort description.",
+    "crumbs": [
+      "Microrider",
+      "Projects"
+    ]
   },
   {
     "objectID": "projects/projects.html",
@@ -334,6 +369,10 @@
     "href": "vmp/maintenance/maintenance.html",
     "title": "Projects",
     "section": "",
-    "text": "Projects\n\n\n\n\nProject 1\n\n\nShort description.\n\n\n\n\nProject 2\n\n\nShort description.\n\n\n\n\nProject 3\n\n\nShort description."
+    "text": "Projects\n\n\n\n\nProject 1\n\n\nShort description.\n\n\n\n\nProject 2\n\n\nShort description.\n\n\n\n\nProject 3\n\n\nShort description.",
+    "crumbs": [
+      "VMP",
+      "Projects"
+    ]
   }
 ]
