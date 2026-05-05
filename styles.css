@@ -61,15 +61,15 @@ h3 {
 }
 
 .hero {
-  background-image: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url("img/IMG_4317.PNG");
+  background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url("img/IMG_4317.PNG");
 }
 
 .hero-1 {
-  background-image: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url("img/IMG_8235.jpeg");
+  background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url("img/IMG_8235.jpeg");
 }
 
 .hero-2 {
-  background-image: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url("img/IMG_3416.jpeg");
+  background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url("img/IMG_3416.jpeg");
 }
 
 .hero h1,
