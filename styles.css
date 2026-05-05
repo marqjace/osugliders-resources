@@ -69,7 +69,14 @@ h3 {
 }
 
 .hero-2 {
-  background-image: url("img/20250723_093658.jpg");
+  background-image: url("img/IMG_3416.jpeg");
+}
+
+.hero h1,
+.hero-1 h1,
+.hero-2 h1,
+.hero-3 h1 {
+  color: white;
 }
 
 .card {
