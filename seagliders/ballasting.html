@@ -283,7 +283,17 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#seagliders" id="toc-seagliders" class="nav-link active" data-scroll-target="#seagliders">Seagliders</a></li>
+  <li><a href="#ballasting-theory-tools" id="toc-ballasting-theory-tools" class="nav-link active" data-scroll-target="#ballasting-theory-tools">Ballasting Theory &amp; Tools</a>
+  <ul class="collapse">
+  <li><a href="#definitions" id="toc-definitions" class="nav-link" data-scroll-target="#definitions">Definitions</a></li>
+  <li><a href="#goal-of-ballasting" id="toc-goal-of-ballasting" class="nav-link" data-scroll-target="#goal-of-ballasting">Goal of ballasting</a></li>
+  <li><a href="#ballasting-strategy" id="toc-ballasting-strategy" class="nav-link" data-scroll-target="#ballasting-strategy">Ballasting Strategy</a></li>
+  <li><a href="#ballast-worksheet" id="toc-ballast-worksheet" class="nav-link" data-scroll-target="#ballast-worksheet">Ballast Worksheet</a></li>
+  <li><a href="#vbd-regression" id="toc-vbd-regression" class="nav-link" data-scroll-target="#vbd-regression">VBD Regression</a></li>
+  <li><a href="#lead-placement" id="toc-lead-placement" class="nav-link" data-scroll-target="#lead-placement">Lead Placement</a></li>
+  <li><a href="#pitch" id="toc-pitch" class="nav-link" data-scroll-target="#pitch">Pitch</a></li>
+  <li><a href="#roll" id="toc-roll" class="nav-link" data-scroll-target="#roll">Roll</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -309,37 +319,106 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="seagliders" class="level1 hero-1">
-<h1>Seagliders</h1>
+<section id="ballasting-theory-tools" class="level2">
+<h2 class="anchored" data-anchor-id="ballasting-theory-tools">Ballasting Theory &amp; Tools</h2>
+<section id="definitions" class="level3">
+<h3 class="anchored" data-anchor-id="definitions">Definitions</h3>
+<p><strong>Volmax:</strong> maximum volume of the glider (i.e., volume when all moveable oil is in the external bladder), in cc’s. Getting an accurate estimate of volmax is key to ballasting. We get an initial estimate of volmax in a tank, and a more refined estimate during the test deployment. Volmax is a constant for a given glider configuration (external payload and VBD settings).</p>
+<p><strong>Neutral volume:</strong> This is the volume of the glider including external bladder position at which the glider is neutrally buoyant at the desired apogee density. By definitions below, the bladder position at this point is 0cc and C_VBD AD counts.</p>
+<p><strong>Thrust:</strong> buoyancy in cc relative to the neutral position defined by C_VBD. Negative thrust means the glider is “heavy”.</p>
+<p><strong>Target thrust ($MAX_BUOY):</strong> This is the desired amount of negative thrust that we want to have at apogee so that we can maintain speed throughout the entire dive.</p>
+<p><strong>$C_VBD:</strong> The position of the oil reservoir in AD counts that defines where the glider thinks it has zero thrust at apogee density.</p>
+<p><strong>Apogee density ($RHO):</strong> Reference density in sigma-theta units. Typically set to the most dense water expected to be seen.</p>
+<p><strong>VBD_MIN, VBD_MAX:</strong> AD limits of the VBD system (VBD_MIN is pumped to max, VBD_MAX is bled to minimum)</p>
 </section>
-<div class="grid">
-<div class="card">
-<h3 class="anchored">
-Overview
-</h3>
-<p>
-Description goes here.
-</p>
-</div>
-<div class="card">
-<h3 class="anchored">
-Data
-</h3>
-<p>
-Information about datasets.
-</p>
-</div>
-<div class="card">
-<h3 class="anchored">
-Missions
-</h3>
-<p>
-Deployment summaries.
-</p>
-</div>
-</div>
+<section id="goal-of-ballasting" class="level3">
+<h3 class="anchored" data-anchor-id="goal-of-ballasting">Goal of ballasting</h3>
+<p>Determine the total mass of the glider (i.e., how much lead to add/remove) needed to achieve the desired thrust at a given density while preserving enough reserve positive buoyancy for the glider to surface in the widest possible range of surface densities.</p>
+<p>The glider is ballasted according to:</p>
+<ul>
+<li><p>Target density (at max depth, typically 1000 m) in the area of operation.</p></li>
+<li><p>Thrust – typically 150 to 250 cc. Larger thrusts are needed to overcome strong currents.</p></li>
+<li><p>Reserve buoyancy – e.g., in areas with a very fresh surface layer, it can be crucial to have enough reserve buoyancy so the glider can surface</p></li>
+</ul>
+</section>
+<section id="ballasting-strategy" class="level3">
+<h3 class="anchored" data-anchor-id="ballasting-strategy">Ballasting Strategy</h3>
+<p><img src="../img/ballasting_strategy.png" class="img-fluid"></p>
+<ol type="1">
+<li><p>Weigh glider to get scale mass</p></li>
+<li><p>Obtain an estimate of volmax (e.g., in tank or from test dives)</p></li>
+<li><p>Compute the target mass needed for a given target density &amp; thrust:</p>
+<ol type="a">
+<li><p>Target thrust fixes C_VBD because we never need to get heavier than that thrust, so we can set C_VBD such that when bled to VBD_MAX (minimum buoyancy) we will be at target thrust:</p>
+<ul>
+<li>C_VBD = VBD_MAX – thrust/VBD_CNV</li>
+</ul></li>
+<li><p>With C_VBD fixed we know how positive we can get: it’s the difference between neutrally buoyant at C_VBD (when the glider has minimum volume, volmin) and having maximum buoyancy when pumped to VBD_MIN:</p>
+<ul>
+<li>volmax = volmin + (VBD_MIN – C_VBD)*VBD_CNV</li>
+</ul></li>
+<li><p>Because volmin = mass / RHO, we can rearrange (b) to solve for mass:</p>
+<ul>
+<li>mass = RHO<em>(volmax – (VBD_MIN – C_VBD)</em>VBD_CNV)</li>
+</ul></li>
+</ol></li>
+<li><p>Difference between scale mass and target mass = amount of lead to add or remove</p></li>
+<li><p>Double check that at Volmax, glider will be able to raise antenna (~150cc) in lowest density surface water expected:</p>
+<ul>
+<li>RHO_min = Mass / (Volmax - 150)</li>
+</ul>
+<p>*VBD_CNV = cc’s of oil per AD count = -0.2453 (constant, same for SG and SGX)</p></li>
+</ol>
+</section>
+<section id="ballast-worksheet" class="level3">
+<h3 class="anchored" data-anchor-id="ballast-worksheet">Ballast Worksheet</h3>
+<p>Access from the Tools menu on the basestation3 visualization:</p>
+<p><img src="../img/ballast_worksheet.png" class="img-fluid"></p>
+<p><strong>Ballast worksheet:</strong> generic tool to compute the target mass based on scale mass, volmax, etc.</p>
+<ul>
+<li>We use this when we already have an estimate of volmax from the ballast tank</li>
+</ul>
+<p><strong>VBD regression:</strong> uses dive data to estimate the glider’s volmax by regressing observed vertical velocity (w) against w from the glider flight model.</p>
+<p><img src="../img/ballast_worksheet2.png" class="img-fluid"></p>
+<ul>
+<li><p>We use this after Puget Sound test dives to get a more accurate estimate of volmax</p></li>
+<li><p>That volmax can then be input in the ballast worksheet to get final ballast numbers prior to deployment</p></li>
+</ul>
+</section>
+<section id="vbd-regression" class="level3">
+<h3 class="anchored" data-anchor-id="vbd-regression">VBD Regression</h3>
+<p><img src="../img/vbd_regression_tool.png" class="img-fluid"></p>
+<p><strong>Output of VBD Regression Tool</strong></p>
+<p><img src="../img/regression_output.png" class="img-fluid"></p>
+</section>
+<section id="lead-placement" class="level3">
+<h3 class="anchored" data-anchor-id="lead-placement">Lead Placement</h3>
+<p>Following a trip to the tank (if available) or a field test, adjust the lead position as needed to achieve the desired trim.</p>
+</section>
+<section id="pitch" class="level3">
+<h3 class="anchored" data-anchor-id="pitch">Pitch</h3>
+<p><img src="../img/pitch.png" class="img-fluid"></p>
+<section id="lead-placement-to-affect-pitch" class="level4">
+<h4 class="anchored" data-anchor-id="lead-placement-to-affect-pitch">Lead placement to affect pitch</h4>
+<p>We aim approximately for –60° pitch when the glider is at the surface and ±18° when the glider is diving/climbing</p>
+<ul>
+<li>If pitch is too flat/steep, lead can be placed forward/aft</li>
+</ul>
+<p>We aim very roughly for C_PITCH=2400 (± a few hundred AD counts)</p>
+<ul>
+<li>If C_PITCH is much lower than this (i.e., pitch center is too far forward, so the glider can’t pitch down enough and surface angle is low), place lead forward</li>
+</ul>
+</section>
+</section>
+<section id="roll" class="level3">
+<h3 class="anchored" data-anchor-id="roll">Roll</h3>
+<p>We look for vehicle rolls that are symmetric to port/starboard and roughly ±18°</p>
+<p>If the vehicle is not rolling enough to one or both sides, lead can be placed on the port/starboard</p>
+<p>The SGX mass shifter can roll up to ±80° (compared to ±40° for the original SG), but needs this extra throw to achieve sufficient vehicle roll to turn. To achieve symmetric rolls with SGX, lead placement is typically asymmetrical</p>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
