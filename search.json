@@ -86,6 +86,61 @@
     ]
   },
   {
+    "objectID": "seagliders/refurbishment.html",
+    "href": "seagliders/refurbishment.html",
+    "title": "Refurbishment",
+    "section": "",
+    "text": "Hardware:\n\nHull Fasteners: 6-32 x ½” socket head\nLock Washers\nZinc Anode\n\nO-rings (all are buna rubber O-rings):\n\n012 - CT sail bore seal (also uses an 012 plastic back-up ring), Antenna bulkhead connector\n013 - DGO Connector\n016 - CT Sail Face Seal\n263 - Electronics Hull (both ends)\n270 - End caps\n271 - Battery hull\n5-712 or N70-M1.3x7.95 - IE-55 connectors\n\nBatteries:\n\nSeaglider/SGX 15V main pack (3PD1496) Littlefuse 0251020 (20 A)\nSeaglider 15V forward pack (3PD1503) Littlefuse 0251010 (10 A)\nSGX 15V forward and aft packs (3PD1632, 3PD1633) Littlefuse 0251015 (15 A)\n\nMiscellaneous:\n\nTef Gel: Threads of fasteners that are exposed to seawater (hull sections, fairings), Face of bulkhead connectors, Bladder nut threads\nLoctite 243 (blue): Threads of all fasteners that are not exposed to seawater - Link\nAcetone: Great for cleaning hydraulic oil. Do not use on rubber parts, wings/rudder\nIsopropyl Alcohol: Less effective and less toxic than acetone\nChemtronics Max-Kleen: Cleaner for IE-55 connectors\n3M Silicone Spray: Lubricant for connectors",
+    "crumbs": [
+      "Seagliders",
+      "Refurbishment"
+    ]
+  },
+  {
+    "objectID": "seagliders/refurbishment.html#refurb-materials",
+    "href": "seagliders/refurbishment.html#refurb-materials",
+    "title": "Refurbishment",
+    "section": "",
+    "text": "Hardware:\n\nHull Fasteners: 6-32 x ½” socket head\nLock Washers\nZinc Anode\n\nO-rings (all are buna rubber O-rings):\n\n012 - CT sail bore seal (also uses an 012 plastic back-up ring), Antenna bulkhead connector\n013 - DGO Connector\n016 - CT Sail Face Seal\n263 - Electronics Hull (both ends)\n270 - End caps\n271 - Battery hull\n5-712 or N70-M1.3x7.95 - IE-55 connectors\n\nBatteries:\n\nSeaglider/SGX 15V main pack (3PD1496) Littlefuse 0251020 (20 A)\nSeaglider 15V forward pack (3PD1503) Littlefuse 0251010 (10 A)\nSGX 15V forward and aft packs (3PD1632, 3PD1633) Littlefuse 0251015 (15 A)\n\nMiscellaneous:\n\nTef Gel: Threads of fasteners that are exposed to seawater (hull sections, fairings), Face of bulkhead connectors, Bladder nut threads\nLoctite 243 (blue): Threads of all fasteners that are not exposed to seawater - Link\nAcetone: Great for cleaning hydraulic oil. Do not use on rubber parts, wings/rudder\nIsopropyl Alcohol: Less effective and less toxic than acetone\nChemtronics Max-Kleen: Cleaner for IE-55 connectors\n3M Silicone Spray: Lubricant for connectors",
+    "crumbs": [
+      "Seagliders",
+      "Refurbishment"
+    ]
+  },
+  {
+    "objectID": "seagliders/refurbishment.html#general-guidance-on-fasteners",
+    "href": "seagliders/refurbishment.html#general-guidance-on-fasteners",
+    "title": "Refurbishment",
+    "section": "General Guidance on Fasteners",
+    "text": "General Guidance on Fasteners\n\nUse blue loctite on threads of all fasteners, except fasteners that are exposed to seawater\nFor fasteners that are exposed to seawater, apply Tef-gel to threads\nIf any fasteners come loose at all during the refurb process, remove them completely and re-apply Loctite\nDo not reuse fasteners that are corroded, bent or damaged. After long deployments, consider replacing all fasteners.",
+    "crumbs": [
+      "Seagliders",
+      "Refurbishment"
+    ]
+  },
+  {
+    "objectID": "seagliders/refurbishment.html#sgx-refurb",
+    "href": "seagliders/refurbishment.html#sgx-refurb",
+    "title": "Refurbishment",
+    "section": "SGX Refurb",
+    "text": "SGX Refurb\n\n\nBattery Replacement\n\n\n\nBattery\nOld Weight (kg)\nNew Weight (kg)\nDifference (kg)\n\n\n\n\nPitch Battery\n\n\n\n\n\nFwd Battery\n\n\n\n\n\nAft Battery\n\n\n\n\n\n\nBefore doing any of this move battery pitch slightly aft!! It will be impossible to remove the pitch battery if pitch is fully forward.\n\nRemove fairings\nRelease pressure relief using special Seaglider tool\nUnscrew grounding nut (do not drop)\nUnclip compass\nDisconnect phone bridge\nUnplug batteries\nUnplug all other connectors\nRemove circuit board chassis\nReplace old battery (use blue loctite 243)\nUse 13/32 allen wrench\nRemove side battery (tape is all that is holding it on)\nUse isopropyl alcohol on O-rings\nMeasure battery voltages on new batteries before install\nPut main battery chassis back in glider\nOutside screws take Teflon gel (McMaster)\nUse Gorilla tape for side battery\nLoctite phone bridge screws\nReset batteries\n\nHardware -&gt; batt -&gt; y\nCtrl Q, hard stop\n\nCompass / GPS – direct talk\nPhone (7) query ID\nCurrents file should be same\nPull vacuum to 9, add nitrogen to 15, pull vacuum back to 9\n\nOpen plug all the way when pulling original vacuum and adding nitrogen\nClose port all the way\nOpen plug 3.5 – 4 turns when adding final vacuum\n\nWhen putting cables back, make sure O-ring for comms is attached\nSilicon spray all connectors",
+    "crumbs": [
+      "Seagliders",
+      "Refurbishment"
+    ]
+  },
+  {
+    "objectID": "seagliders/refurbishment.html#sg-refurb",
+    "href": "seagliders/refurbishment.html#sg-refurb",
+    "title": "Refurbishment",
+    "section": "SG Refurb",
+    "text": "SG Refurb\n\n\nBattery Replacement\n\n\n\nBattery\nOld Weight (kg)\nNew Weight (kg)\nDifference (kg)\n\n\n\n\nPitch Battery\n\n\n\n\n\nFwd Battery\n\n\n\n\n\nAft Battery\n\n\n\n\n\n\nBefore doing any of this move battery pitch slightly aft!! It will be impossible to remove the pitch battery if pitch is fully forward.\n\nRemove fairings\nRelease pressure relief using special Seaglider tool\nUnscrew grounding nut (do not drop)\nUnclip compass\nDisconnect phone bridge\nUnplug batteries\nUnplug all other connectors\nRemove circuit board chassis\nReplace old battery (use blue loctite 243)\nUse 13/32 allen wrench\nRemove side battery (tape is all that is holding it on)\nUse isopropyl alcohol on O-rings\nMeasure battery voltages on new batteries before install\nPut main battery chassis back in glider\nOutside screws take Teflon gel (McMaster)\nUse Gorilla tape for side battery\nLoctite phone bridge screws\nReset batteries\n\nHardware -&gt; batt -&gt; y\nCtrl Q, hard stop\n\nCompass / GPS – direct talk\nPhone (7) query ID\nCurrents file should be same\nPull vacuum to 9, add nitrogen to 15, pull vacuum back to 9\n\nOpen plug all the way when pulling original vacuum and adding nitrogen\nClose port all the way\nOpen plug 3.5 – 4 turns when adding final vacuum\n\nWhen putting cables back, make sure O-ring for comms is attached\nSilicon spray all connectors",
+    "crumbs": [
+      "Seagliders",
+      "Refurbishment"
+    ]
+  },
+  {
     "objectID": "seagliders/mission-planning.html",
     "href": "seagliders/mission-planning.html",
     "title": "Mission Planning",
@@ -134,7 +189,7 @@
     "href": "seagliders/ballasting.html#tips",
     "title": "Ballasting",
     "section": "Tips",
-    "text": "Tips\n\nLead Placement\nFollowing a trip to the tank (if available) or a field test, adjust the lead position as needed to achieve the desired trim.\n\n\nPitch\n\n\nLead placement to affect pitch\nWe aim approximately for –60° pitch when the glider is at the surface and ±18° when the glider is diving/climbing\n\nIf pitch is too flat/steep, lead can be placed forward/aft\n\nWe aim very roughly for C_PITCH=2400 (± a few hundred AD counts)\n\nIf C_PITCH is much lower than this (i.e., pitch center is too far forward, so the glider can’t pitch down enough and surface angle is low), place lead forward\n\n\n\n\nRoll\nWe look for vehicle rolls that are symmetric to port/starboard and roughly ±18°\nIf the vehicle is not rolling enough to one or both sides, lead can be placed on the port/starboard\nThe SGX mass shifter can roll up to ±80° (compared to ±40° for the original SG), but needs this extra throw to achieve sufficient vehicle roll to turn. To achieve symmetric rolls with SGX, lead placement is typically asymmetrical",
+    "text": "Tips\n\nPitch\n\n\nLead placement to affect pitch\nWe aim approximately for –60° pitch when the glider is at the surface and ±18° when the glider is diving/climbing\n\nIf pitch is too flat/steep, lead can be placed forward/aft\n\nWe aim very roughly for C_PITCH=2400 (± a few hundred AD counts)\n\nIf C_PITCH is much lower than this (i.e., pitch center is too far forward, so the glider can’t pitch down enough and surface angle is low), place lead forward\n\n\n\n\nRoll\nWe look for vehicle rolls that are symmetric to port/starboard and roughly ±18°\nIf the vehicle is not rolling enough to one or both sides, lead can be placed on the port/starboard\nThe SGX mass shifter can roll up to ±80° (compared to ±40° for the original SG), but needs this extra throw to achieve sufficient vehicle roll to turn. To achieve symmetric rolls with SGX, lead placement is typically asymmetrical",
     "crumbs": [
       "Seagliders",
       "Ballasting"
@@ -292,18 +347,18 @@
     "href": "seagliders/piloting.html",
     "title": "Piloting",
     "section": "",
-    "text": "Pre-Deployment Simulation Checklist\nPilot Log",
+    "text": "Seagliders are buoyancy-driven AUVs: they move through the water without an active thruster and are thus extremely energy efficient. Seaglider is designed for max energy efficiency. Main energy draw is buoyancy pump (~50%).\nWith a glider, some vertical motion is translated into horizontal motion by the wings. Vertical speed is ~10 cm/s. Glide slopes from ~1:1 to ~1:5, horizontal speed ~25 cm/s. The glider can control its pitch and roll by shifting its large internal battery. It uses roll to bank and turn so that it can maintain a specified heading.\n\n\nTypical 1000 m ocean density is 1027.5 kg/m3. Shorthand notation for density: σ = (density - 1000) kg/m3 – so the typical 1000 m density is 27.5 in σ units (or σθ since density is measured based on potential temperature θ).\nWe use potential density (which removes the effect of pressure on density) when talking about Seaglider because Seaglider (mostly) matches the compressibility of seawater due to its hull design.\nThe most important formula in glider operations: \\[\n\\rho = \\frac{m}{V}\n\\]\n\nThe glider can be ballasted (mass changed by adding or removing lead) for:\n\nA given range of water density\nNegative buoyancy (thrust), e.g., in strong currents\nReserve buoyancy, e.g., in areas with low surface density like the Arctic, river plumes or Bay of Bengal (monsoon season).\n\nRule of thumb:\n\nFor Seaglider SG, a ~50 cc change in glider volume produces a 1 σθ density change\nFor SGX, a ~70 cc change in volume produces a 1 σθ density change",
     "crumbs": [
       "Seagliders",
       "Piloting"
     ]
   },
   {
-    "objectID": "seagliders/piloting.html#links",
-    "href": "seagliders/piloting.html#links",
+    "objectID": "seagliders/piloting.html#seaglider-basics",
+    "href": "seagliders/piloting.html#seaglider-basics",
     "title": "Piloting",
     "section": "",
-    "text": "Pre-Deployment Simulation Checklist\nPilot Log",
+    "text": "Seagliders are buoyancy-driven AUVs: they move through the water without an active thruster and are thus extremely energy efficient. Seaglider is designed for max energy efficiency. Main energy draw is buoyancy pump (~50%).\nWith a glider, some vertical motion is translated into horizontal motion by the wings. Vertical speed is ~10 cm/s. Glide slopes from ~1:1 to ~1:5, horizontal speed ~25 cm/s. The glider can control its pitch and roll by shifting its large internal battery. It uses roll to bank and turn so that it can maintain a specified heading.\n\n\nTypical 1000 m ocean density is 1027.5 kg/m3. Shorthand notation for density: σ = (density - 1000) kg/m3 – so the typical 1000 m density is 27.5 in σ units (or σθ since density is measured based on potential temperature θ).\nWe use potential density (which removes the effect of pressure on density) when talking about Seaglider because Seaglider (mostly) matches the compressibility of seawater due to its hull design.\nThe most important formula in glider operations: \\[\n\\rho = \\frac{m}{V}\n\\]\n\nThe glider can be ballasted (mass changed by adding or removing lead) for:\n\nA given range of water density\nNegative buoyancy (thrust), e.g., in strong currents\nReserve buoyancy, e.g., in areas with low surface density like the Arctic, river plumes or Bay of Bengal (monsoon season).\n\nRule of thumb:\n\nFor Seaglider SG, a ~50 cc change in glider volume produces a 1 σθ density change\nFor SGX, a ~70 cc change in volume produces a 1 σθ density change",
     "crumbs": [
       "Seagliders",
       "Piloting"
@@ -337,6 +392,17 @@
     "title": "Piloting",
     "section": "FAQ’s",
     "text": "FAQ’s\nWhat happens if I forgot to change $ALTIM_PING_DEPTH and it’s set deeper than the estimated bottom depth?\nThe glider has a built-in bathymetry map that it follows in addition to using the on-board altimeter. If the altimeter is turned on, the glider will wait for one of two things to happen: 1) The altimeter pings the bottom, or 2) The bathymetry map knows that it is close to the bottom. If the altimeter isn’t sensing the bottom, but the bathymetry shows that the glider is close, then the glider will initiate apogee and begin climbing. So, if $ALTIM_PING_DEPTH is set wrong, it will likely not hit the bottom.\nWhat if the glider does hit the bottom and what does that look like from a piloting standpoint?\nThe glider is traveling slow (~25 cm/s) so any hit to the bottom would be a soft landing. We don’t really need to worry about it damaging the glider but rather we do worry about it getting stuck in random junk on the bottom. If it gets caught in a net or something, it won’t be able to climb back to the surface.\nA glider hitting the bottom will look like a hockey stick. The depth will have the normal dive shape, but then flatten out and not form the classic “V” dive shape. Notice how the “W” vertical speed (solid blue line) goes to “0” indicating no vertical motion. Similarly with the horizontal speed (solid cyan line), notice how it hovers around 0, indicating very little horizontal motion. When it hits the bottom, it will wait there until the dive time reaches half of $T_MISSION (desired time in minutes for mission), then initiate apogee and start climbing. So, if it does hit the bottom in shallow water (~100 m), expect the dive to take longer because it will stay on the bottom until ½ of $T_MISSION.",
+    "crumbs": [
+      "Seagliders",
+      "Piloting"
+    ]
+  },
+  {
+    "objectID": "seagliders/piloting.html#links",
+    "href": "seagliders/piloting.html#links",
+    "title": "Piloting",
+    "section": "Links",
+    "text": "Links\n\nPre-Deployment Simulation Checklist\nPilot Log",
     "crumbs": [
       "Seagliders",
       "Piloting"

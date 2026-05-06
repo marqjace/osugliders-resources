@@ -73,6 +73,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../styles.css">
 </head>
@@ -283,7 +312,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#links" id="toc-links" class="nav-link active" data-scroll-target="#links">Links</a></li>
+  <li><a href="#seaglider-basics" id="toc-seaglider-basics" class="nav-link active" data-scroll-target="#seaglider-basics">Seaglider Basics</a></li>
   <li><a href="#general-piloting-tips" id="toc-general-piloting-tips" class="nav-link" data-scroll-target="#general-piloting-tips">General Piloting Tips</a>
   <ul class="collapse">
   <li><a href="#dive-plots" id="toc-dive-plots" class="nav-link" data-scroll-target="#dive-plots">Dive Plots</a></li>
@@ -291,6 +320,7 @@ ul.task-list li input[type="checkbox"] {
   </ul></li>
   <li><a href="#inshore-th-line-piloting" id="toc-inshore-th-line-piloting" class="nav-link" data-scroll-target="#inshore-th-line-piloting">Inshore TH Line Piloting</a></li>
   <li><a href="#faqs" id="toc-faqs" class="nav-link" data-scroll-target="#faqs">FAQ’s</a></li>
+  <li><a href="#links" id="toc-links" class="nav-link" data-scroll-target="#links">Links</a></li>
   </ul>
 </nav>
     </div>
@@ -316,12 +346,30 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="links" class="level2">
-<h2 class="anchored" data-anchor-id="links">Links</h2>
+<section id="seaglider-basics" class="level2">
+<h2 class="anchored" data-anchor-id="seaglider-basics">Seaglider Basics</h2>
+<p>Seagliders are buoyancy-driven AUVs: they move through the water without an active thruster and are thus extremely energy efficient. Seaglider is designed for max energy efficiency. Main energy draw is buoyancy pump (~50%).</p>
+<p>With a glider, some vertical motion is translated into horizontal motion by the wings. Vertical speed is ~10 cm/s. Glide slopes from ~1:1 to ~1:5, horizontal speed ~25 cm/s. The glider can control its pitch and roll by shifting its large internal battery. It uses roll to bank and turn so that it can maintain a specified heading.</p>
+<section id="density" class="level4">
+<h4 class="anchored" data-anchor-id="density">Density</h4>
+<p>Typical 1000 m ocean density is 1027.5 kg/m3. Shorthand notation for density: σ = (density - 1000) kg/m3 – so the typical 1000 m density is 27.5 in σ units (or σθ since density is measured based on potential temperature θ).</p>
+<p>We use potential density (which removes the effect of pressure on density) when talking about Seaglider because Seaglider (mostly) matches the compressibility of seawater due to its hull design.</p>
+<p>The most important formula in glider operations: <span class="math display">\[
+\rho = \frac{m}{V}
+\]</span></p>
+<p><img src="../img/buoyancy_plot.png" class="img-fluid"></p>
+<p>The glider can be ballasted (mass changed by adding or removing lead) for:</p>
 <ul>
-<li><a href="https://docs.google.com/document/d/1BSOH0RLtQUU7PrWZfJw9tEvpwh7uKujecqRrm--C3Vk/edit?tab=t.0#heading=h.en2i3qgrmuqy">Pre-Deployment Simulation Checklist</a></li>
-<li><a href="https://docs.google.com/document/d/1Ut9yin8Ykr7FIboMhdcxCaXLbEBQ0KElK1F4VF6J7N8/edit?tab=t.0">Pilot Log</a></li>
+<li><p>A given range of water density</p></li>
+<li><p>Negative buoyancy (thrust), e.g., in strong currents</p></li>
+<li><p>Reserve buoyancy, e.g., in areas with low surface density like the Arctic, river plumes or Bay of Bengal (monsoon season).</p></li>
 </ul>
+<p><strong>Rule of thumb:</strong></p>
+<ul>
+<li><p>For Seaglider SG, a ~50 cc change in glider volume produces a 1 σθ density change</p></li>
+<li><p>For SGX, a ~70 cc change in volume produces a 1 σθ density change</p></li>
+</ul>
+</section>
 </section>
 <section id="general-piloting-tips" class="level2">
 <h2 class="anchored" data-anchor-id="general-piloting-tips">General Piloting Tips</h2>
@@ -377,6 +425,13 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>What if the glider does hit the bottom and what does that look like from a piloting standpoint?</strong></p>
 <p>The glider is traveling slow (~25 cm/s) so any hit to the bottom would be a soft landing. We don’t really need to worry about it damaging the glider but rather we do worry about it getting stuck in random junk on the bottom. If it gets caught in a net or something, it won’t be able to climb back to the surface.</p>
 <p>A glider hitting the bottom will look like a hockey stick. The depth will have the normal dive shape, but then flatten out and not form the classic “V” dive shape. Notice how the “W” vertical speed (solid blue line) goes to “0” indicating no vertical motion. Similarly with the horizontal speed (solid cyan line), notice how it hovers around 0, indicating very little horizontal motion. When it hits the bottom, it will wait there until the dive time reaches half of $T_MISSION (desired time in minutes for mission), then initiate apogee and start climbing. So, if it does hit the bottom in shallow water (~100 m), expect the dive to take longer because it will stay on the bottom until ½ of $T_MISSION.</p>
+</section>
+<section id="links" class="level2">
+<h2 class="anchored" data-anchor-id="links">Links</h2>
+<ul>
+<li><a href="https://docs.google.com/document/d/1BSOH0RLtQUU7PrWZfJw9tEvpwh7uKujecqRrm--C3Vk/edit?tab=t.0#heading=h.en2i3qgrmuqy">Pre-Deployment Simulation Checklist</a></li>
+<li><a href="https://docs.google.com/document/d/1Ut9yin8Ykr7FIboMhdcxCaXLbEBQ0KElK1F4VF6J7N8/edit?tab=t.0">Pilot Log</a></li>
+</ul>
 
 
 </section>
