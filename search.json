@@ -164,7 +164,17 @@
     "href": "calibrations/calibrations.html#slocum-glider",
     "title": "Calibrations",
     "section": "Slocum Glider",
-    "text": "Slocum Glider\n\n\n\nTable 2: Current Slocum calibrations\n\n\n\n\n\nGlider\nCTD\nECO Puck\nHydrophone\n\n\n\n\nSL551\n?\n?\n?\n\n\nSL592\n?\n?\n?\n\n\nSL683\n?\n?\n?\n\n\nSL684\n?\n?\n?\n\n\nSL685\n?\n?\n?\n\n\nSL1138\n?\n?\n?\n\n\nSL1267\n?\n?\n?\n\n\nSLNNNN\n?\n?\n?",
+    "text": "Slocum Glider\n\n\n\nTable 2: Current Slocum calibrations\n\n\n\n\n\nGlider\nCTD\nECO Puck\nHydrophone\n\n\n\n\nSL551\n?\n?\n?\n\n\nSL592\nNov 2015\n?\n?\n\n\nSL683\n?\n?\n?\n\n\nSL684\n?\n?\n?\n\n\nSL685\n?\n?\n?\n\n\nSL1138\n?\n?\n?\n\n\nSL1267\n?\n?\n?\n\n\nSLNNNN\n?\n?\n?",
+    "crumbs": [
+      "Calibrations"
+    ]
+  },
+  {
+    "objectID": "calibrations/calibrations.html#optodes",
+    "href": "calibrations/calibrations.html#optodes",
+    "title": "Calibrations",
+    "section": "Optodes",
+    "text": "Optodes\n\n\n\nOptode\nModel\nCal Date\n\n\n\n\n416\nMar 2026\nApr 2024\n\n\n469\n?\n?\n\n\n573\nNov 2024\nApr 2022\n\n\n693\n?\n?\n\n\n979\n?\n?\n\n\n1012\n?\n?\n\n\n1042\n?\n?",
     "crumbs": [
       "Calibrations"
     ]
@@ -337,7 +347,7 @@
     "href": "slocum_gliders/ballasting.html",
     "title": "Ballasting",
     "section": "",
-    "text": "TWR G3 Ballasting Sheet\nJace’s ARCTERX G3 Ballasting Sheet\n\n\nFigure: Illustration of Archimedes’ principle for an underwater glider. The buoyant force acting upward equals the weight of the displaced water (mdisp=ρwaterVm_{} = {} Vmdisp​=ρwater​V), while the glider’s weight acts downward based on its dry mass (mdrym{}mdry​). The apparent (wet) mass measured by a hanging scale is reduced by the displaced water (mwet=mdry−mdispm_{} = m_{} - m_{}mwet​=mdry​−mdisp​), demonstrating that buoyant force is equivalent to the mass of the displaced fluid.",
+    "text": "TWR G3 Ballasting Sheet\nJace’s ARCTERX G3 Ballasting Sheet",
     "crumbs": [
       "Slocum Gliders",
       "Ballasting"
@@ -348,7 +358,18 @@
     "href": "slocum_gliders/ballasting.html#links",
     "title": "Ballasting",
     "section": "",
-    "text": "TWR G3 Ballasting Sheet\nJace’s ARCTERX G3 Ballasting Sheet\n\n\nFigure: Illustration of Archimedes’ principle for an underwater glider. The buoyant force acting upward equals the weight of the displaced water (mdisp=ρwaterVm_{} = {} Vmdisp​=ρwater​V), while the glider’s weight acts downward based on its dry mass (mdrym{}mdry​). The apparent (wet) mass measured by a hanging scale is reduced by the displaced water (mwet=mdry−mdispm_{} = m_{} - m_{}mwet​=mdry​−mdisp​), demonstrating that buoyant force is equivalent to the mass of the displaced fluid.",
+    "text": "TWR G3 Ballasting Sheet\nJace’s ARCTERX G3 Ballasting Sheet",
+    "crumbs": [
+      "Slocum Gliders",
+      "Ballasting"
+    ]
+  },
+  {
+    "objectID": "slocum_gliders/ballasting.html#how-to-ballast",
+    "href": "slocum_gliders/ballasting.html#how-to-ballast",
+    "title": "Ballasting",
+    "section": "How to Ballast",
+    "text": "How to Ballast\n\n\n\nIllustration of Archimedes’ principle for an underwater glider. The buoyant force acting upward equals the weight of the displaced water (\\(m_{\\text{disp}} = \\rho_{\\text{water}} V\\)), while the glider’s weight acts downward based on its dry mass (\\(m_{\\text{dry}}\\)). The apparent (wet) mass measured by a hanging scale is reduced by the displaced water (\\(m_{\\text{wet}} = m_{\\text{dry}} - m_{\\text{disp}}\\)), demonstrating that buoyant force is equivalent to the mass of the displaced fluid.",
     "crumbs": [
       "Slocum Gliders",
       "Ballasting"
