@@ -360,47 +360,75 @@ window.Quarto = {
 <section id="buoyancy-and-ballasting-calculation-example" class="level3">
 <h3 class="anchored" data-anchor-id="buoyancy-and-ballasting-calculation-example">Buoyancy and Ballasting Calculation Example</h3>
 <ol type="1">
-<li><p>Measured Quantities</p>
-<p><strong>Dry mass of glider:</strong></p>
-<p>$m_{} = 101.4 kg (measured on a floor scale, out of the water)</p>
-<p><strong>Water density during ballast test:</strong></p>
-<p><span class="math inline">\(\rho_{\text{water}} = 1022.9 kg m^{-3}\)</span></p>
-<p><strong>Hanging scale measurement (apparent weight in water):</strong></p>
-<p>$m_{} = +0.209 kg (positive means the glider is still heavy in water)</p>
-<p><strong>Additional mass required to make the glider sink:</strong></p>
-<p>$m_{} = 0.346 kg</p></li>
-<li><p>Determining the Displaced Water Mass</p>
-<p>When an object is submerged, the buoyant force equals the weight of the displaced water. In mass units, this corresponds to the total mass of water displaced by the glider.</p>
-<p>The displaced water mass is calculated as:</p>
-<p><span class="math inline">\(m_{\text{disp}} = m_{\text{dry}} + m_{\text{wet}} - m_{\text{added}}\)</span></p>
-<p><span class="math inline">\(m_{\text{disp}} = 101.4 kg + 0.209 kg - 0.346 kg = 101.537 kg\)</span></p></li>
-<li><p>Calculating Glider Volume</p>
-<p>Using the definition of density:</p>
-<p>ρ = m / V → V = m / ρ</p>
-<p>V = mdisp / ρwater</p>
-<p>V = 101.537 kg / (1022.9 kg m-3)</p>
-<p>V = 0.099264 m3 = 99.264 L</p>
-<p><strong>This is the physical volume of the glider.</strong></p></li>
-<li><p>Density of the Glider (Current Configuration)</p>
-<p>The effective density of the glider is its dry mass divided by its volume:</p>
-<p>ρglider = mdry / V</p>
-<p>ρglider = 101.4 kg / 0.099264 m3</p>
-<p>ρglider = 1021.52 kg m-3</p>
-<p>Since this value is lower than seawater density, the glider is positively buoyant.</p></li>
-<li><p>Target Density and Required Mass</p>
-<p><strong>Target neutral-buoyancy density:</strong></p>
-<p>ρ target = 1022.8 kg m-3</p>
-<p>The mass required for neutral buoyancy at this density is:</p>
-<p>mtarget = ρ target × V</p>
-<p>mtarget = 1022.8 kg m-3 × 0.099264 m3</p>
-<p>mtarget = 101.527 kg</p></li>
-<li><p>Ballast Adjustment Required</p>
-<p>The required ballast change is the difference between the target mass and the current dry mass:</p>
-<p>∆m = mtarget − mdry</p>
-<p>∆m = 101.527 kg − 101.4 kg = +0.127 kg</p>
-<p><strong>Interpretation:</strong></p>
-<p>A positive value means mass must be added. Therefore, <strong>127 g must be added</strong> to achieve neutral buoyancy at 1022.8 kg m-3.</p></li>
-<li><p>Key Takeaways</p>
+<li><p><strong>Measured Quantities</strong></p>
+<pre><code> **Dry mass of glider:**
+
+ $m_{\text{dry}} = 101.4 kg (measured on a floor scale, out of the water) 
+
+ **Water density during ballast test:** 
+
+ $\rho_{\text{water}} = 1022.9 kg m^{-3}$ 
+
+ **Hanging scale measurement (apparent weight in water):** 
+
+ $m_{\text{wet}} = +0.209 kg (positive means the glider is still heavy in water) 
+
+ **Additional mass required to make the glider sink:** 
+
+ $m_{\text{added}} = 0.346 kg</code></pre></li>
+<li><p><strong>Determining the Displaced Water Mass</strong></p>
+<pre><code> When an object is submerged, the buoyant force equals the weight of the displaced water. In mass units, this corresponds to the total mass of water displaced by the glider. 
+
+ The displaced water mass is calculated as: 
+
+ $m_{\text{disp}} = m_{\text{dry}} + m_{\text{wet}} - m_{\text{added}}$
+
+ $m_{\text{disp}} = 101.4 kg + 0.209 kg - 0.346 kg = 101.537 kg$</code></pre></li>
+<li><p><strong>Calculating Glider Volume</strong></p>
+<pre><code> Using the definition of density: 
+
+ ρ = m / V   →   V = m / ρ 
+
+ V = mdisp / ρwater 
+
+ V = 101.537 kg / (1022.9 kg m-3) 
+
+ V = 0.099264 m3 = 99.264 L 
+
+ **This is the physical volume of the glider.**</code></pre></li>
+<li><p><strong>Density of the Glider (Current Configuration)</strong></p>
+<pre><code> The effective density of the glider is its dry mass divided by its volume: 
+
+ ρglider = mdry / V 
+
+ ρglider = 101.4 kg / 0.099264 m3
+
+ ρglider = 1021.52 kg m-3 
+
+ Since this value is lower than seawater density, the glider is positively buoyant.</code></pre></li>
+<li><p><strong>Target Density and Required Mass</strong></p>
+<pre><code> **Target neutral-buoyancy density:** 
+
+ ρ target = 1022.8 kg m-3 
+
+ The mass required for neutral buoyancy at this density is: 
+
+ mtarget = ρ target × V 
+
+ mtarget = 1022.8 kg m-3 × 0.099264 m3 
+
+ mtarget = 101.527 kg</code></pre></li>
+<li><p><strong>Ballast Adjustment Required</strong></p>
+<pre><code> The required ballast change is the difference between the target mass and the current dry mass: 
+
+ ∆m = mtarget − mdry 
+
+ ∆m = 101.527 kg − 101.4 kg = +0.127 kg
+
+ **Interpretation:** 
+
+ A positive value means mass must be added. Therefore, **127 g must be added** to achieve neutral buoyancy at 1022.8 kg m-3.</code></pre></li>
+<li><p><strong>Key Takeaways</strong></p>
 <ul>
 <li><p>Always track units at every step.</p></li>
 <li><p>Water density must match the ballast test environment.</p></li>
