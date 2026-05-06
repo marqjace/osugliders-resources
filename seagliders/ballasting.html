@@ -73,6 +73,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../styles.css">
 </head>
@@ -283,17 +312,24 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#ballasting-theory-tools" id="toc-ballasting-theory-tools" class="nav-link active" data-scroll-target="#ballasting-theory-tools">Ballasting Theory &amp; Tools</a>
+  <li><a href="#ballasting-theory" id="toc-ballasting-theory" class="nav-link active" data-scroll-target="#ballasting-theory">Ballasting Theory</a>
   <ul class="collapse">
   <li><a href="#definitions" id="toc-definitions" class="nav-link" data-scroll-target="#definitions">Definitions</a></li>
   <li><a href="#goal-of-ballasting" id="toc-goal-of-ballasting" class="nav-link" data-scroll-target="#goal-of-ballasting">Goal of ballasting</a></li>
   <li><a href="#ballasting-strategy" id="toc-ballasting-strategy" class="nav-link" data-scroll-target="#ballasting-strategy">Ballasting Strategy</a></li>
+  </ul></li>
+  <li><a href="#tools" id="toc-tools" class="nav-link" data-scroll-target="#tools">Tools</a>
+  <ul class="collapse">
   <li><a href="#ballast-worksheet" id="toc-ballast-worksheet" class="nav-link" data-scroll-target="#ballast-worksheet">Ballast Worksheet</a></li>
   <li><a href="#vbd-regression" id="toc-vbd-regression" class="nav-link" data-scroll-target="#vbd-regression">VBD Regression</a></li>
+  </ul></li>
+  <li><a href="#tips" id="toc-tips" class="nav-link" data-scroll-target="#tips">Tips</a>
+  <ul class="collapse">
   <li><a href="#lead-placement" id="toc-lead-placement" class="nav-link" data-scroll-target="#lead-placement">Lead Placement</a></li>
   <li><a href="#pitch" id="toc-pitch" class="nav-link" data-scroll-target="#pitch">Pitch</a></li>
   <li><a href="#roll" id="toc-roll" class="nav-link" data-scroll-target="#roll">Roll</a></li>
   </ul></li>
+  <li><a href="#links" id="toc-links" class="nav-link" data-scroll-target="#links">Links</a></li>
   </ul>
 </nav>
     </div>
@@ -319,8 +355,8 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="ballasting-theory-tools" class="level2">
-<h2 class="anchored" data-anchor-id="ballasting-theory-tools">Ballasting Theory &amp; Tools</h2>
+<section id="ballasting-theory" class="level2">
+<h2 class="anchored" data-anchor-id="ballasting-theory">Ballasting Theory</h2>
 <section id="definitions" class="level3">
 <h3 class="anchored" data-anchor-id="definitions">Definitions</h3>
 <p><strong>Volmax:</strong> maximum volume of the glider (i.e., volume when all moveable oil is in the external bladder), in cc’s. Getting an accurate estimate of volmax is key to ballasting. We get an initial estimate of volmax in a tank, and a more refined estimate during the test deployment. Volmax is a constant for a given glider configuration (external payload and VBD settings).</p>
@@ -349,27 +385,32 @@ ul.task-list li input[type="checkbox"] {
 <li><p>Obtain an estimate of volmax (e.g., in tank or from test dives)</p></li>
 <li><p>Compute the target mass needed for a given target density &amp; thrust:</p>
 <ol type="a">
-<li><p>Target thrust fixes C_VBD because we never need to get heavier than that thrust, so we can set C_VBD such that when bled to VBD_MAX (minimum buoyancy) we will be at target thrust:</p>
-<ul>
-<li>C_VBD = VBD_MAX – thrust/VBD_CNV</li>
-</ul></li>
-<li><p>With C_VBD fixed we know how positive we can get: it’s the difference between neutrally buoyant at C_VBD (when the glider has minimum volume, volmin) and having maximum buoyancy when pumped to VBD_MIN:</p>
-<ul>
-<li>volmax = volmin + (VBD_MIN – C_VBD)*VBD_CNV</li>
-</ul></li>
-<li><p>Because volmin = mass / RHO, we can rearrange (b) to solve for mass:</p>
-<ul>
-<li>mass = RHO<em>(volmax – (VBD_MIN – C_VBD)</em>VBD_CNV)</li>
-</ul></li>
+<li>Target thrust fixes C_VBD because we never need to get heavier than that thrust, so we can set C_VBD such that when bled to VBD_MAX (minimum buoyancy) we will be at target thrust:</li>
+</ol>
+<p><span class="math display">\[
+C\_VBD = VBD\_MAX – \frac{thrust}{VBD\_CNV}
+\]</span></p>
+<ol start="2" type="a">
+<li>With C_VBD fixed we know how positive we can get: it’s the difference between neutrally buoyant at C_VBD (when the glider has minimum volume, volmin) and having maximum buoyancy when pumped to VBD_MIN:</li>
+</ol>
+<p><span class="math display">\[
+volmax = volmin + (VBD\_MIN – C\_VBD)*VBD\_CNV
+\]</span></p>
+<ol start="3" type="a">
+<li>Because volmin = mass / RHO, we can rearrange (b) to solve for mass: <span class="math display">\[
+mass = \rho*(volmax - (VBD\_MIN - C\_VBD)*VBD\_CNV)
+\]</span></li>
 </ol></li>
 <li><p>Difference between scale mass and target mass = amount of lead to add or remove</p></li>
-<li><p>Double check that at Volmax, glider will be able to raise antenna (~150cc) in lowest density surface water expected:</p>
-<ul>
-<li>RHO_min = Mass / (Volmax - 150)</li>
-</ul>
+<li><p>Double check that at Volmax, glider will be able to raise antenna (~150cc) in lowest density surface water expected: <span class="math display">\[
+\rho_{min} = \frac{mass}{volmax - 150}
+\]</span></p>
 <p>*VBD_CNV = cc’s of oil per AD count = -0.2453 (constant, same for SG and SGX)</p></li>
 </ol>
 </section>
+</section>
+<section id="tools" class="level2">
+<h2 class="anchored" data-anchor-id="tools">Tools</h2>
 <section id="ballast-worksheet" class="level3">
 <h3 class="anchored" data-anchor-id="ballast-worksheet">Ballast Worksheet</h3>
 <p>Access from the Tools menu on the basestation3 visualization:</p>
@@ -391,6 +432,9 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>Output of VBD Regression Tool</strong></p>
 <p><img src="../img/regression_output.png" class="img-fluid"></p>
 </section>
+</section>
+<section id="tips" class="level2">
+<h2 class="anchored" data-anchor-id="tips">Tips</h2>
 <section id="lead-placement" class="level3">
 <h3 class="anchored" data-anchor-id="lead-placement">Lead Placement</h3>
 <p>Following a trip to the tank (if available) or a field test, adjust the lead position as needed to achieve the desired trim.</p>
@@ -415,9 +459,15 @@ ul.task-list li input[type="checkbox"] {
 <p>We look for vehicle rolls that are symmetric to port/starboard and roughly ±18°</p>
 <p>If the vehicle is not rolling enough to one or both sides, lead can be placed on the port/starboard</p>
 <p>The SGX mass shifter can roll up to ±80° (compared to ±40° for the original SG), but needs this extra throw to achieve sufficient vehicle roll to turn. To achieve symmetric rolls with SGX, lead placement is typically asymmetrical</p>
-
-
 </section>
+</section>
+<section id="links" class="level2">
+<h2 class="anchored" data-anchor-id="links">Links</h2>
+<ul>
+<li><a href="https://seaglider.pub/tools/fw_tank.html">Fresh Water Ballast Tool</a></li>
+</ul>
+
+
 </section>
 
 </main> <!-- /main -->
