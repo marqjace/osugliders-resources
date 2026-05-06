@@ -337,7 +337,18 @@
     "href": "slocum_gliders/ballasting.html",
     "title": "Ballasting",
     "section": "",
-    "text": "Slocum Gliders\n\n\n\n\nOverview\n\n\nDescription goes here.\n\n\n\n\nInstrumentation\n\n\nSensors and payloads.\n\n\n\n\nOperations\n\n\nHow they are deployed.",
+    "text": "TWR G3 Ballasting Sheet\nJace’s ARCTERX G3 Ballasting Sheet",
+    "crumbs": [
+      "Slocum Gliders",
+      "Ballasting"
+    ]
+  },
+  {
+    "objectID": "slocum_gliders/ballasting.html#links",
+    "href": "slocum_gliders/ballasting.html#links",
+    "title": "Ballasting",
+    "section": "",
+    "text": "TWR G3 Ballasting Sheet\nJace’s ARCTERX G3 Ballasting Sheet",
     "crumbs": [
       "Slocum Gliders",
       "Ballasting"
@@ -377,11 +388,44 @@
     ]
   },
   {
+    "objectID": "slocum_gliders/resources.html#templates",
+    "href": "slocum_gliders/resources.html#templates",
+    "title": "Resources",
+    "section": "Templates",
+    "text": "Templates\n\nWater Flight Test\nFunctional Checkout\nDeployment Notes",
+    "crumbs": [
+      "Slocum Gliders",
+      "Resources"
+    ]
+  },
+  {
+    "objectID": "slocum_gliders/resources.html#training",
+    "href": "slocum_gliders/resources.html#training",
+    "title": "Resources",
+    "section": "Training",
+    "text": "Training\n\nSlocum Glider Training",
+    "crumbs": [
+      "Slocum Gliders",
+      "Resources"
+    ]
+  },
+  {
+    "objectID": "slocum_gliders/resources.html#revisions",
+    "href": "slocum_gliders/resources.html#revisions",
+    "title": "Resources",
+    "section": "Revisions",
+    "text": "Revisions\n\nG3S New Processor Guide\nG3 Wiring Diagram",
+    "crumbs": [
+      "Slocum Gliders",
+      "Resources"
+    ]
+  },
+  {
     "objectID": "slocum_gliders/slocum.html",
     "href": "slocum_gliders/slocum.html",
     "title": "Overview",
     "section": "",
-    "text": "Slocum Gliders\n\n\n\n\nTable 1: Current Slocum fleet condition\n\n\n\n\n\nGlider\nLast Deployment\nNext Deployment\n\n\n\n\nSL551\n?\nN/A\n\n\nSL592\nSep 2025\nSep 2026\n\n\nSL683\n?\n?\n\n\nSL684\nMar 2026\nJul 2026\n\n\nSL685\nMar 2026\nJul 2026\n\n\nSL1138\nJul 2025\nMay 2026\n\n\nSL1267\nFeb 2026\nJul 2026?\n\n\nSLNNNN\n?\n?",
+    "text": "Slocum Gliders\n\n\n\n\nTable 1: Current Slocum fleet condition\n\n\n\n\n\nGlider\nLast Deployment\nNext Deployment\n\n\n\n\nSL551\n?\nN/A\n\n\nSL592\nSep 2025\nSep 2026\n\n\nSL683\n?\n?\n\n\nSL684\nMar 2026\nAug 2026\n\n\nSL685\nMar 2026\nAug 2026\n\n\nSL1138\nJul 2025\nMay 2026\n\n\nSL1267\nFeb 2026\nJul 2026?\n\n\nSLNNNN\n?\n?",
     "crumbs": [
       "Slocum Gliders"
     ]
