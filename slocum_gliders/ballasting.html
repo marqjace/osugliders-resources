@@ -363,62 +363,73 @@ window.Quarto = {
 <li><p><strong>Measured Quantities</strong></p>
 <ul>
 <li><p><strong>Dry mass of glider:</strong></p>
-<ul>
-<li><span class="math inline">\(m_{\text{dry}} = 101.4\,\mathrm{kg}\)</span> (measured on a floor scale, out of the water)</li>
-</ul></li>
+<p><span class="math display">\[
+  m_{\text{dry}} = 101.4\,\mathrm{kg}
+  \]</span> (measured on a floor scale, out of the water)</p></li>
 <li><p><strong>Water density during ballast test:</strong></p>
-<ul>
-<li><span class="math inline">\(\rho_{\text{water}} = 1022.9\,\mathrm{kg\,m^{-3}}\)</span></li>
-</ul></li>
+<p><span class="math display">\[
+  \rho_{\text{water}} = 1022.9\,\mathrm{kg\,m^{-3}}
+  \]</span> (measured at the test location)</p></li>
 <li><p><strong>Hanging scale measurement (apparent weight in water):</strong></p>
-<ul>
-<li><span class="math inline">\(m_{\text{wet}} = +0.209\,\mathrm{kg}\)</span> (positive means the glider is still heavy in water)</li>
-</ul></li>
+<p><span class="math display">\[
+  m_{\text{wet}} = +0.209\,\mathrm{kg}
+  \]</span> (positive means the glider is still heavy in water)</p></li>
 <li><p><strong>Additional mass required to make the glider sink:</strong></p>
-<ul>
-<li><span class="math inline">\(m_{\text{added}} = 0.346\,\mathrm{kg}\)</span></li>
-</ul></li>
+<p><span class="math display">\[
+  m_{\text{added}} = 0.346\,\mathrm{kg}
+  \]</span></p></li>
 </ul></li>
 <li><p><strong>Determining the Displaced Water Mass</strong></p>
-<p>When an object is submerged, the buoyant force equals the weight of the displaced water. In mass units, this corresponds to the total mass of water displaced by the glider.</p>
-<p>The displaced water mass is calculated as:</p>
+<ul>
+<li><p>When an object is submerged, the buoyant force equals the weight of the displaced water. In mass units, this corresponds to the total mass of water displaced by the glider.</p></li>
+<li><p>The displaced water mass is calculated as:</p>
 <p><span class="math display">\[
-m_{\text{disp}} = m_{\text{dry}} + m_{\text{wet}} - m_{\text{added}}
-\]</span></p>
+  m_{\text{disp}} = m_{\text{dry}} + m_{\text{wet}} - m_{\text{added}}
+  \]</span></p>
 <p><span class="math display">\[
-m_{\text{disp}} = 101.4 + 0.209 - 0.346 = 101.537\,\mathrm{kg}
-\]</span></p></li>
+  m_{\text{disp}} = 101.4 + 0.209 - 0.346 = 101.537\,\mathrm{kg}
+  \]</span></p></li>
+</ul></li>
 <li><p><strong>Calculating Glider Volume</strong></p>
-<p>Using the definition of density:</p>
+<ul>
+<li><p>Using the definition of density:</p>
 <p><span class="math display">\[
-\rho = \frac{m}{V} \Rightarrow V = \frac{m}{\rho}
-\]</span></p>
+  \rho = \frac{m}{V} \Rightarrow V = \frac{m}{\rho}
+  \]</span></p>
 <p><span class="math display">\[
-V = \frac{m_{\text{disp}}}{\rho_{\text{water}}} = \frac{101.537}{1022.9} = 0.099264\,\mathrm{m^3} = 99.264\,\mathrm{L}
-\]</span></p>
-<p><strong>This is the physical volume of the glider.</strong></p></li>
+  V = \frac{m_{\text{disp}}}{\rho_{\text{water}}} = \frac{101.537}{1022.9} = 0.099264\,\mathrm{m^3} = 99.264\,\mathrm{L}
+  \]</span> <strong>This is the physical volume of the glider.</strong></p></li>
+</ul></li>
 <li><p><strong>Density of the Glider (Current Configuration)</strong></p>
-<p>The effective density of the glider is its dry mass divided by its volume:</p>
+<ul>
+<li><p>The effective density of the glider is its dry mass divided by its volume:</p>
 <p><span class="math display">\[
-\rho_{\text{glider}} = \frac{m_{\text{dry}}}{V} = \frac{101.4}{0.099264} = 1021.52\,\mathrm{kg\,m^{-3}}
-\]</span></p>
-<p>Since this value is lower than seawater density, the glider is positively buoyant.</p></li>
+  \rho_{\text{glider}} = \frac{m_{\text{dry}}}{V} = \frac{101.4}{0.099264} = 1021.52\,\mathrm{kg\,m^{-3}}
+  \]</span></p></li>
+<li><p>Since this value is lower than seawater density, the glider is positively buoyant.</p></li>
+</ul></li>
 <li><p><strong>Target Density and Required Mass</strong></p>
-<p><strong>Target neutral-buoyancy density:</strong></p>
+<ul>
+<li><p><strong>Target neutral-buoyancy density:</strong></p>
 <p><span class="math display">\[
-\rho_{\text{target}} = 1022.8\,\mathrm{kg\,m^{-3}}
-\]</span></p>
-<p>The mass required for neutral buoyancy at this density is:</p>
+  \rho_{\text{target}} = 1022.8\,\mathrm{kg\,m^{-3}}
+  \]</span></p></li>
+<li><p>The mass required for neutral buoyancy at this density is:</p>
 <p><span class="math display">\[
-m_{\text{target}} = \rho_{\text{target}}V = 1022.8 \times 0.099264 = 101.527\,\mathrm{kg}
-\]</span></p></li>
+  m_{\text{target}} = \rho_{\text{target}}V = 1022.8 \times 0.099264 = 101.527\,\mathrm{kg}
+  \]</span></p></li>
+</ul></li>
 <li><p><strong>Ballast Adjustment Required</strong></p>
-<p>The required ballast change is the difference between the target mass and the current dry mass:</p>
+<ul>
+<li><p>The required ballast change is the difference between the target mass and the current dry mass:</p>
 <p><span class="math display">\[
-\Delta m = m_{\text{target}} - m_{\text{dry}} = 101.527 - 101.4 = +0.127\,\mathrm{kg}
-\]</span></p>
-<p><strong>Interpretation:</strong></p>
-<p>A positive value means mass must be added. Therefore, <strong>127 g must be added</strong> to achieve neutral buoyancy at <span class="math inline">\(1022.8\,\mathrm{kg\,m^{-3}}\)</span>.</p></li>
+  \Delta m = m_{\text{target}} - m_{\text{dry}} = 101.527 - 101.4 = +0.127\,\mathrm{kg}
+  \]</span></p></li>
+<li><p><strong>Interpretation:</strong></p>
+<ul>
+<li>A positive value means mass must be added. Therefore, <strong>127 g must be added</strong> to achieve neutral buoyancy at <span class="math inline">\(1022.8\,\mathrm{kg\,m^{-3}}\)</span>.</li>
+</ul></li>
+</ul></li>
 <li><p><strong>Key Takeaways</strong></p>
 <ul>
 <li>Always track units at every step.</li>
