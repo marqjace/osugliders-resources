@@ -312,7 +312,11 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#seaglider-basics" id="toc-seaglider-basics" class="nav-link active" data-scroll-target="#seaglider-basics">Seaglider Basics</a></li>
+  <li><a href="#piloting-basics" id="toc-piloting-basics" class="nav-link active" data-scroll-target="#piloting-basics">Piloting Basics</a>
+  <ul class="collapse">
+  <li><a href="#pilots-responsibilities" id="toc-pilots-responsibilities" class="nav-link" data-scroll-target="#pilots-responsibilities">Pilot’s responsibilities</a></li>
+  <li><a href="#phases-of-a-typical-seaglider-dive" id="toc-phases-of-a-typical-seaglider-dive" class="nav-link" data-scroll-target="#phases-of-a-typical-seaglider-dive">Phases of a typical Seaglider Dive</a></li>
+  </ul></li>
   <li><a href="#general-piloting-tips" id="toc-general-piloting-tips" class="nav-link" data-scroll-target="#general-piloting-tips">General Piloting Tips</a>
   <ul class="collapse">
   <li><a href="#dive-plots" id="toc-dive-plots" class="nav-link" data-scroll-target="#dive-plots">Dive Plots</a></li>
@@ -346,29 +350,49 @@ window.Quarto = {
 </header>
 
 
-<section id="seaglider-basics" class="level2">
-<h2 class="anchored" data-anchor-id="seaglider-basics">Seaglider Basics</h2>
-<p>Seagliders are buoyancy-driven AUVs: they move through the water without an active thruster and are thus extremely energy efficient. Seaglider is designed for max energy efficiency. Main energy draw is buoyancy pump (~50%).</p>
-<p>With a glider, some vertical motion is translated into horizontal motion by the wings. Vertical speed is ~10 cm/s. Glide slopes from ~1:1 to ~1:5, horizontal speed ~25 cm/s. The glider can control its pitch and roll by shifting its large internal battery. It uses roll to bank and turn so that it can maintain a specified heading.</p>
-<section id="density" class="level4">
-<h4 class="anchored" data-anchor-id="density">Density</h4>
-<p>Typical 1000 m ocean density is 1027.5 kg/m3. Shorthand notation for density: σ = (density - 1000) kg/m3 – so the typical 1000 m density is 27.5 in σ units (or σθ since density is measured based on potential temperature θ).</p>
-<p>We use potential density (which removes the effect of pressure on density) when talking about Seaglider because Seaglider (mostly) matches the compressibility of seawater due to its hull design.</p>
-<p>The most important formula in glider operations: <span class="math display">\[
-\rho = \frac{m}{V}
-\]</span></p>
-<p><img src="../img/buoyancy_plot.png" class="img-fluid"></p>
-<p>The glider can be ballasted (mass changed by adding or removing lead) for:</p>
+<section id="piloting-basics" class="level2">
+<h2 class="anchored" data-anchor-id="piloting-basics">Piloting Basics</h2>
+<section id="pilots-responsibilities" class="level3">
+<h3 class="anchored" data-anchor-id="pilots-responsibilities">Pilot’s responsibilities</h3>
 <ul>
-<li><p>A given range of water density</p></li>
-<li><p>Negative buoyancy (thrust), e.g., in strong currents</p></li>
-<li><p>Reserve buoyancy, e.g., in areas with low surface density like the Arctic, river plumes or Bay of Bengal (monsoon season).</p></li>
-</ul>
-<p><strong>Rule of thumb:</strong></p>
+<li><p>Command glider to gather desired data from target area at proper space &amp; time intervals</p></li>
+<li><p>Keep glider flying efficiently until end of mission (batteries depleted, reached pickup location, completed n-th dive, etc.)</p></li>
+<li><p>Modify glider’s commands/files/behavior to match environmental changes (e.g., currents, stratification, bottom depth, etc.)</p></li>
+<li><p>Continuously monitor flight and engineering data to determine cause of errors &amp; problems and decide whether to continue mission</p></li>
+<li><p>Continuously monitor science data to ensure that sensors are functioning properly and mission science goals are being met</p></li>
+<li><p>Set up the mission directory on the basestation</p></li>
+<li><p>Adjust files controlling:</p>
 <ul>
-<li><p>For Seaglider SG, a ~50 cc change in glider volume produces a 1 σθ density change</p></li>
-<li><p>For SGX, a ~70 cc change in volume produces a 1 σθ density change</p></li>
+<li><p>parameters for phases of dive, centers of systems, control modes (cmdfile file)</p></li>
+<li><p>waypoints and associated details (targets file)</p></li>
+<li><p>sampling scheme for each sensor (science file and/or scicon.sch)</p></li>
+<li><p>Use special files for interactive debugging or resending dive data (pdoscmds.bat file)</p></li>
+</ul></li>
 </ul>
+</section>
+<section id="phases-of-a-typical-seaglider-dive" class="level3">
+<h3 class="anchored" data-anchor-id="phases-of-a-typical-seaglider-dive">Phases of a typical Seaglider Dive</h3>
+<p><img src="../img/sg_phases.png" class="img-fluid"></p>
+<section id="controlling-dive-time-and-depth---fundamental-parameters" class="level4">
+<h4 class="anchored" data-anchor-id="controlling-dive-time-and-depth---fundamental-parameters">Controlling dive time and depth - fundamental $PARAMETERS</h4>
+<ul>
+<li><p>Specify the desired dive time in minutes and dive depth in meters:</p>
+<ul>
+<li><p><strong>$T_DIVE</strong> (minutes)</p></li>
+<li><p><strong>$D_TGT</strong> (meters)</p></li>
+</ul></li>
+<li><p>These two parameters set the desired vertical velocity. A convenient bit of math is that <strong>$T_DIVE = $D_TGT/3</strong> sets a vertical velocity of 10 cm/s.</p></li>
+<li><p>The actual target depth will be a function of <strong>$D_TGT</strong> and bathymetry (if loaded).</p></li>
+<li><p>The first two failsafes on these values are:</p>
+<ul>
+<li><p><strong>$T_MISSION</strong> (also minutes)</p></li>
+<li><p><strong>$D_ABORT</strong> (also meters)</p></li>
+</ul></li>
+<li><p>If time into the dive reaches <strong><span class="math inline">\(T_MISSION/2** before it reaches apogee (target depth) it will move to climb phase. If it reaches **\)</span>T_MISSION</strong> before it reaches the surface it will move to surface phase.</p></li>
+<li><p>We typically set <strong><span class="math inline">\(T_MISSION** to be 15-60 minutes longer than **\)</span>T_DIVE</strong></p></li>
+<li><p>If the glider reaches <strong>$D_ABORT</strong> at any time, it will immediately pump to maximum buoyancy and move to surface phase (go into recovery)</p></li>
+</ul>
+</section>
 </section>
 </section>
 <section id="general-piloting-tips" class="level2">
@@ -384,6 +408,7 @@ window.Quarto = {
 <li><p><img src="../img/pitch_plot.png" class="img-fluid"></p></li>
 <li><p><u>Roll plot:</u> There are two lines on this graph, one for dive and one for climb. We want both of these lines to go through the black +. Similar to the pitch plot, there are our actual center values and implied center values. Adjust halfway until satisfactory.</p></li>
 <li><p><img src="../img/roll_plot.png" class="img-fluid"></p></li>
+<li><p><img src="../img/sg_roll.png" class="img-fluid" style="width:70.0%"></p></li>
 <li><p><u>Energy plots:</u> Watch for something draining too much power. You’ll see the consumption for something be much higher than normal.</p></li>
 <li><p><img src="../img/energy_plot.png" class="img-fluid"></p></li>
 <li><p><u>Humidity &amp; Pressure plot:</u> 50-60 Humidity is good, 8-9 Pressure is good. Just make sure that nothing changes dramatically.</p></li>

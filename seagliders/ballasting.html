@@ -323,8 +323,9 @@ window.Quarto = {
   <li><a href="#ballast-worksheet" id="toc-ballast-worksheet" class="nav-link" data-scroll-target="#ballast-worksheet">Ballast Worksheet</a></li>
   <li><a href="#vbd-regression" id="toc-vbd-regression" class="nav-link" data-scroll-target="#vbd-regression">VBD Regression</a></li>
   </ul></li>
-  <li><a href="#tips" id="toc-tips" class="nav-link" data-scroll-target="#tips">Tips</a>
+  <li><a href="#ballasting-tips" id="toc-ballasting-tips" class="nav-link" data-scroll-target="#ballasting-tips">Ballasting Tips</a>
   <ul class="collapse">
+  <li><a href="#vbd" id="toc-vbd" class="nav-link" data-scroll-target="#vbd">VBD</a></li>
   <li><a href="#pitch" id="toc-pitch" class="nav-link" data-scroll-target="#pitch">Pitch</a></li>
   <li><a href="#roll" id="toc-roll" class="nav-link" data-scroll-target="#roll">Roll</a></li>
   </ul></li>
@@ -432,8 +433,24 @@ mass = \rho*(volmax - (VBD\_MIN - C\_VBD)*VBD\_CNV)
 <p><img src="../img/regression_output.png" class="img-fluid"></p>
 </section>
 </section>
-<section id="tips" class="level2">
-<h2 class="anchored" data-anchor-id="tips">Tips</h2>
+<section id="ballasting-tips" class="level2">
+<h2 class="anchored" data-anchor-id="ballasting-tips">Ballasting Tips</h2>
+<section id="vbd" class="level3">
+<h3 class="anchored" data-anchor-id="vbd">VBD</h3>
+<p>The VBD for contains around 800 cc’s of moveable oil, i.e., available buoyancy (same for SG and SGX). To determine the density range (stratification) where your glider can operate:</p>
+<ol type="1">
+<li>Start with the total buoyancy (cc’s of oil) available</li>
+<li>Subtract the cc’s of oil needed to lift the antenna out of the water</li>
+<li>Subtract the cc’s of oil needed for negative buoyancy (thrust), usually specified at the deepest/densest water to be encountered.</li>
+<li>Divide the remaining cc’s of oil by the rule of thumb (50 or 70 cc/σθ):</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../img/vbd_calc.png" class="img-fluid figure-img"></p>
+<figcaption>VBD Calculation</figcaption>
+</figure>
+</div>
+</section>
 <section id="pitch" class="level3">
 <h3 class="anchored" data-anchor-id="pitch">Pitch</h3>
 <p><img src="../img/pitch.png" class="img-fluid"></p>

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Overview</title>
+<title>seagliders</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -73,6 +73,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../styles.css">
 </head>
@@ -278,30 +307,26 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#seaglider-fleet" id="toc-seaglider-fleet" class="nav-link active" data-scroll-target="#seaglider-fleet">Seaglider Fleet</a></li>
+  <li><a href="#current-th-line-deployment" id="toc-current-th-line-deployment" class="nav-link" data-scroll-target="#current-th-line-deployment">Current TH Line Deployment</a></li>
+  <li><a href="#seaglider-basics" id="toc-seaglider-basics" class="nav-link" data-scroll-target="#seaglider-basics">Seaglider Basics</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
-<main class="content column-page-right" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Overview</h1>
-</div>
+<main class="content column-body" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
 
-<div class="quarto-title-meta column-page-right">
 
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-
-<p><img src="../img/seaglider_logo.png" class="img-fluid"></p>
+<p><img src="../img/seaglider_logo.png" class="img-fluid" style="width:80.0%"></p>
+<section id="seaglider-fleet" class="level2">
+<h2 class="anchored" data-anchor-id="seaglider-fleet">Seaglider Fleet</h2>
 <div class="grid">
 <div class="card">
 <h3 class="anchored">
@@ -360,6 +385,7 @@ SG680
 </p>
 </div>
 </div>
+</section>
 <section id="current-th-line-deployment" class="level2">
 <h2 class="anchored" data-anchor-id="current-th-line-deployment">Current TH Line Deployment</h2>
 <iframe src="https://osugrg.seaglider.pub/map/266?mission=2026_03_14_TH_Line" width="100%" height="600" style="border:0;" loading="lazy">
@@ -419,8 +445,34 @@ Table&nbsp;1: Current Seaglider fleet condition
 </div>
 </figure>
 </div>
+</section>
+<section id="seaglider-basics" class="level2">
+<h2 class="anchored" data-anchor-id="seaglider-basics">Seaglider Basics</h2>
+<p>Seagliders are buoyancy-driven AUVs: they move through the water without an active thruster and are thus extremely energy efficient. Seaglider is designed for max energy efficiency. Main energy draw is buoyancy pump (~50%).</p>
+<p>With a glider, some vertical motion is translated into horizontal motion by the wings. Vertical speed is ~10 cm/s. Glide slopes from ~1:1 to ~1:5, horizontal speed ~25 cm/s. The glider can control its pitch and roll by shifting its large internal battery. It uses roll to bank and turn so that it can maintain a specified heading.</p>
+<section id="density" class="level4">
+<h4 class="anchored" data-anchor-id="density">Density</h4>
+<p>Typical 1000 m ocean density is 1027.5 kg/m3. Shorthand notation for density: σ = (density - 1000) kg/m3 – so the typical 1000 m density is 27.5 in σ units (or σθ since density is measured based on potential temperature θ).</p>
+<p>We use potential density (which removes the effect of pressure on density) when talking about Seaglider because Seaglider (mostly) matches the compressibility of seawater due to its hull design.</p>
+<p>The most important formula in glider operations: <span class="math display">\[
+\rho = \frac{m}{V}
+\]</span></p>
+<p>VBD moves oil between an internal reservoir that is inside the glider’s pressure housing and a bladder that is external to the pressure housing, thereby changing the total volume of the glider and hence its density. Oil pumped from the reservoir to the bladder increases the glider’s volume and decreases its density, while oil pumped from the bladder to the reservoir decreases the glider’s volume and increases its density.</p>
+<p><img src="../img/buoyancy_plot.png" class="img-fluid"></p>
+<p>The glider can be ballasted (mass changed by adding or removing lead) for:</p>
+<ul>
+<li><p>A given range of water density</p></li>
+<li><p>Negative buoyancy (thrust), e.g., in strong currents</p></li>
+<li><p>Reserve buoyancy, e.g., in areas with low surface density like the Arctic, river plumes or Bay of Bengal (monsoon season).</p></li>
+</ul>
+<p><strong>Rule of thumb:</strong></p>
+<ul>
+<li><p>For Seaglider SG, a ~50 cc change in glider volume produces a 1 σθ density change</p></li>
+<li><p>For SGX, a ~70 cc change in volume produces a 1 σθ density change</p></li>
+</ul>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
