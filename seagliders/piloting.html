@@ -354,21 +354,21 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="piloting-basics">Piloting Basics</h2>
 <section id="pilots-responsibilities" class="level3">
 <h3 class="anchored" data-anchor-id="pilots-responsibilities">Pilot’s responsibilities</h3>
-<ul>
-<li><p>Command glider to gather desired data from target area at proper space &amp; time intervals</p></li>
-<li><p>Keep glider flying efficiently until end of mission (batteries depleted, reached pickup location, completed n-th dive, etc.)</p></li>
-<li><p>Modify glider’s commands/files/behavior to match environmental changes (e.g., currents, stratification, bottom depth, etc.)</p></li>
-<li><p>Continuously monitor flight and engineering data to determine cause of errors &amp; problems and decide whether to continue mission</p></li>
-<li><p>Continuously monitor science data to ensure that sensors are functioning properly and mission science goals are being met</p></li>
-<li><p>Set up the mission directory on the basestation</p></li>
-<li><p>Adjust files controlling:</p>
-<ul>
-<li><p>parameters for phases of dive, centers of systems, control modes (cmdfile file)</p></li>
-<li><p>waypoints and associated details (targets file)</p></li>
-<li><p>sampling scheme for each sensor (science file and/or scicon.sch)</p></li>
-<li><p>Use special files for interactive debugging or resending dive data (pdoscmds.bat file)</p></li>
-</ul></li>
-</ul>
+<ol type="1">
+<li>Command glider to gather desired data from target area at proper space &amp; time intervals</li>
+<li>Keep glider flying efficiently until end of mission (batteries depleted, reached pickup location, completed n-th dive, etc.)</li>
+<li>Modify glider’s commands/files/behavior to match environmental changes (e.g., currents, stratification, bottom depth, etc.)</li>
+<li>Continuously monitor flight and engineering data to determine cause of errors &amp; problems and decide whether to continue mission</li>
+<li>Continuously monitor science data to ensure that sensors are functioning properly and mission science goals are being met</li>
+<li>Set up the mission directory on the basestation</li>
+<li>Adjust files controlling:
+<ol type="1">
+<li>parameters for phases of dive, centers of systems, control modes (cmdfile file)</li>
+<li>waypoints and associated details (targets file)</li>
+<li>sampling scheme for each sensor (science file and/or scicon.sch)</li>
+<li>use special files for interactive debugging or resending dive data (pdoscmds.bat file)</li>
+</ol></li>
+</ol>
 </section>
 <section id="phases-of-a-typical-seaglider-dive" class="level3">
 <h3 class="anchored" data-anchor-id="phases-of-a-typical-seaglider-dive">Phases of a typical Seaglider Dive</h3>
@@ -381,16 +381,39 @@ window.Quarto = {
 <li><p><strong>$T_DIVE</strong> (minutes)</p></li>
 <li><p><strong>$D_TGT</strong> (meters)</p></li>
 </ul></li>
-<li><p>These two parameters set the desired vertical velocity. A convenient bit of math is that <strong>$T_DIVE = $D_TGT/3</strong> sets a vertical velocity of 10 cm/s.</p></li>
-<li><p>The actual target depth will be a function of <strong>$D_TGT</strong> and bathymetry (if loaded).</p></li>
+<li><p>These two parameters set the desired vertical velocity. A convenient bit of math is that <strong>$T_DIVE = <span class="math inline">\(D_TGT/3** sets a vertical velocity of 10 cm/s. The actual target depth will be a function of **\)</span>D_TGT</strong> and bathymetry (if loaded).</p></li>
 <li><p>The first two failsafes on these values are:</p>
 <ul>
 <li><p><strong>$T_MISSION</strong> (also minutes)</p></li>
 <li><p><strong>$D_ABORT</strong> (also meters)</p></li>
 </ul></li>
-<li><p>If time into the dive reaches <strong><span class="math inline">\(T_MISSION/2** before it reaches apogee (target depth) it will move to climb phase. If it reaches **\)</span>T_MISSION</strong> before it reaches the surface it will move to surface phase.</p></li>
-<li><p>We typically set <strong><span class="math inline">\(T_MISSION** to be 15-60 minutes longer than **\)</span>T_DIVE</strong></p></li>
+<li><p>If time into the dive reaches <strong><span class="math inline">\(T\_MISSION/2** before it reaches apogee (target depth) it will move to climb phase. If it reaches **\)</span>T_MISSION</strong> before it reaches the surface it will move to surface phase. We typically set <strong><span class="math inline">\(T\_MISSION** to be 15-60 minutes longer than **\)</span>T_DIVE</strong></p></li>
 <li><p>If the glider reaches <strong>$D_ABORT</strong> at any time, it will immediately pump to maximum buoyancy and move to surface phase (go into recovery)</p></li>
+</ul>
+</section>
+<section id="launch-beginning-of-mission" class="level4">
+<h4 class="anchored" data-anchor-id="launch-beginning-of-mission">1. Launch (beginning of mission)</h4>
+<p>Launch phase begins after field team has performed a selftest and initiated Sea Launch (more details later).</p>
+<ul>
+<li><p>Seaglider is in its surface position:</p>
+<ul>
+<li><p>Rolled to neutral</p></li>
+<li><p>Pitched fully forward (typically -30 to -60° pitch angle)</p></li>
+<li><p>VBD pumped to max volume, $SM_CC is automatically reset to max cc’s at launch. VBD AD counts will equal $VBD_MIN.</p></li>
+</ul></li>
+<li><p>Seaglider acquires the first GPS fix, “GPS1”, and initiates a communications session via Iridium</p></li>
+</ul>
+</section>
+<section id="surface" class="level4">
+<h4 class="anchored" data-anchor-id="surface">2. Surface</h4>
+<p>Surface phase begins at the end of the climb-phase data acquisition and has the following steps:</p>
+<ul>
+<li><p>Surface maneuver (pitch fully forward, rolled to $C_ROLL_CLIMB, VBD pumped to $SM_CC)</p></li>
+<li><p>GPS1 acquired (unless $T_GPS minutes elapse without a GPS fix)</p></li>
+<li><p>Glider initiates Iridium call to basestation, files transferred between glider &amp; basestation (more on this tomorrow)</p></li>
+<li><p>Surface depth and angle measured (average over 10 readings) and written to log file</p></li>
+<li><p>Second GPS fix (GPS2) acquired - this is the most recent position of the glider before diving</p></li>
+<li><p>Navigation &amp; flight calculations: buoyancy, pitch angle, and heading computed for the next dive</p></li>
 </ul>
 </section>
 </section>
