@@ -337,7 +337,7 @@
     "href": "slocum_gliders/ballasting.html",
     "title": "Ballasting",
     "section": "",
-    "text": "TWR G3 Ballasting Sheet\nJace’s ARCTERX G3 Ballasting Sheet",
+    "text": "TWR G3 Ballasting Sheet\nJace’s ARCTERX G3 Ballasting Sheet\n\n\nFigure: Illustration of Archimedes’ principle for an underwater glider. The buoyant force acting upward equals the weight of the displaced water (mdisp=ρwaterVm_{} = {} Vmdisp​=ρwater​V), while the glider’s weight acts downward based on its dry mass (mdrym{}mdry​). The apparent (wet) mass measured by a hanging scale is reduced by the displaced water (mwet=mdry−mdispm_{} = m_{} - m_{}mwet​=mdry​−mdisp​), demonstrating that buoyant force is equivalent to the mass of the displaced fluid.",
     "crumbs": [
       "Slocum Gliders",
       "Ballasting"
@@ -348,7 +348,7 @@
     "href": "slocum_gliders/ballasting.html#links",
     "title": "Ballasting",
     "section": "",
-    "text": "TWR G3 Ballasting Sheet\nJace’s ARCTERX G3 Ballasting Sheet",
+    "text": "TWR G3 Ballasting Sheet\nJace’s ARCTERX G3 Ballasting Sheet\n\n\nFigure: Illustration of Archimedes’ principle for an underwater glider. The buoyant force acting upward equals the weight of the displaced water (mdisp=ρwaterVm_{} = {} Vmdisp​=ρwater​V), while the glider’s weight acts downward based on its dry mass (mdrym{}mdry​). The apparent (wet) mass measured by a hanging scale is reduced by the displaced water (mwet=mdry−mdispm_{} = m_{} - m_{}mwet​=mdry​−mdisp​), demonstrating that buoyant force is equivalent to the mass of the displaced fluid.",
     "crumbs": [
       "Slocum Gliders",
       "Ballasting"
@@ -370,7 +370,7 @@
     "href": "slocum_gliders/resources.html",
     "title": "Resources",
     "section": "",
-    "text": "Bench Test Microrider through Science Computer - How to bench test a microrider through the Slocum science computer. This is to verify that the glider is able to generate p files on the microrider via comms through the science bay.\nHigh Speed Data Offload - Instructions for how to download data off the glider using 921600 baud rate.\nAbort Behaviors - Basic instructions for how to respond to an abort.\nBattery Charging - How to charge G3S lithium rechargeable batteries.",
+    "text": "Bench Test Microrider through Science Computer - How to bench test a microrider through the Slocum science computer. This is to verify that the glider is able to generate p files on the microrider via comms through the science bay.\nHigh Speed Data Offload - Instructions for how to download data off the glider using 921600 baud rate.\nAbort Behaviors - Basic instructions for how to respond to an abort.\nBattery Charging - How to charge G3S lithium rechargeable batteries.\nHull Polishing Tutorial - A quick tutorial on how to polish the hull of a Slocum glider.\nSlocum G3 Operator’s Manual - 2019",
     "crumbs": [
       "Slocum Gliders",
       "Resources"
@@ -381,7 +381,7 @@
     "href": "slocum_gliders/resources.html#manuals",
     "title": "Resources",
     "section": "",
-    "text": "Bench Test Microrider through Science Computer - How to bench test a microrider through the Slocum science computer. This is to verify that the glider is able to generate p files on the microrider via comms through the science bay.\nHigh Speed Data Offload - Instructions for how to download data off the glider using 921600 baud rate.\nAbort Behaviors - Basic instructions for how to respond to an abort.\nBattery Charging - How to charge G3S lithium rechargeable batteries.",
+    "text": "Bench Test Microrider through Science Computer - How to bench test a microrider through the Slocum science computer. This is to verify that the glider is able to generate p files on the microrider via comms through the science bay.\nHigh Speed Data Offload - Instructions for how to download data off the glider using 921600 baud rate.\nAbort Behaviors - Basic instructions for how to respond to an abort.\nBattery Charging - How to charge G3S lithium rechargeable batteries.\nHull Polishing Tutorial - A quick tutorial on how to polish the hull of a Slocum glider.\nSlocum G3 Operator’s Manual - 2019",
     "crumbs": [
       "Slocum Gliders",
       "Resources"
@@ -392,7 +392,7 @@
     "href": "slocum_gliders/resources.html#templates",
     "title": "Resources",
     "section": "Templates",
-    "text": "Templates\n\nWater Flight Test\nFunctional Checkout\nDeployment Notes",
+    "text": "Templates\n\nWater Flight Test - Water flight test checkout template.\nFunctional Checkout Template - Basic functional checkout template.\nDeployment Notes Template - Template for taking notes during deployment.",
     "crumbs": [
       "Slocum Gliders",
       "Resources"
@@ -403,7 +403,7 @@
     "href": "slocum_gliders/resources.html#training",
     "title": "Resources",
     "section": "Training",
-    "text": "Training\n\nSlocum Glider Training",
+    "text": "Training\n\nSlocum Glider Training Slides - Basic glider training slides; Apr 2023.\nSFMC User Manual - User manual for the Slocum Fleet Mission Control; 2019.",
     "crumbs": [
       "Slocum Gliders",
       "Resources"
@@ -414,7 +414,7 @@
     "href": "slocum_gliders/resources.html#revisions",
     "title": "Resources",
     "section": "Revisions",
-    "text": "Revisions\n\nG3S New Processor Guide\nG3 Wiring Diagram",
+    "text": "Revisions\n\nG3S New Processor Guide - Jan 2021\nG3 Wiring Diagram - Oct 2017",
     "crumbs": [
       "Slocum Gliders",
       "Resources"
