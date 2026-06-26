@@ -500,7 +500,7 @@
     "href": "slocum_gliders/resources.html",
     "title": "Resources",
     "section": "",
-    "text": "Bench Test Microrider through Science Computer - How to bench test a microrider through the Slocum science computer. This is to verify that the glider is able to generate p files on the microrider via comms through the science bay.\nHigh Speed Data Offload - Instructions for how to download data off the glider using 921600 baud rate.\nAbort Behaviors - Basic instructions for how to respond to an abort.\nBattery Charging - How to charge G3S lithium rechargeable batteries.\nHull Polishing Tutorial - A quick tutorial on how to polish the hull of a Slocum glider.\nSlocum G3 Operator’s Manual - 2019\nUpdate RIOT Bottle Software - Instructions for updating the RIOT bottle software on a Slocum glider.",
+    "text": "Bench Test Microrider through Science Computer - How to bench test a microrider through the Slocum science computer. This is to verify that the glider is able to generate p files on the microrider via comms through the science bay.\nHigh Speed Data Offload - Instructions for how to download data off the glider using 921600 baud rate.\nAbort Behaviors - Basic instructions for how to respond to an abort.\nBattery Charging - How to charge G3S lithium rechargeable batteries.\nHull Polishing Tutorial - A quick tutorial on how to polish the hull of a Slocum glider.\nUpdate RIOT Bottle Software - Instructions for updating the RIOT bottle software on a Slocum glider.",
     "crumbs": [
       "Slocum Gliders",
       "Resources"
@@ -511,7 +511,7 @@
     "href": "slocum_gliders/resources.html#manuals",
     "title": "Resources",
     "section": "",
-    "text": "Bench Test Microrider through Science Computer - How to bench test a microrider through the Slocum science computer. This is to verify that the glider is able to generate p files on the microrider via comms through the science bay.\nHigh Speed Data Offload - Instructions for how to download data off the glider using 921600 baud rate.\nAbort Behaviors - Basic instructions for how to respond to an abort.\nBattery Charging - How to charge G3S lithium rechargeable batteries.\nHull Polishing Tutorial - A quick tutorial on how to polish the hull of a Slocum glider.\nSlocum G3 Operator’s Manual - 2019\nUpdate RIOT Bottle Software - Instructions for updating the RIOT bottle software on a Slocum glider.",
+    "text": "Bench Test Microrider through Science Computer - How to bench test a microrider through the Slocum science computer. This is to verify that the glider is able to generate p files on the microrider via comms through the science bay.\nHigh Speed Data Offload - Instructions for how to download data off the glider using 921600 baud rate.\nAbort Behaviors - Basic instructions for how to respond to an abort.\nBattery Charging - How to charge G3S lithium rechargeable batteries.\nHull Polishing Tutorial - A quick tutorial on how to polish the hull of a Slocum glider.\nUpdate RIOT Bottle Software - Instructions for updating the RIOT bottle software on a Slocum glider.",
     "crumbs": [
       "Slocum Gliders",
       "Resources"
@@ -522,7 +522,7 @@
     "href": "slocum_gliders/resources.html#templates",
     "title": "Resources",
     "section": "Templates",
-    "text": "Templates\n\nWater Flight Test - Water flight test checkout template.\nFunctional Checkout Template - Basic functional checkout template.\nDeployment Notes Template - Template for taking notes during deployment.",
+    "text": "Templates\n\nWater Flight Test - Water flight test checkout template.\nFunctional Checkout Template - Basic funccheckout template.\nDeployment Notes Template - Template for taking notes during deployment.",
     "crumbs": [
       "Slocum Gliders",
       "Resources"
@@ -544,7 +544,7 @@
     "href": "slocum_gliders/resources.html#revisions",
     "title": "Resources",
     "section": "Revisions",
-    "text": "Revisions\n\nG3S New Processor Guide - Jan 2021\nG3 Wiring Diagram - Oct 2017",
+    "text": "Revisions\n\nG3S New Processor Guide - Jan 2021",
     "crumbs": [
       "Slocum Gliders",
       "Resources"
