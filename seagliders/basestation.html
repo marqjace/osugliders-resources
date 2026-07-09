@@ -383,9 +383,14 @@ ul.task-list li input[type="checkbox"] {
 <p><code>/opt/basestation/bin/python /usr/local/basestation3/BaseCtrlFiles.py \ --mission_dir &lt;seaglider_home_directory&gt; [--group_etc &lt;group_etc_directory&gt;] dump_pagers_yml</code></p>
 </blockquote>
 <p><strong>MakeMissionTimeSeries.py</strong></p>
-<p>This script generates a whole-mission time series of the specified mission directory.</p>
+<p>This script generates a whole-mission time series of the specified mission directory using the per-dive netcdf files.</p>
 <blockquote class="blockquote">
-<p><code>/opt/basestation/bin/python /usr/local/basestation3/MakeMissionTimeSeries.py -m [MISSION_DIR]</code></p>
+<p><code>/opt/basestation/bin/python /usr/local/basestation3/MakeMissionTimeSeries.py --mission_dir [MISSION_DIR] --verbose --force</code></p>
+</blockquote>
+<p><strong>MakeDiveProfiles.py</strong></p>
+<p>This script generates the per-dive netcdf files for the specified mission directory. This can be used to regenerate the dive profiles if needed.</p>
+<blockquote class="blockquote">
+<p><code>/opt/basestation/bin/python /usr/local/basestation3/MakeDiveProfiles.py --mission_dir [MISSION_DIR] --verbose --force</code></p>
 </blockquote>
 
 
