@@ -129,22 +129,11 @@
     ]
   },
   {
-    "objectID": "seagliders/refurbishment.html#sgx-refurb",
-    "href": "seagliders/refurbishment.html#sgx-refurb",
+    "objectID": "seagliders/refurbishment.html#refurbishment-instructions",
+    "href": "seagliders/refurbishment.html#refurbishment-instructions",
     "title": "Refurbishment",
-    "section": "SGX Refurb",
-    "text": "SGX Refurb\n\n\nBattery Replacement\n\n\n\nBattery\nOld Weight (kg)\nNew Weight (kg)\nDifference (kg)\n\n\n\n\nPitch Battery\n\n\n\n\n\nFwd Battery\n\n\n\n\n\nAft Battery\n\n\n\n\n\n\nBefore doing any of this move battery pitch slightly aft!! It will be impossible to remove the pitch battery if pitch is fully forward.\n\nRemove fairings\nRelease pressure relief using special Seaglider tool\nUnscrew grounding nut (do not drop)\nUnclip compass\nDisconnect phone bridge\nUnplug batteries\nUnplug all other connectors\nRemove circuit board chassis\nReplace old battery (use blue loctite 243)\nUse 13/32 allen wrench\nRemove side battery (tape is all that is holding it on)\nUse isopropyl alcohol on O-rings\nMeasure battery voltages on new batteries before install\nPut main battery chassis back in glider\nOutside screws take Teflon gel (McMaster)\nUse Gorilla tape for side battery\nLoctite phone bridge screws\nReset batteries\n\nHardware -&gt; batt -&gt; y\nCtrl Q, hard stop\n\nCompass / GPS – direct talk\nPhone (7) query ID\nCurrents file should be same\nPull vacuum to 9, add nitrogen to 15, pull vacuum back to 9\n\nOpen plug all the way when pulling original vacuum and adding nitrogen\nClose port all the way\nOpen plug 3.5 – 4 turns when adding final vacuum\n\nWhen putting cables back, make sure O-ring for comms is attached\nSilicon spray all connectors",
-    "crumbs": [
-      "Seagliders",
-      "Refurbishment"
-    ]
-  },
-  {
-    "objectID": "seagliders/refurbishment.html#sg-refurb",
-    "href": "seagliders/refurbishment.html#sg-refurb",
-    "title": "Refurbishment",
-    "section": "SG Refurb",
-    "text": "SG Refurb\n\n\nBattery Replacement\n\n\n\nBattery\nOld Weight (kg)\nNew Weight (kg)\nDifference (kg)\n\n\n\n\nPitch Battery\n\n\n\n\n\nFwd Battery\n\n\n\n\n\nAft Battery\n\n\n\n\n\n\nBefore doing any of this move battery pitch slightly aft!! It will be impossible to remove the pitch battery if pitch is fully forward.\n\nRemove fairings\nRelease pressure relief using special Seaglider tool\nUnscrew grounding nut (do not drop)\nUnclip compass\nDisconnect phone bridge\nUnplug batteries\nUnplug all other connectors\nRemove circuit board chassis\nReplace old battery (use blue loctite 243)\nUse 13/32 allen wrench\nRemove side battery (tape is all that is holding it on)\nUse isopropyl alcohol on O-rings\nMeasure battery voltages on new batteries before install\nPut main battery chassis back in glider\nOutside screws take Teflon gel (McMaster)\nUse Gorilla tape for side battery\nLoctite phone bridge screws\nReset batteries\n\nHardware -&gt; batt -&gt; y\nCtrl Q, hard stop\n\nCompass / GPS – direct talk\nPhone (7) query ID\nCurrents file should be same\nPull vacuum to 9, add nitrogen to 15, pull vacuum back to 9\n\nOpen plug all the way when pulling original vacuum and adding nitrogen\nClose port all the way\nOpen plug 3.5 – 4 turns when adding final vacuum\n\nWhen putting cables back, make sure O-ring for comms is attached\nSilicon spray all connectors",
+    "section": "Refurbishment Instructions",
+    "text": "Refurbishment Instructions\n\n\nYour browser cannot display PDFs inline. Download the PDF.",
     "crumbs": [
       "Seagliders",
       "Refurbishment"
