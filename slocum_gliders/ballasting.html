@@ -317,6 +317,7 @@ window.Quarto = {
   <ul class="collapse">
   <li><a href="#buoyancy-and-ballasting-calculation-example" id="toc-buoyancy-and-ballasting-calculation-example" class="nav-link" data-scroll-target="#buoyancy-and-ballasting-calculation-example">Buoyancy and Ballasting Calculation Example</a></li>
   <li><a href="#brians-ballasting-instructions" id="toc-brians-ballasting-instructions" class="nav-link" data-scroll-target="#brians-ballasting-instructions">Brian’s Ballasting Instructions</a></li>
+  <li><a href="#compass-calibration" id="toc-compass-calibration" class="nav-link" data-scroll-target="#compass-calibration">Compass Calibration</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -474,6 +475,124 @@ m_{\text{target}} = \rho_{\text{target}}V = 1022.8 \times 0.099264 = 101.527\,\m
 <li>Put c_air_pump 0</li>
 <li>Exit</li>
 </ol></li>
+</ol>
+</section>
+<section id="compass-calibration" class="level3">
+<h3 class="anchored" data-anchor-id="compass-calibration">Compass Calibration</h3>
+<ol type="1">
+<li>Gather compass calibration supplies
+<ol type="1">
+<li>Freewave<br>
+</li>
+<li>Computer with ProComm<br>
+</li>
+<li>Rope with carabiner<br>
+</li>
+<li>Ladder<br>
+</li>
+</ol></li>
+<li>Hang glider from rope as high as possible<br>
+</li>
+<li>Connect Freewave to computer and battery power<br>
+</li>
+<li>Open ProComm, confirm serial cable 1 (port 3) (this is the 2 port blue serial cable)<br>
+</li>
+<li>Connect Green plug
+<ol type="1">
+<li>CTRL C<br>
+</li>
+<li>Put c_air_pump 0<br>
+</li>
+<li>Callback 30<br>
+</li>
+<li>Lab_mode on<br>
+</li>
+<li>Use - argos iridium (disable argos and iridium)<br>
+</li>
+<li>Exit pico (G2) / exit shell (G3) exit to picoDOS)<br>
+</li>
+<li>Talk att (G2) / talk attitude (G3) (begin reading compass)<br>
+</li>
+</ol></li>
+<li>Close teraterm<br>
+</li>
+<li>Open Revolution app, using the same port as teraterm
+<ol type="1">
+<li>Wireless<br>
+</li>
+<li>Close<br>
+</li>
+<li>Tools -&gt; Calibrate magnetics -&gt; start<br>
+</li>
+<li>Confirm setting
+<ol type="1">
+<li>3D<br>
+</li>
+<li>3000 samples<br>
+</li>
+<li>64 something?<br>
+</li>
+</ol></li>
+</ol></li>
+<li>Begin spinning glider in every orientation possible
+<ol type="1">
+<li>X,Y,Z planes in Revolution app will begin to be populated<br>
+</li>
+<li>If at OOI, do 300 observations flat with the glider upright, then 300 with the nose down, then 300 with the nose up. Flip the glider sideways and complete this process for 900 more observations, then flip the other way and repeat.<br>
+</li>
+<li>Get 3000 observations<br>
+</li>
+<li>If more than 3% mag sigma, redo<br>
+</li>
+<li>Use new (saves file)<br>
+</li>
+<li>This file is saved directly to the glider<br>
+</li>
+<li>Write down the change in Mag Total sigma 3 values for future reference.<br>
+</li>
+</ol></li>
+<li>Open teraterm, it should automatically connect via the same port
+<ol type="1">
+<li>Enter<br>
+</li>
+</ol></li>
+<li>If at OOI and doing a compass characterization:
+<ol type="1">
+<li>App -lab (to go back into gliderdos)<br>
+</li>
+<li>Callback 30<br>
+</li>
+<li>Put c_iridium_on 0<br>
+</li>
+<li>Put c_argos_on -1<br>
+</li>
+<li>Put c_gps_on 0<br>
+</li>
+<li>Report ++ m_vacuum m_coulomb_current m_heading
+<ol type="1">
+<li>Once m_vacuum is steady and m_coulomb_current is 0.15 amp or less it indicates that the air pump motor is no longer running and the air bladder is full. Then remove those 2 variables from reporting<br>
+</li>
+</ol></li>
+<li>Report - m_vacuum m_coulomb_current<br>
+</li>
+<li>Close teraterm<br>
+</li>
+<li>Start compass program (python program)<br>
+</li>
+</ol></li>
+<li>After compass characterization
+<ol type="1">
+<li>App -lab<br>
+</li>
+<li>Report clearall<br>
+</li>
+<li>Put c_de_oil_vol -1000 (if deep pump)<br>
+</li>
+<li>Put c_air_pump 0<br>
+</li>
+<li>exit</li>
+</ol></li>
+<li>Pull green plug (because we’re in picoDOS, no need to exit)</li>
 </ol>
 
 
