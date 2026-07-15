@@ -316,6 +316,7 @@ window.Quarto = {
   <li><a href="#how-to-ballast" id="toc-how-to-ballast" class="nav-link" data-scroll-target="#how-to-ballast">How to Ballast</a>
   <ul class="collapse">
   <li><a href="#buoyancy-and-ballasting-calculation-example" id="toc-buoyancy-and-ballasting-calculation-example" class="nav-link" data-scroll-target="#buoyancy-and-ballasting-calculation-example">Buoyancy and Ballasting Calculation Example</a></li>
+  <li><a href="#brians-ballasting-instructions" id="toc-brians-ballasting-instructions" class="nav-link" data-scroll-target="#brians-ballasting-instructions">Brian’s Ballasting Instructions</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -424,6 +425,55 @@ m_{\text{target}} = \rho_{\text{target}}V = 1022.8 \times 0.099264 = 101.527\,\m
 <li>If glider density <span class="math inline">\(&lt;\rho_{\text{water}}\)</span>, the glider floats.</li>
 <li>Small mass changes (<span class="math inline">\(O(100\,\mathrm{g})\)</span>) significantly affect buoyancy.</li>
 </ul></li>
+</ol>
+</section>
+<section id="brians-ballasting-instructions" class="level3">
+<h3 class="anchored" data-anchor-id="brians-ballasting-instructions">Brian’s Ballasting Instructions</h3>
+<ol type="1">
+<li>After applying vacuum to 6 for G2, 7 for G3 +- 0.3 inHg, ballast glider</li>
+<li>Supplies are in yellow ballasting box
+<ol type="1">
+<li>Water pump</li>
+<li>Red winch</li>
+</ol></li>
+<li>Open ballasting tank, put metal across top</li>
+<li>Hang scales and fishing line</li>
+<li>Connect Freewave wireless data receiver</li>
+<li>Connect Green plug
+<ol type="1">
+<li>CTRL C</li>
+<li>Put c_air_pump 0</li>
+<li>Callback 30</li>
+<li>Lab_mode on</li>
+<li>Use - argos iridium attitude_rev (disable argos iridium and compass)</li>
+<li>Ballast</li>
+</ol></li>
+<li>Put the glider in the water and add wings, making sure the entire glider, including the antenna, is under water.</li>
+<li>Remove sensor caps (salinity and 02)</li>
+<li>Shake to remove bubbles from glider, particularly from the nose</li>
+<li>Flush the salinity sensor using the aquarium pump</li>
+<li>Raise glider off of scales, zero scales, and put back on fishing line near black part of glider</li>
+<li>Measure weight on front and aft after letting the water in the tank settle down</li>
+<li>Test science instrument, get water temp and salinity
+<ol type="1">
+<li>Report clearall</li>
+<li>Put c_science_all_on 0 (turn on science instruments)</li>
+<li>Put c_science_send_all 1</li>
+<li>Report ++ sci_water_temp (continuously record temp)</li>
+<li>Report ++ sci_water_cond (continuously record salinity)</li>
+<li>Report clearall</li>
+</ol></li>
+<li>Save ProComm buffer (to use in script when calculating average temp and salinity
+<ol type="1">
+<li>Edit -&gt; scrollback buffer to -&gt; clipboard</li>
+</ol></li>
+<li>Power down glider
+<ol type="1">
+<li>Exit reset</li>
+<li>CTRL C</li>
+<li>Put c_air_pump 0</li>
+<li>Exit</li>
+</ol></li>
 </ol>
 
 
