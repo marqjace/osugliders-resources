@@ -179,8 +179,8 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../slocum_gliders/ballasting.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Ballasting</span></a>
+  <a href="../slocum_gliders/pre-deployment.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Pre-Deployment</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -286,6 +286,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#seaglider" id="toc-seaglider" class="nav-link active" data-scroll-target="#seaglider">Seaglider</a></li>
   <li><a href="#slocum-glider" id="toc-slocum-glider" class="nav-link" data-scroll-target="#slocum-glider">Slocum Glider</a></li>
   <li><a href="#optodes" id="toc-optodes" class="nav-link" data-scroll-target="#optodes">Optodes</a></li>
+  <li><a href="#aanderaa-oxygen-calibration" id="toc-aanderaa-oxygen-calibration" class="nav-link" data-scroll-target="#aanderaa-oxygen-calibration"><strong>Aanderaa Oxygen Calibration</strong></a></li>
   </ul>
 </nav>
     </div>
@@ -512,6 +513,135 @@ Table&nbsp;3: Current oxygen optode calibrations
 </div>
 </figure>
 </div>
+</section>
+<section id="aanderaa-oxygen-calibration" class="level2">
+<h2 class="anchored" data-anchor-id="aanderaa-oxygen-calibration"><strong>Aanderaa Oxygen Calibration</strong></h2>
+<p><strong>Complete oxygen calibrations before and after each glider deployment</strong></p>
+<ol type="1">
+<li><p>The day before the Winkler titration, fill the black water tank with tap water and let it sit overnight to come to room temperature. Have the sensors in the water overnight to come to equilibrium with water.</p></li>
+<li><p>Using the field laptop, open the Local Disk (D:) folder, and under ‘DO_calibration’ create a new folder with the current date as the folder name.</p></li>
+<li><p>Open an old calibration folder and copy the .log file into the new folder.</p></li>
+<li><p>Rename the new folder ‘DO#_SNXXXX_MM-DD-YYYY.log’</p></li>
+<li><p>Delete the contents of the new file so it is an empty .log file</p></li>
+<li><p>Close the file</p></li>
+<li><p>If doing a single sensor calibration, attach the DO logger to the computer</p>
+<ol type="1">
+<li>Open the oxygen calibration box in the glass sliding cabinet about the bench<br>
+</li>
+<li>Using the heavy black cable with a RS232 and USB cable, directly attach the communication / power cable to the DO logger<br>
+</li>
+<li>Plug the Edgeport 4 port USB adaptor into the USB port on the computer<br>
+</li>
+<li>Attach the RS232 cable from the cable to the USB converter (you will have to play around with the different ports once connecting to Tera Term)<br>
+</li>
+<li>The black USB on the connection cable supplies 5V to the sensor</li>
+</ol></li>
+<li><p>Open Tera Term</p>
+<ol type="1">
+<li>Setup -&gt; Restore -&gt; DO.ini</li>
+</ol></li>
+<li><p>Plug in the USB from the communication cable, this should supply power to the DO sensor and one will begin to see data in Tera Term.</p>
+<ol type="1">
+<li>If data is not being transmitted, change the RS232 connection on the 4-port USB adaptor until data is seen.</li>
+</ol></li>
+<li><p>Before logging data in .log file,</p>
+<ol type="1">
+<li><p>Edit -&gt; clear screen</p></li>
+<li><p>Edit -&gt; clear buffer</p></li>
+</ol></li>
+<li><p>Begin logging</p>
+<ol type="1">
+<li>File/Setup -&gt; log -&gt; select file to log to (’DO#_SNXXXX_MM-DD-YYYY.log) -&gt; select <strong>Timestamp</strong></li>
+</ol></li>
+<li><p>Anytime you want logging to occur, plug / unplug the USB cable supplying 5V power</p></li>
+<li><p>Create the following table:</p>
+<ol type="1">
+<li>We collect samples at 3 points on the regression: 400, 200, 100</li>
+</ol></li>
+</ol>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Number</th>
+<th style="text-align: left;">Flask ID</th>
+<th style="text-align: left;">[O2]</th>
+<th style="text-align: left;">Time</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">1</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">400</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">400</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">3</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">400</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">4</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">200</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">5</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">200</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">6</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">200</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">7</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">100</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">8</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">100</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">9</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">100</td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<ol start="14" type="1">
+<li><p>Add oxygen to ~400 mmol/l by attaching the air stone to the oxygen tank, it may take 30-90 seconds to get the concentration to 400.</p>
+<ol type="1">
+<li>Only add 10-20 second bursts of oxygen at a time, there is a lag between adding oxygen and seeing it rise in Tera Term</li>
+</ol></li>
+<li><p>To take sample, gently dunk the BOD bottle completely in the water until full.</p></li>
+<li><p>Add 1ml of MnCl2 (pink), then 1ml of NaOH/NaI (reminder, this is a strong base, wear gloves and eye protection).</p></li>
+<li><p>Cape the bottle, removing all air, and confirm that there is a tight seal.</p></li>
+<li><p>Mix the reagents by inverting and shaking the sample.</p></li>
+<li><p>When a sample is taken, record the Flask ID, [O2], and the Time.</p></li>
+<li><p>After completing the initial three replicates, add Nitrogen to the tank until oxygen is reading 200, and again for 100.</p></li>
+<li><p>Repeat steps 15-19.</p></li>
+<li><p>Once all the oxygen bottles have been filled , add around 1-2 tablespoons of Sodium Sulfite to the tank and stir until dissolved.</p>
+<ol type="1">
+<li>Oxygen should decline to ~2-6 mmol/l</li>
+</ol></li>
+</ol>
 
 
 </section>

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Seagliders</title>
+<title>Pre-Deployment</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -115,7 +115,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../seagliders/seagliders.html">Seagliders</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../slocum_gliders/slocum.html">Slocum Gliders</a></li><li class="breadcrumb-item"><a href="../slocum_gliders/pre-deployment.html">Pre-Deployment</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -152,13 +152,13 @@ window.Quarto = {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../seagliders/seagliders.html" class="sidebar-item-text sidebar-link active">
+            <a href="../seagliders/seagliders.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Seagliders</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../seagliders/ballasting.html" class="sidebar-item-text sidebar-link">
@@ -201,14 +201,14 @@ window.Quarto = {
       <div class="sidebar-item-container"> 
             <a href="../slocum_gliders/slocum.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Slocum Gliders</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../slocum_gliders/pre-deployment.html" class="sidebar-item-text sidebar-link">
+  <a href="../slocum_gliders/pre-deployment.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Pre-Deployment</span></a>
   </div>
 </li>
@@ -312,16 +312,24 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#seaglider-basics" id="toc-seaglider-basics" class="nav-link active" data-scroll-target="#seaglider-basics">Seaglider Basics</a></li>
+  <li><a href="#links" id="toc-links" class="nav-link active" data-scroll-target="#links">Links</a></li>
+  <li><a href="#ballasting" id="toc-ballasting" class="nav-link" data-scroll-target="#ballasting">Ballasting</a>
+  <ul class="collapse">
+  <li><a href="#buoyancy-and-ballasting-calculation-example" id="toc-buoyancy-and-ballasting-calculation-example" class="nav-link" data-scroll-target="#buoyancy-and-ballasting-calculation-example">Buoyancy and Ballasting Calculation Example</a></li>
+  <li><a href="#tank-ballasting-procedure" id="toc-tank-ballasting-procedure" class="nav-link" data-scroll-target="#tank-ballasting-procedure">Tank Ballasting Procedure</a></li>
+  </ul></li>
+  <li><a href="#compass-calibration" id="toc-compass-calibration" class="nav-link" data-scroll-target="#compass-calibration">Compass Calibration</a></li>
+  <li><a href="#battery-charging" id="toc-battery-charging" class="nav-link" data-scroll-target="#battery-charging">Battery Charging</a></li>
+  <li><a href="#talk-to-battery" id="toc-talk-to-battery" class="nav-link" data-scroll-target="#talk-to-battery">Talk to Battery</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content column-body" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../slocum_gliders/slocum.html">Slocum Gliders</a></li><li class="breadcrumb-item"><a href="../slocum_gliders/pre-deployment.html">Pre-Deployment</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Seagliders</h1>
+<h1 class="title">Pre-Deployment</h1>
 </div>
 
 
@@ -338,93 +346,379 @@ window.Quarto = {
 </header>
 
 
-<div id="tbl-letters" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-tbl figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-letters-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;1: Current Seaglider fleet condition
-</figcaption>
-<div aria-describedby="tbl-letters-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<table class="caption-top table">
-<colgroup>
-<col style="width: 24%">
-<col style="width: 37%">
-<col style="width: 37%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Glider – Owner</th>
-<th>Last Deployment</th>
-<th>Next Deployment</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><span style="color: green;"><strong>SG266</strong> – Jack</span></td>
-<td><span style="color: green;">Mar 2026</span></td>
-<td><span style="color: green;">Mar 2027</span></td>
-</tr>
-<tr class="even">
-<td><span style="color: green;"><strong>SG646</strong> – Kipp</span></td>
-<td><span style="color: green;">Jul 2022</span></td>
-<td><span style="color: green;">Jan 2027</span></td>
-</tr>
-<tr class="odd">
-<td><span style="color: green;"><strong>SG686</strong> – Jack</span></td>
-<td><span style="color: green;">Nov 2025</span></td>
-<td><span style="color: green;">Aug 2026</span></td>
-</tr>
-<tr class="even">
-<td><span style="color: blue;"><strong>SG607</strong> – Dave</span></td>
-<td><span style="color: blue;">Jan 2026</span></td>
-<td><span style="color: blue;">Jan 2027</span></td>
-</tr>
-<tr class="odd">
-<td><span style="color: blue;"><strong>SG639</strong> – Dave</span></td>
-<td><span style="color: blue;">Jan 2026</span></td>
-<td><span style="color: blue;">Jan 2027</span></td>
-</tr>
-<tr class="even">
-<td><span style="color: blue;"><strong>SG679</strong> – Dave</span></td>
-<td><span style="color: blue;">Jan 2026</span></td>
-<td><span style="color: blue;">Jan 2027</span></td>
-</tr>
-<tr class="odd">
-<td><span style="color: blue;"><strong>SG680</strong> – Dave</span></td>
-<td><span style="color: blue;">Sep 2024</span></td>
-<td><span style="color: blue;">Jan 2027</span></td>
-</tr>
-</tbody>
-</table>
-</div>
+<section id="links" class="level2">
+<h2 class="anchored" data-anchor-id="links">Links</h2>
+<ul>
+<li><a href="../ext/G3-ballasting-4095-GBPSH.xlsm">TWR G3 Ballasting Sheet</a></li>
+<li><a href="../ext/Updated_G3-nnnnn_Ballast_Sheets.xlsm">Jace’s ARCTERX G3 Ballasting Sheet</a></li>
+</ul>
+</section>
+<section id="ballasting" class="level2">
+<h2 class="anchored" data-anchor-id="ballasting">Ballasting</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../img/buoyancy.png" class="img-fluid figure-img" style="width:50.0%"></p>
+<figcaption>Illustration of Archimedes’ principle for an underwater glider. The buoyant force acting upward equals the weight of the displaced water (<span class="math inline">\(m_{\text{disp}} = \rho_{\text{water}} V\)</span>), while the glider’s weight acts downward based on its dry mass (<span class="math inline">\(m_{\text{dry}}\)</span>). The apparent (wet) mass measured by a hanging scale is reduced by the displaced water (<span class="math inline">\(m_{\text{wet}} = m_{\text{dry}} - m_{\text{disp}}\)</span>), demonstrating that buoyant force is equivalent to the mass of the displaced fluid.</figcaption>
 </figure>
 </div>
-<section id="seaglider-basics" class="level2">
-<h2 class="anchored" data-anchor-id="seaglider-basics">Seaglider Basics</h2>
-<p>Seagliders are buoyancy-driven AUVs: they move through the water without an active thruster and are thus extremely energy efficient. Seaglider is designed for max energy efficiency. Main energy draw is buoyancy pump (~50%).</p>
-<p>With a glider, some vertical motion is translated into horizontal motion by the wings. Vertical speed is ~10 cm/s. Glide slopes from ~1:1 to ~1:5, horizontal speed ~25 cm/s. The glider can control its pitch and roll by shifting its large internal battery. It uses roll to bank and turn so that it can maintain a specified heading.</p>
-<section id="density" class="level4">
-<h4 class="anchored" data-anchor-id="density">Density</h4>
-<p>Typical 1000 m ocean density is 1027.5 kg/m3. Shorthand notation for density: σ = (density - 1000) kg/m3 – so the typical 1000 m density is 27.5 in σ units (or σθ since density is measured based on potential temperature θ).</p>
-<p>We use potential density (which removes the effect of pressure on density) when talking about Seaglider because Seaglider (mostly) matches the compressibility of seawater due to its hull design.</p>
-<p>The most important formula in glider operations: <span class="math display">\[
-\rho = \frac{m}{V}
+<section id="buoyancy-and-ballasting-calculation-example" class="level3">
+<h3 class="anchored" data-anchor-id="buoyancy-and-ballasting-calculation-example">Buoyancy and Ballasting Calculation Example</h3>
+<ol type="1">
+<li><p><strong>Measured Quantities</strong></p>
+<p>Dry mass of glider (measured on a floor scale, out of the water):</p>
+<p><span class="math display">\[
+m_{\text{dry}} = 101.4\,\mathrm{kg}
 \]</span></p>
-<p>VBD moves oil between an internal reservoir that is inside the glider’s pressure housing and a bladder that is external to the pressure housing, thereby changing the total volume of the glider and hence its density. Oil pumped from the reservoir to the bladder increases the glider’s volume and decreases its density, while oil pumped from the bladder to the reservoir decreases the glider’s volume and increases its density.</p>
-<p><img src="../img/buoyancy_plot.png" class="img-fluid"></p>
-<p>The glider can be ballasted (mass changed by adding or removing lead) for:</p>
+<p>Water density during ballast test (measured at the test location):</p>
+<p><span class="math display">\[
+\rho_{\text{water}} = 1022.9\,\mathrm{kg\,m^{-3}}
+\]</span></p>
+<p>Hanging scale measurement (apparent weight in water):</p>
+<p>(positive means the glider is still heavy in water)</p>
+<p><span class="math display">\[
+m_{\text{wet}} = +0.209\,\mathrm{kg}
+\]</span></p>
+<p><strong>Additional mass required to make the glider sink:</strong></p>
+<p><span class="math display">\[
+m_{\text{added}} = 0.346\,\mathrm{kg}
+\]</span></p></li>
+<li><p><strong>Determining the Displaced Water Mass</strong></p>
+<p>When an object is submerged, the buoyant force equals the weight of the displaced water. In mass units, this corresponds to the total mass of water displaced by the glider.</p>
+<p>The displaced water mass is calculated as:</p>
+<p><span class="math display">\[
+m_{\text{disp}} = m_{\text{dry}} + m_{\text{wet}} - m_{\text{added}}
+\]</span></p>
+<p><span class="math display">\[
+m_{\text{disp}} = 101.4 + 0.209 - 0.346 = 101.537\,\mathrm{kg}
+\]</span></p></li>
+<li><p><strong>Calculating Glider Volume</strong></p>
+<p>Using the definition of density:</p>
+<p><span class="math display">\[
+\rho = \frac{m}{V} \Rightarrow V = \frac{m}{\rho}
+\]</span></p>
+<p><span class="math display">\[
+V = \frac{m_{\text{disp}}}{\rho_{\text{water}}} = \frac{101.537}{1022.9} = 0.099264\,\mathrm{m^3} = 99.264\,\mathrm{L}
+\]</span> <strong>This is the physical volume of the glider.</strong></p></li>
+<li><p><strong>Density of the Glider (Current Configuration)</strong></p>
+<p>The effective density of the glider is its dry mass divided by its volume:</p>
+<p><span class="math display">\[
+\rho_{\text{glider}} = \frac{m_{\text{dry}}}{V} = \frac{101.4}{0.099264} = 1021.52\,\mathrm{kg\,m^{-3}}
+\]</span></p>
+<p>Since this value is lower than seawater density, the glider is positively buoyant.</p></li>
+<li><p><strong>Target Density and Required Mass</strong></p>
+<p><strong>Target neutral-buoyancy density:</strong></p>
+<p><span class="math display">\[
+\rho_{\text{target}} = 1022.8\,\mathrm{kg\,m^{-3}}
+\]</span></p>
+<p>The mass required for neutral buoyancy at this density is:</p>
+<p><span class="math display">\[
+m_{\text{target}} = \rho_{\text{target}}V = 1022.8 \times 0.099264 = 101.527\,\mathrm{kg}
+\]</span></p></li>
+<li><p><strong>Ballast Adjustment Required</strong></p>
+<p>The required ballast change is the difference between the target mass and the current dry mass:</p>
+<p><span class="math display">\[
+\Delta m = m_{\text{target}} - m_{\text{dry}} = 101.527 - 101.4 = +0.127\,\mathrm{kg}
+\]</span></p>
+<p><strong>Interpretation:</strong></p>
+<p>A positive value means mass must be added. Therefore, <strong>127 g must be added</strong> to achieve neutral buoyancy at <span class="math inline">\(1022.8\,\mathrm{kg\,m^{-3}}\)</span>.</p></li>
+<li><p><strong>Key Takeaways</strong></p>
 <ul>
-<li><p>A given range of water density</p></li>
-<li><p>Negative buoyancy (thrust), e.g., in strong currents</p></li>
-<li><p>Reserve buoyancy, e.g., in areas with low surface density like the Arctic, river plumes or Bay of Bengal (monsoon season).</p></li>
-</ul>
-<p><strong>Rule of thumb:</strong></p>
-<ul>
-<li><p>For Seaglider SG, a ~50 cc change in glider volume produces a 1 σθ density change</p></li>
-<li><p>For SGX, a ~70 cc change in volume produces a 1 σθ density change</p></li>
-</ul>
-
-
+<li>Always track units at every step.</li>
+<li>Water density must match the ballast test environment.</li>
+<li>If glider density <span class="math inline">\(&lt;\rho_{\text{water}}\)</span>, the glider floats.</li>
+<li>Small mass changes (<span class="math inline">\(O(100\,\mathrm{g})\)</span>) significantly affect buoyancy.</li>
+</ul></li>
+</ol>
 </section>
+<section id="tank-ballasting-procedure" class="level3">
+<h3 class="anchored" data-anchor-id="tank-ballasting-procedure">Tank Ballasting Procedure</h3>
+<ol type="1">
+<li>After applying vacuum to 6 for G2, 7 for G3 +- 0.3 inHg, ballast glider</li>
+<li>Supplies are in yellow ballasting box
+<ol type="1">
+<li>Water pump</li>
+<li>Red winch</li>
+</ol></li>
+<li>Open ballasting tank, put metal across top</li>
+<li>Hang scales and fishing line</li>
+<li>Connect Freewave wireless data receiver</li>
+<li>Connect Green plug
+<ol type="1">
+<li>CTRL C</li>
+<li>Put c_air_pump 0</li>
+<li>Callback 30</li>
+<li>Lab_mode on</li>
+<li>Use - argos iridium attitude_rev (disable argos iridium and compass)</li>
+<li>Ballast</li>
+</ol></li>
+<li>Put the glider in the water and add wings, making sure the entire glider, including the antenna, is under water.</li>
+<li>Remove sensor caps (salinity and 02)</li>
+<li>Shake to remove bubbles from glider, particularly from the nose</li>
+<li>Flush the salinity sensor using the aquarium pump</li>
+<li>Raise glider off of scales, zero scales, and put back on fishing line near black part of glider</li>
+<li>Measure weight on front and aft after letting the water in the tank settle down</li>
+<li>Test science instrument, get water temp and salinity
+<ol type="1">
+<li>Report clearall</li>
+<li>Put c_science_all_on 0 (turn on science instruments)</li>
+<li>Put c_science_send_all 1</li>
+<li>Report ++ sci_water_temp (continuously record temp)</li>
+<li>Report ++ sci_water_cond (continuously record salinity)</li>
+<li>Report clearall</li>
+</ol></li>
+<li>Save ProComm buffer (to use in script when calculating average temp and salinity
+<ol type="1">
+<li>Edit -&gt; scrollback buffer to -&gt; clipboard</li>
+</ol></li>
+<li>Power down glider
+<ol type="1">
+<li>Exit reset</li>
+<li>CTRL C</li>
+<li>Put c_air_pump 0</li>
+<li>Exit</li>
+</ol></li>
+</ol>
+</section>
+</section>
+<section id="compass-calibration" class="level2">
+<h2 class="anchored" data-anchor-id="compass-calibration">Compass Calibration</h2>
+<ol type="1">
+<li>Gather compass calibration supplies
+<ol type="1">
+<li>Freewave<br>
+</li>
+<li>Computer with ProComm<br>
+</li>
+<li>Rope with carabiner<br>
+</li>
+<li>Ladder<br>
+</li>
+</ol></li>
+<li>Hang glider from rope as high as possible<br>
+</li>
+<li>Connect Freewave to computer and battery power<br>
+</li>
+<li>Open ProComm, confirm serial cable 1 (port 3) (this is the 2 port blue serial cable)<br>
+</li>
+<li>Connect Green plug
+<ol type="1">
+<li>CTRL C<br>
+</li>
+<li>Put c_air_pump 0<br>
+</li>
+<li>Callback 30<br>
+</li>
+<li>Lab_mode on<br>
+</li>
+<li>Use - argos iridium (disable argos and iridium)<br>
+</li>
+<li>Exit pico (G2) / exit shell (G3) exit to picoDOS)<br>
+</li>
+<li>Talk att (G2) / talk attitude (G3) (begin reading compass)<br>
+</li>
+</ol></li>
+<li>Close teraterm<br>
+</li>
+<li>Open Revolution app, using the same port as teraterm
+<ol type="1">
+<li>Wireless<br>
+</li>
+<li>Close<br>
+</li>
+<li>Tools -&gt; Calibrate magnetics -&gt; start<br>
+</li>
+<li>Confirm setting
+<ol type="1">
+<li>3D<br>
+</li>
+<li>3000 samples<br>
+</li>
+<li>64 something?<br>
+</li>
+</ol></li>
+</ol></li>
+<li>Begin spinning glider in every orientation possible
+<ol type="1">
+<li>X,Y,Z planes in Revolution app will begin to be populated<br>
+</li>
+<li>If at OOI, do 300 observations flat with the glider upright, then 300 with the nose down, then 300 with the nose up. Flip the glider sideways and complete this process for 900 more observations, then flip the other way and repeat.<br>
+</li>
+<li>Get 3000 observations<br>
+</li>
+<li>If more than 3% mag sigma, redo<br>
+</li>
+<li>Use new (saves file)<br>
+</li>
+<li>This file is saved directly to the glider<br>
+</li>
+<li>Write down the change in Mag Total sigma 3 values for future reference.<br>
+</li>
+</ol></li>
+<li>Open teraterm, it should automatically connect via the same port
+<ol type="1">
+<li>Enter<br>
+</li>
+</ol></li>
+<li>If at OOI and doing a compass characterization:
+<ol type="1">
+<li>App -lab (to go back into gliderdos)<br>
+</li>
+<li>Callback 30<br>
+</li>
+<li>Put c_iridium_on 0<br>
+</li>
+<li>Put c_argos_on -1<br>
+</li>
+<li>Put c_gps_on 0<br>
+</li>
+<li>Report ++ m_vacuum m_coulomb_current m_heading
+<ol type="1">
+<li>Once m_vacuum is steady and m_coulomb_current is 0.15 amp or less it indicates that the air pump motor is no longer running and the air bladder is full. Then remove those 2 variables from reporting<br>
+</li>
+</ol></li>
+<li>Report - m_vacuum m_coulomb_current<br>
+</li>
+<li>Close teraterm<br>
+</li>
+<li>Start compass program (python program)<br>
+</li>
+</ol></li>
+<li>After compass characterization
+<ol type="1">
+<li>App -lab<br>
+</li>
+<li>Report clearall<br>
+</li>
+<li>Put c_de_oil_vol -1000 (if deep pump)<br>
+</li>
+<li>Put c_air_pump 0<br>
+</li>
+<li>exit</li>
+</ol></li>
+<li>Pull green plug (because we’re in picoDOS, no need to exit)</li>
+</ol>
+</section>
+<section id="battery-charging" class="level2">
+<h2 class="anchored" data-anchor-id="battery-charging">Battery Charging</h2>
+<ol type="1">
+<li>There are two ways to charge lithium batteries depending on what model glider they are in.<br>
+</li>
+<li>If the glider is a newer G3 with an external charging port:
+<ol type="1">
+<li>Connect the charging cable to the external port at the aft end of the glider<br>
+</li>
+<li>Turn on the charging block
+<ol type="1">
+<li>The amperage reading should increase initially, up to ~12<br>
+</li>
+<li>The glider is done charging once the readout is less than 0.5 amps<br>
+</li>
+</ol></li>
+</ol></li>
+<li>If the glider is a G2, the forward and aft batteries will need to be removed to charge (ex SL592)
+<ol type="1">
+<li>Take glider apart to access both the forward and aft batteries<br>
+</li>
+<li>The charging cable has three direct charging cables corresponding to the aft, extended battery, and forward battery (the cable is identical for the forward and extended battery).<br>
+</li>
+<li>Use the charging cable adaptor to plug in to the aft battery first, and then use either of the remaining charging cables to plug into the forward battery.<br>
+</li>
+<li>Turn on the charging block
+<ol type="1">
+<li>The amperage reading should increase initially, up to ~12<br>
+</li>
+<li>The glider is done charging once the readout is less than 0.5 amps<br>
+</li>
+</ol></li>
+</ol></li>
+<li>When either replacing G2 batteries or after recharging G3 batteries, reset the coulomb counter to 0
+<ol type="1">
+<li>Put m_coulomb_amphr_total 0<br>
+</li>
+<li>Exit reset<br>
+</li>
+<li>Get m_coulomb_amphr_total<br>
+</li>
+</ol></li>
+<li>You can also check the lithium battery relative charge
+<ol type="1">
+<li>Get m_lithium_battery_relative_charge<br>
+</li>
+</ol></li>
+<li>Other relevant battery commands
+<ol type="1">
+<li>m_battery<br>
+</li>
+<li>m_battery_inst<br>
+</li>
+<li>m_coulomb_amphr_total<br>
+</li>
+<li>m_coulomb_current<br>
+</li>
+<li>M_lithium_battery_relative_charge<br>
+</li>
+<li>report ++ m_bms_pitch_current m_bms_aft_current m_bms_ebay_current<br>
+</li>
+<li>get m_bms_emergency_battery_voltage</li>
+</ol></li>
+</ol>
+</section>
+<section id="talk-to-battery" class="level2">
+<h2 class="anchored" data-anchor-id="talk-to-battery">Talk to Battery</h2>
+<ol type="1">
+<li>You can directly query the battery in two ways:
+<ol type="1">
+<li>With the batteries in the glider
+<ol type="1">
+<li>Exit pico (G2) / exit shell (G3) exit to pico/shell DOS<br>
+</li>
+<li>Talk batt (G2) / battery (G3)<br>
+</li>
+</ol></li>
+<li>With the batteries outside the glider
+<ol type="1">
+<li>Connect the charging / communication cable to the batteries
+<ol type="1">
+<li>Open TeraTerm and connect via available serial port<br>
+</li>
+<li>You will only see a black screen, even when you type commands<br>
+</li>
+<li>Type $R,0 $R,1 $R,2 or $R,3 (R,2 is for extended battery)<br>
+</li>
+</ol></li>
+<li>The output will look similar to this:<br>
+$R,0<br>
+Batt #: 0<br>
+Status: 0xdc10<br>
+LTCO: 0x202<br>
+Voltage: 5009 mV<br>
+Current: 0 mA<br>
+Temperature: 296.101562K<br>
+Serial: 1425<br>
+Remaining Capacity: 0 mAh<br>
+<strong>Full Charge Capacity: 9915 mAh</strong><br>
+Time to full charge: -1 min<br>
+Cycle Count: 3<br>
+Thermistor (raw) 32320<br>
+Thermistor (V) 2.465880<br>
+Manufacturer Name: INSPIREDE<br>
+Device Name: NL2054HD34<br>
+Device Chemistry: LION<br>
+</li>
+<li>The important part is that the full charge capacity on the rechargeable batteries is over 9000 mAh. There will always be a ‘dummy’ battery in $R,0 that will say something like this (and this is normal):<br>
+Remaining Capacity: -1 mAh<br>
+Full Charge Capacity: -1 mAh<br>
+</li>
+<li>It is common to have to query a battery multiple times to get a ‘full’ reading, meaning that some of the Batt # will not communicate properly if only querying the battery 1 time.<br>
+</li>
+</ol></li>
+<li>Ctrl -c<br>
+</li>
+<li>App -lab (to go back into gliderdos)</li>
+</ol></li>
+</ol>
+
+
 </section>
 
 </main> <!-- /main -->

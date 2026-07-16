@@ -179,8 +179,8 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../slocum_gliders/ballasting.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Ballasting</span></a>
+  <a href="../slocum_gliders/pre-deployment.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Pre-Deployment</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -283,7 +283,10 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#slocum-gliders" id="toc-slocum-gliders" class="nav-link active" data-scroll-target="#slocum-gliders">Slocum Gliders</a></li>
+  <li><a href="#simulate-glider-position-in-westport" id="toc-simulate-glider-position-in-westport" class="nav-link active" data-scroll-target="#simulate-glider-position-in-westport"><strong>Simulate Glider Position in Westport</strong></a></li>
+  <li><a href="#configure-project-in-sfmc" id="toc-configure-project-in-sfmc" class="nav-link" data-scroll-target="#configure-project-in-sfmc"><strong>Configure project in SFMC</strong></a></li>
+  <li><a href="#create-new-maps-in-sfmc" id="toc-create-new-maps-in-sfmc" class="nav-link" data-scroll-target="#create-new-maps-in-sfmc"><strong>Create new maps in SFMC</strong></a></li>
+  <li><a href="#glider-simulation" id="toc-glider-simulation" class="nav-link" data-scroll-target="#glider-simulation">Glider Simulation</a></li>
   </ul>
 </nav>
     </div>
@@ -309,37 +312,283 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="slocum-gliders" class="level1 hero">
-<h1>Slocum Gliders</h1>
+<section id="simulate-glider-position-in-westport" class="level2">
+<h2 class="anchored" data-anchor-id="simulate-glider-position-in-westport"><strong>Simulate Glider Position in Westport</strong></h2>
+<p>Simulating a glider mission / location so glider thinks it is at Westport</p>
+<ol type="1">
+<li>Start glider by putting the Green plug in, ProComm open on computer, Freewave on
+<ol type="1">
+<li></li>
+<li><strong>CTRL C</strong><br>
+</li>
+<li><strong>Put c_air_pump 0</strong><br>
+</li>
+<li><strong>Callback 30</strong><br>
+</li>
+<li><strong>Lab_mode on</strong><br>
+</li>
+<li><strong>Dir config</strong> (should have file simul.not)<br>
+</li>
+<li><strong>Cd config</strong><br>
+</li>
+<li><strong>Copy simul.not simul.sim</strong><br>
+</li>
+<li><strong>Exit reset</strong> (reboot to go into simulation mode, will complain about attitude)<br>
+</li>
+<li><strong>CTRL C</strong><br>
+</li>
+<li><strong>Put c_air_pump 0</strong><br>
+</li>
+<li><strong>Callback 30</strong><br>
+</li>
+<li><strong>Lab_mode on</strong> (glider will now be in simulation mode)<br>
+</li>
+</ol></li>
+<li>Go to SFMC0 website
+<ol type="1">
+<li>Select WA551 (or current glider deployment name) under Deployments<br>
+</li>
+</ol></li>
+<li>Archive previous deployment (if this has not been done already, it may have also been ‘Recovered’ in which case it will be under Recovered instead of Archived)
+<ol type="1">
+<li>Options - &gt; Archive Deployment<br>
+</li>
+</ol></li>
+<li>Mission Control -&gt; Glider terminal -&gt; (select glider of choice)
+<ol type="1">
+<li>Remove active script (under ’Script)<br>
+</li>
+</ol></li>
+<li>Load mission
+<ol type="1">
+<li><strong>Cd missions</strong><br>
+</li>
+<li><strong>Dir</strong><br>
+</li>
+<li><strong>Loadmission ldsimwa.mi</strong> (loading Anatoli’s simulated position)
+<ol type="1">
+<li><p>Loadmission will load sensor parameters but not behaviors ex. Loadmision watercl.mi</p>
+<p>sensor: m_water_vx(m/s) 0</p>
+<p>sensor: m_water_vy(m/s) 0</p></li>
+</ol></li>
+</ol></li>
+<li>Bring glider outside
+<ol type="1">
+<li><strong>Callback 0 0</strong> (call immediately, primary #)<br>
+</li>
+</ol></li>
+<li>In SFMC, once Iridium connects you should see something in the ‘Active Terminal’. Once SFMC ‘sees’ the glider, you can disconnect for Iridium<br>
+</li>
+<li>Delete simul.sim file
+<ol type="1">
+<li>Navigate to config directory
+<ol type="1">
+<li><strong>Del simul.sim</strong><br>
+</li>
+<li><strong>Dir</strong> (confirm deletion)<br>
+</li>
+<li><strong>Cd..</strong> (go up one directory)<br>
+</li>
+<li><strong>Exit reset</strong> (make sure to <strong>callback 30</strong> so it doesn’t pick up location)<br>
+</li>
+<li>Bring glider inside<br>
+</li>
+</ol></li>
+</ol></li>
+<li>Glider should now appear like it is in the water near Westport<br>
+</li>
+<li>While connected via Freewave, download important files from glider
+<ol type="1">
+<li>From Terminal
+<ol type="1">
+<li><strong>Zs autoexec.mi</strong> (in config dir)<br>
+</li>
+<li><strong>Zs longterm.sta</strong> (in state dir)<br>
+</li>
+<li><strong>Zs proglets.dat</strong> (conci to go to SciDOS, quit to return to GliderLAB)<br>
+</li>
+<li>You must be in each folder for this to work<br>
+</li>
+</ol></li>
+<li>Drop three downloaded files to glider
+<ol type="1">
+<li>Options -&gt; view glider details -&gt; config file drop zone<br>
+</li>
+</ol></li>
+</ol></li>
+<li>Test science sensors
+<ol type="1">
+<li><strong>Put c_science_all_on 0</strong><br>
+</li>
+<li><strong>Put c_science_send_all 1</strong><br>
+</li>
+<li><strong>Get sci_”sensor name”</strong> (for science sensor readout, ex. Get sci_water_temp)<br>
+</li>
+</ol></li>
+<li>Exit glider
+<ol type="1">
+<li><strong>Exit reset</strong><br>
+</li>
+<li><strong>CTRL C</strong><br>
+</li>
+<li><strong>Put c_air_pump 0</strong><br>
+</li>
+<li><strong>Callback 30</strong><br>
+</li>
+<li><strong>Get m_vacuum</strong><br>
+</li>
+<li><strong>Get m_battery</strong><br>
+</li>
+<li><strong>Exit</strong><br>
+</li>
+<li>Pull Green plug</li>
+</ol></li>
+</ol>
 </section>
-<div class="grid">
-<div class="card">
-<h3 class="anchored">
-Overview
-</h3>
-<p>
-Description goes here.
-</p>
-</div>
-<div class="card">
-<h3 class="anchored">
-Instrumentation
-</h3>
-<p>
-Sensors and payloads.
-</p>
-</div>
-<div class="card">
-<h3 class="anchored">
-Operations
-</h3>
-<p>
-How they are deployed.
-</p>
-</div>
-</div>
+<section id="configure-project-in-sfmc" class="level2">
+<h2 class="anchored" data-anchor-id="configure-project-in-sfmc"><strong>Configure project in SFMC</strong></h2>
+<ol type="1">
+<li>Configure project assignment
+<ol type="1">
+<li>Options -&gt; configure project assignment -&gt; WA551(or WA_VEMCO if using SL592) -&gt; save<br>
+</li>
+<li>-&gt; Access Mission plan -&gt; nhg2test (or vemco_azfp if using SL592)<br>
+</li>
+</ol></li>
+<li>Configure waypoints
+<ol start="9" type="1">
+<li>Configuration -&gt; Mission Planning -&gt; Waypoints Plan<br>
+</li>
+<li>Clone WA_Sept2021 to different name associated with this deployment (ex WA_2024_may)<br>
+</li>
+<li>Group -&gt; OSU<br>
+</li>
+<li>Release Waypoint Plan<br>
+</li>
+<li>Options -&gt; Access Mission Plans -&gt; Modify Selected Mission Plan -&gt; Modify Waypoints Plan -&gt; WA_sept2024 (or whatever the copied name is that you just created)<br>
+</li>
+<li>For the beginning of the deployment, use a 15m surface plan (15surface_plus_wpt)(always use wpt)
+<ol type="1">
+<li>This is so it surfaces after a 15 minute test dive, this will change to 1hr and then 2hr as you traverse north to the first waypoint.<br>
+</li>
+</ol></li>
+<li>Release plan -&gt; process<br>
+</li>
+<li>The file number you choose is based on what is being called in the mission plan (aka nhg2test or vemco_azfp etc)
+<ol type="1">
+<li>Double check the number being used by going to the mission plan when proceeding files (10,20,30,40 etc), located in <a href="http://autoexec.mi">autoexec.mi</a> file<br>
+</li>
+<li>Need to figure out how to check this<br>
+</li>
+</ol></li>
+<li>File number = 60 -&gt; generate<br>
+</li>
+<li>Delete all files except files that were modified
+<ol type="1">
+<li>Keep goto_l40.ma - modified waypoints<br>
+</li>
+<li>Keep surfac41.ma - surfacing interval<br>
+</li>
+</ol></li>
+<li>Add yo40.ma file (thruster on file) to to-glider drop zone in glider terminal
+<ol type="1">
+<li>In the GliderGroup -&gt; slocum -&gt; piloting file there are two thruster ma files<br>
+</li>
+<li>Change the name of the yo40_thruster_on.ma file to yo40.ma<br>
+</li>
+<li>Drop this in the to_glider drop zone in the glider terminal<br>
+</li>
+<li>This will turn on the thruster<br>
+</li>
+<li>To turn off the thruster rename the glider_off file to yo40.ma and put in the to_glider drop zone<br>
+</li>
+</ol></li>
+<li>Change the script to <strong>driftdo.xml</strong> after glider dives<br>
+</li>
+<li>Delete to-science files<br>
+</li>
+<li>When glider is running mission, it will automatically grab files from glider file drop, but when not running a mission you need to Ctrl-F to re-read ma files.</li>
+</ol></li>
+</ol>
+</section>
+<section id="create-new-maps-in-sfmc" class="level2">
+<h2 class="anchored" data-anchor-id="create-new-maps-in-sfmc"><strong>Create new maps in SFMC</strong></h2>
+<p>We store our maps on the CEOAS maps GeoServer <a href="https://gliderwms.ceoas.oregonstate.edu/">https://gliderwms.ceoas.oregonstate.edu/</a> which is linked to your OSU credentials. In order to add a map to glidermfmc0 or gliderfmc1, one must first create a map and add it to the GeoServer.</p>
+<p>The easiest way to add a map is to follow Pat’s Github tutorial using his <a href="https://github.com/mousebrains/Isobaths">Isobaths</a> repository. One must either create the map using the <a href="https://download.gebco.net/">GEBCO</a> or <a href="https://www.ncei.noaa.gov/maps/bathymetry/">NOAA</a> map creation service. If using the GEBCO site, create a Grid 2D netcdf. This will produce a 15 arc second map.</p>
+<p>It is easiest to clone the Isobath repository to your local: git clone <a href="https://github.com/mousebrains/Isobaths.git">https://github.com/mousebrains/Isobaths.git</a></p>
+<p>Add the netcdf map file to this folder, and then run a command similar to this:<br>
+python gebco.isobaths.py --nc gebco_2025_channel_islands.nc --shp southern_california.shp --contour=“10,20,50,100,150,200,250,300,350,400,450,500,550,600,650,700,750,800,850,900,950,1000” --plot</p>
+<p>Once a map is created, upload it to the GeoServer:</p>
+<ol type="1">
+<li>Add the files created to gliderfs3
+<ol type="1">
+<li>home/server/homes/pi/verweybr/Stores/socal<br>
+</li>
+<li>You may need to create the Stores directory in your home directory<br>
+</li>
+</ol></li>
+<li>Create a new Stores on the GeoServer
+<ol type="1">
+<li>Directory of spatial files (shapefiles)<br>
+</li>
+<li>Directory of shapefiles
+<ol type="1">
+<li>file:///home/server/homes/pi/username/Stores/socal<br>
+</li>
+</ol></li>
+</ol></li>
+<li>Add a new layer for the map on the GeoServer<br>
+</li>
+<li>Under the Publishing heading, select Default Style - Gliderwms:IsoBath so that the map shows up with bathymetry numbers.<br>
+</li>
+<li>Login to gliderfmc0/1 and under your username in the upper right select Map Settings -&gt; Map Layer Settings<br>
+</li>
+<li>Create WMS Layer Setting
+<ol type="1">
+<li><a href="https://gliderwms.ceoas.oregonstate.edu/geoserver/Gliderwms/wms">https://gliderwms.ceoas.oregonstate.edu/geoserver/Gliderwms/wms</a>?<br>
+</li>
+<li>Format: image/svg</li>
+</ol></li>
+</ol>
+</section>
+<section id="glider-simulation" class="level2">
+<h2 class="anchored" data-anchor-id="glider-simulation">Glider Simulation</h2>
+<p>To do on bench testing, the glider must be put in simulation mode by adding a file called simul.sim that has the text on_bench or just_electronics in it. When the glider boots up, it will immediately see the simul.sim file and then go to on_bench mode.</p>
+<p>One can either add simulated variables to the <a href="http://autoexec.mi">autoexec.mi</a> file or you can create them in a mission file and then use the command loadmission *mission_name.mi* to load the variables to the glider. If you do the latter (preferred method) the loadmission simulated variables will override any simulated variables in the <a href="http://autoexec.mi">autoexec.mi</a>.</p>
+<p>For example, the file contents in the custom mission file simulated_test.mi are as follows:</p>
+<p># Simulated variables for bench testing of SL1267 in lab<br>
+# Initialize simulation parameters</p>
+<p>sensor: s_battery(volts) -1</p>
+<p>sensor: s_coulomb_relative_charge(%) 40.0</p>
+<p>sensor: s_water_depth_avg(m) 2000.0<br>
+sensor: s_water_depth_delta(m) 1500.0<br>
+sensor: s_water_depth_wavelength(m) 10000.0</p>
+<p>sensor: s_water_cond(S/m) 4.1 # conductivity, How salty it is</p>
+<p>sensor: s_water_temp_surface(degc) 30.0 # temp above<br>
+sensor: s_water_temp_depth_inft(m) 50.0 # this depth (inflection top)</p>
+<p>sensor: s_water_temp_bottom(degc) 3.0 # temp below<br>
+sensor: s_water_temp_depth_infb(m) 400.0 # this depth (inflection bottom)</p>
+<p># sensor: s_vehicle_temp_tc(1/sec) 0.01 # tc ==&gt; time constant</p>
+<p>sensor: s_wind_speed(m/s) 0.0 # how fast the wind is blowing, 3.0 ==&gt; 5.4 knots<br>
+# sensor: s_wind_direction(rad) 0.0 # Direction wind is blowing FROM</p>
+<p>sensor: s_water_speed(m/s) 0.00 # Current speed, 0.5 ==&gt; 1knot<br>
+# sensor: s_water_direction(rad) 4.712 # direction current is going TO,<br>
+# toward the west</p>
+<p># sensor: s_water_speed_fast(m/s) -1 # in, set to -1 to disable<br>
+# sensor: s_water_speed_fast_zone_x_min(m) 0 # in<br>
+# sensor: s_water_speed_fast_zone_x_max(m) 0 # in</p>
+<p>sensor: s_mag_var(rad) -0.089 # mag_heading = true_heading + mag_var<br>
+# Taiwan</p>
+<p>sensor: s_ini_lat(deg) 4772.4867 # North Beach, Seattle<br>
+sensor: s_ini_lon(deg) -12239.8383 # North Beach, Seattle</p>
+<p>sensor: s_ocean_pressure_min(volts) 0.20 # used to generate voltage for 0 pressure</p>
+<p>To run a simulated mission, you follow the same protocol as creating any other ‘real’ mission. You can configure a project in SFMC, create your mission plan with waypoint, surface, yo, etc files.</p>
+<p>The best way to run a simulated mission in the lab is via gliderfmc1, which is the Raspberry Pi that Pat has set up on the server rack in the SE corner of the lab. To connect to gliderfmc1, direct connect a communication cable between the gliders comm port and the USB on the pack of the Pi. Go th gliderfmc1, Configuration, System Status, and look for one of the ports to become active. Click on the terminal window, and then type in ‘whoru’ into the terminal line. The glider number should appear in the terminal, in which case you can then communicate with the glider.</p>
+<p>You can also run a simulated mission just over Freewave, but this will not ‘connect’ to Iridium or send files to SFMC like it will on gliderfmc1..</p>
+<p>To run a mission, load the simulated variables in the custom .mi file (ex. loadmission simulated_test.mi). Then sequence *mission_name.mi*(5) to run the mission. As with any other mission, once the glider dives, select an XML script to run so that when the glider connects with Iridium (in this case the glider thinks it is connecting with Iridium but is not actually), the glider can accept dockzr commands and get .ma files from the dockserver and send files to the dockserver from the dockserver. If you are running over freewave, you do not need a xml script.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
