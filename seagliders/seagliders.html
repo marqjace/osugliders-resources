@@ -313,7 +313,7 @@ window.Quarto = {
    
   <ul>
   <li><a href="#seaglider-basics" id="toc-seaglider-basics" class="nav-link active" data-scroll-target="#seaglider-basics">Seaglider Basics</a></li>
-  <li><a href="#seaglider-fundamentals" id="toc-seaglider-fundamentals" class="nav-link" data-scroll-target="#seaglider-fundamentals">Seaglider Fundamentals</a></li>
+  <li><a href="#seaglider-fundamentals-slides" id="toc-seaglider-fundamentals-slides" class="nav-link" data-scroll-target="#seaglider-fundamentals-slides">Seaglider Fundamentals Slides</a></li>
   </ul>
 </nav>
     </div>
@@ -339,72 +339,13 @@ window.Quarto = {
 </header>
 
 
-<div id="tbl-letters" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-tbl figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-letters-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;1: Current Seaglider fleet condition
-</figcaption>
-<div aria-describedby="tbl-letters-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<table class="caption-top table">
-<colgroup>
-<col style="width: 24%">
-<col style="width: 37%">
-<col style="width: 37%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Glider – Owner</th>
-<th>Last Deployment</th>
-<th>Next Deployment</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><span style="color: green;"><strong>SG266</strong> – Jack</span></td>
-<td><span style="color: green;">Mar 2026</span></td>
-<td><span style="color: green;">Mar 2027</span></td>
-</tr>
-<tr class="even">
-<td><span style="color: green;"><strong>SG646</strong> – Kipp</span></td>
-<td><span style="color: green;">Jul 2022</span></td>
-<td><span style="color: green;">Jan 2027</span></td>
-</tr>
-<tr class="odd">
-<td><span style="color: green;"><strong>SG686</strong> – Jack</span></td>
-<td><span style="color: green;">Nov 2025</span></td>
-<td><span style="color: green;">Aug 2026</span></td>
-</tr>
-<tr class="even">
-<td><span style="color: blue;"><strong>SG607</strong> – Dave</span></td>
-<td><span style="color: blue;">Jan 2026</span></td>
-<td><span style="color: blue;">Jan 2027</span></td>
-</tr>
-<tr class="odd">
-<td><span style="color: blue;"><strong>SG639</strong> – Dave</span></td>
-<td><span style="color: blue;">Jan 2026</span></td>
-<td><span style="color: blue;">Jan 2027</span></td>
-</tr>
-<tr class="even">
-<td><span style="color: blue;"><strong>SG679</strong> – Dave</span></td>
-<td><span style="color: blue;">Jan 2026</span></td>
-<td><span style="color: blue;">Jan 2027</span></td>
-</tr>
-<tr class="odd">
-<td><span style="color: blue;"><strong>SG680</strong> – Dave</span></td>
-<td><span style="color: blue;">Sep 2024</span></td>
-<td><span style="color: blue;">Jan 2027</span></td>
-</tr>
-</tbody>
-</table>
-</div>
-</figure>
-</div>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/y2rNmAgqTt4?start=10" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+<p>Seaglider Animation (credit robotoblog.com)</p>
 <section id="seaglider-basics" class="level2">
 <h2 class="anchored" data-anchor-id="seaglider-basics">Seaglider Basics</h2>
 <p>Seagliders are buoyancy-driven AUVs: they move through the water without an active thruster and are thus extremely energy efficient. Seaglider is designed for max energy efficiency. Main energy draw is buoyancy pump (~50%).</p>
 <p>With a glider, some vertical motion is translated into horizontal motion by the wings. Vertical speed is ~10 cm/s. Glide slopes from ~1:1 to ~1:5, horizontal speed ~25 cm/s. The glider can control its pitch and roll by shifting its large internal battery. It uses roll to bank and turn so that it can maintain a specified heading.</p>
-<section id="density" class="level4">
-<h4 class="anchored" data-anchor-id="density">Density</h4>
+<p><img src="../img/sg_schematic.png" class="img-fluid"></p>
 <p>Typical 1000 m ocean density is 1027.5 kg/m3. Shorthand notation for density: σ = (density - 1000) kg/m3 – so the typical 1000 m density is 27.5 in σ units (or σθ since density is measured based on potential temperature θ).</p>
 <p>We use potential density (which removes the effect of pressure on density) when talking about Seaglider because Seaglider (mostly) matches the compressibility of seawater due to its hull design.</p>
 <p>The most important formula in glider operations: <span class="math display">\[
@@ -424,9 +365,8 @@ Table&nbsp;1: Current Seaglider fleet condition
 <li><p>For SGX, a ~70 cc change in volume produces a 1 σθ density change</p></li>
 </ul>
 </section>
-</section>
-<section id="seaglider-fundamentals" class="level2">
-<h2 class="anchored" data-anchor-id="seaglider-fundamentals">Seaglider Fundamentals</h2>
+<section id="seaglider-fundamentals-slides" class="level2">
+<h2 class="anchored" data-anchor-id="seaglider-fundamentals-slides">Seaglider Fundamentals Slides</h2>
 <embed src="../ext/seaglider-fundamentals-slides.pdf" type="application/pdf" width="100%" height="600px">
 
 

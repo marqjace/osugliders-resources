@@ -157,7 +157,7 @@
     "href": "seagliders/seagliders.html",
     "title": "Seagliders",
     "section": "",
-    "text": "Table 1: Current Seaglider fleet condition\n\n\n\n\n\n\n\n\n\n\nGlider – Owner\nLast Deployment\nNext Deployment\n\n\n\n\nSG266 – Jack\nMar 2026\nMar 2027\n\n\nSG646 – Kipp\nJul 2022\nJan 2027\n\n\nSG686 – Jack\nNov 2025\nAug 2026\n\n\nSG607 – Dave\nJan 2026\nJan 2027\n\n\nSG639 – Dave\nJan 2026\nJan 2027\n\n\nSG679 – Dave\nJan 2026\nJan 2027\n\n\nSG680 – Dave\nSep 2024\nJan 2027",
+    "text": "Seaglider Animation (credit robotoblog.com)",
     "crumbs": [
       "Seagliders"
     ]
@@ -167,17 +167,17 @@
     "href": "seagliders/seagliders.html#seaglider-basics",
     "title": "Seagliders",
     "section": "Seaglider Basics",
-    "text": "Seaglider Basics\nSeagliders are buoyancy-driven AUVs: they move through the water without an active thruster and are thus extremely energy efficient. Seaglider is designed for max energy efficiency. Main energy draw is buoyancy pump (~50%).\nWith a glider, some vertical motion is translated into horizontal motion by the wings. Vertical speed is ~10 cm/s. Glide slopes from ~1:1 to ~1:5, horizontal speed ~25 cm/s. The glider can control its pitch and roll by shifting its large internal battery. It uses roll to bank and turn so that it can maintain a specified heading.\n\nDensity\nTypical 1000 m ocean density is 1027.5 kg/m3. Shorthand notation for density: σ = (density - 1000) kg/m3 – so the typical 1000 m density is 27.5 in σ units (or σθ since density is measured based on potential temperature θ).\nWe use potential density (which removes the effect of pressure on density) when talking about Seaglider because Seaglider (mostly) matches the compressibility of seawater due to its hull design.\nThe most important formula in glider operations: \\[\n\\rho = \\frac{m}{V}\n\\]\nVBD moves oil between an internal reservoir that is inside the glider’s pressure housing and a bladder that is external to the pressure housing, thereby changing the total volume of the glider and hence its density. Oil pumped from the reservoir to the bladder increases the glider’s volume and decreases its density, while oil pumped from the bladder to the reservoir decreases the glider’s volume and increases its density.\n\nThe glider can be ballasted (mass changed by adding or removing lead) for:\n\nA given range of water density\nNegative buoyancy (thrust), e.g., in strong currents\nReserve buoyancy, e.g., in areas with low surface density like the Arctic, river plumes or Bay of Bengal (monsoon season).\n\nRule of thumb:\n\nFor Seaglider SG, a ~50 cc change in glider volume produces a 1 σθ density change\nFor SGX, a ~70 cc change in volume produces a 1 σθ density change",
+    "text": "Seaglider Basics\nSeagliders are buoyancy-driven AUVs: they move through the water without an active thruster and are thus extremely energy efficient. Seaglider is designed for max energy efficiency. Main energy draw is buoyancy pump (~50%).\nWith a glider, some vertical motion is translated into horizontal motion by the wings. Vertical speed is ~10 cm/s. Glide slopes from ~1:1 to ~1:5, horizontal speed ~25 cm/s. The glider can control its pitch and roll by shifting its large internal battery. It uses roll to bank and turn so that it can maintain a specified heading.\n\nTypical 1000 m ocean density is 1027.5 kg/m3. Shorthand notation for density: σ = (density - 1000) kg/m3 – so the typical 1000 m density is 27.5 in σ units (or σθ since density is measured based on potential temperature θ).\nWe use potential density (which removes the effect of pressure on density) when talking about Seaglider because Seaglider (mostly) matches the compressibility of seawater due to its hull design.\nThe most important formula in glider operations: \\[\n\\rho = \\frac{m}{V}\n\\]\nVBD moves oil between an internal reservoir that is inside the glider’s pressure housing and a bladder that is external to the pressure housing, thereby changing the total volume of the glider and hence its density. Oil pumped from the reservoir to the bladder increases the glider’s volume and decreases its density, while oil pumped from the bladder to the reservoir decreases the glider’s volume and increases its density.\n\nThe glider can be ballasted (mass changed by adding or removing lead) for:\n\nA given range of water density\nNegative buoyancy (thrust), e.g., in strong currents\nReserve buoyancy, e.g., in areas with low surface density like the Arctic, river plumes or Bay of Bengal (monsoon season).\n\nRule of thumb:\n\nFor Seaglider SG, a ~50 cc change in glider volume produces a 1 σθ density change\nFor SGX, a ~70 cc change in volume produces a 1 σθ density change",
     "crumbs": [
       "Seagliders"
     ]
   },
   {
-    "objectID": "seagliders/seagliders.html#seaglider-fundamentals",
-    "href": "seagliders/seagliders.html#seaglider-fundamentals",
+    "objectID": "seagliders/seagliders.html#seaglider-fundamentals-slides",
+    "href": "seagliders/seagliders.html#seaglider-fundamentals-slides",
     "title": "Seagliders",
-    "section": "Seaglider Fundamentals",
-    "text": "Seaglider Fundamentals",
+    "section": "Seaglider Fundamentals Slides",
+    "text": "Seaglider Fundamentals Slides",
     "crumbs": [
       "Seagliders"
     ]
