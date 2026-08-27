@@ -1,7 +1,7 @@
 Retract the VBD and power down the Seaglider remotely (only works on Rev. E boards with firmware version 67.01 or greater)
 
 Create a pdoscmds.bat file with the following lines:
-menu hw/vbd/ad pos=3200
-menu shutdown confirm=GGG
+   menu hw/vbd/ad pos=3200
+   menu shutdown confirm=GGG
 
 *GGG is the glider number (ex: 266)
