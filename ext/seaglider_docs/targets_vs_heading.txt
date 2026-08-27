@@ -1,0 +1,22 @@
+How to fly by targets versus fly by heading.
+
+Fly By Targets:
+
+Add the target in a pdoscmds.bat file.
+   vi pdoscmds.bat
+   target [target_name]
+   Esc
+   :wq
+
+Edit the cmdfile.
+   cmdedit
+   $HEADING,-1
+   Esc
+   :wq
+   yes
+
+
+Fly By Heading:
+
+Edit the cmdfile
+Set desired $HEADING in degrees

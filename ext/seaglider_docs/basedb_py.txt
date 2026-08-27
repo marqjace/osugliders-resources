@@ -1,0 +1,4 @@
+The mission database is added to during the normal logout processing. 
+
+If there was ever a need to regenerate the database:
+   /opt/basestation/bin/python /usr/local/basestation3/BaseDB.py \ --mission_dir <seaglider_home_directory> addncfs

@@ -283,9 +283,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#editing-the-cmdfile" id="toc-editing-the-cmdfile" class="nav-link active" data-scroll-target="#editing-the-cmdfile">Editing the cmdfile</a></li>
-  <li><a href="#gliderdac" id="toc-gliderdac" class="nav-link" data-scroll-target="#gliderdac">GliderDAC</a></li>
-  <li><a href="#basestation-scripts" id="toc-basestation-scripts" class="nav-link" data-scroll-target="#basestation-scripts">Basestation Scripts</a></li>
+  <li><a href="#gliderdac" id="toc-gliderdac" class="nav-link active" data-scroll-target="#gliderdac">GliderDAC</a></li>
   </ul>
 </nav>
     </div>
@@ -311,20 +309,6 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="editing-the-cmdfile" class="level2">
-<h2 class="anchored" data-anchor-id="editing-the-cmdfile">Editing the cmdfile</h2>
-<p>Instructions for accessing seaglider.pub:</p>
-<ol type="1">
-<li><p>SSH into seaglider.pub: “ssh username@seaglider.pub”</p>
-<p>*Need to set up ssh keypair with APL-UW</p></li>
-<li><p>Type “cd ..” to get out of your local directory. This will take you to /home/jails/osugrg/</p></li>
-<li><p>Type “gcd sgXXX” to go the current directory of the specified glider</p></li>
-<li><p>Type “cmdedit” to edit the cmdfile.</p></li>
-<li><p>Type “i” to enter edit mode in vi. Make the changes. Hit ESC to exit edit mode.</p></li>
-<li><p>Type “:wq” and hit Enter to exit vi.</p></li>
-<li><p>Type yes, no, or edit to confirm, reject, or edit your new cmdfile.</p></li>
-</ol>
-</section>
 <section id="gliderdac" class="level2">
 <h2 class="anchored" data-anchor-id="gliderdac">GliderDAC</h2>
 <p>To set up automatic GliderDAC processing, you must have the following files:</p>
@@ -334,64 +318,6 @@ ul.task-list li input[type="checkbox"] {
 <li>sgXXX/seaglider.yml</li>
 <li>sgXXX/project.yml</li>
 </ul>
-<p>Reprocess GliderDAC files within the glider’s current directory:</p>
-<blockquote class="blockquote">
-<p><code>/opt/basestation/bin/python /usr/local/basestation3/GliderDAC.py --config  sgXXX.conf -m /home/jails/osugrg/gliderjail/home/sgXXX/current --verbose</code></p>
-</blockquote>
-</section>
-<section id="basestation-scripts" class="level2">
-<h2 class="anchored" data-anchor-id="basestation-scripts">Basestation Scripts</h2>
-<p><strong>Reprocess.py</strong></p>
-<p>Reprocess.py starts with the .log and .eng files and can regenerate netcdf files, run Flight Model and generate plots.</p>
-<p>Regenerate all netcdf files, run Flight Model and generate plots:</p>
-<blockquote class="blockquote">
-<p><code>/opt/basestation/bin/python /usr/local/basestation3/Reprocess.py \ --mission_dir &lt;seaglider_home_directory&gt; --force --reprocess_plots</code></p>
-</blockquote>
-<p>Regenerate the dive 100 through 102 netcdf files, not re-running Flight Model</p>
-<blockquote class="blockquote">
-<p><code>/opt/basestation/bin/python /usr/local/basestation3/Reprocess.py \ --mission_dir &lt;seaglider_home_directory&gt; --force --skip_flight_model 100:102</code></p>
-</blockquote>
-<p><strong>BaseDB.py</strong></p>
-<p>The mission database is added to during the normal logout processing. If there was ever a need to regenerate the database:</p>
-<blockquote class="blockquote">
-<p><code>/opt/basestation/bin/python /usr/local/basestation3/BaseDB.py \ --mission_dir &lt;seaglider_home_directory&gt; addncfs</code></p>
-</blockquote>
-<p><strong>BasePlot.py</strong></p>
-<p>Any of the plots may be generated outside of the normal logout processing.</p>
-<p>To generate all the plots for dive 100, generating stand-alone html files, in addition to the normal output:</p>
-<blockquote class="blockquote">
-<p><code>/opt/basestation/bin/python /usr/local/basestation3/BasePlot.py \ --mission_dir &lt;seaglider_home_directory&gt;  --plot_types dives --full_html p0010100.nc</code></p>
-</blockquote>
-<p>To regenerate the whole mission plots:</p>
-<blockquote class="blockquote">
-<p><code>/opt/basestation/bin/python /usr/local/basestation3/BasePlot.py \ --mission_dir &lt;seaglider_home_directory&gt;  --plot_types mission</code></p>
-</blockquote>
-<p><strong>MoveData.py</strong></p>
-<p>MoveData.py is used to clean up a Seaglider’s home directory prior to a new deployment.</p>
-<blockquote class="blockquote">
-<p><code>/opt/basestation/bin/python /usr/local/basestation3/MoveData.py \ --mission_dir &lt;seaglider_home_directory&gt; -t &lt;target_directory&gt; --verbose</code></p>
-</blockquote>
-<p><strong>BaseCtrlFiles.py</strong></p>
-<p>BaseCtrlFiles.py contains the low-level routines that send notifications sent via the pagers.yml configuration files. For debugging purposes, these routines can be accessed directly, but they may not generate meaningful content. Additionally, it is possible to dump the merged pagers.yml dictionary.</p>
-<p>To execute a low-level notification, simply supply one of the low-level notification tags:</p>
-<blockquote class="blockquote">
-<p><code>/opt/basestation/bin/python /usr/local/basestation3/BaseCtrlFiles.py \ --mission_dir &lt;seaglider_home_directory&gt; [--group_etc &lt;group_etc_directory&gt;] [divetar,upload,lategps,errors,drift,comp,tracebackrecov,alerts,gps,critical]</code></p>
-</blockquote>
-<p>For example, gps will dispatch the GPS position found in the last comm session in the comm.log to those users subscribing to gps notifications.</p>
-<p>To dump the merged pagers.yml dictionary:</p>
-<blockquote class="blockquote">
-<p><code>/opt/basestation/bin/python /usr/local/basestation3/BaseCtrlFiles.py \ --mission_dir &lt;seaglider_home_directory&gt; [--group_etc &lt;group_etc_directory&gt;] dump_pagers_yml</code></p>
-</blockquote>
-<p><strong>MakeMissionTimeSeries.py</strong></p>
-<p>This script generates a whole-mission time series of the specified mission directory using the per-dive netcdf files.</p>
-<blockquote class="blockquote">
-<p><code>/opt/basestation/bin/python /usr/local/basestation3/MakeMissionTimeSeries.py --mission_dir [MISSION_DIR] --verbose --force</code></p>
-</blockquote>
-<p><strong>MakeDiveProfiles.py</strong></p>
-<p>This script generates the per-dive netcdf files for the specified mission directory. This can be used to regenerate the dive profiles if needed.</p>
-<blockquote class="blockquote">
-<p><code>/opt/basestation/bin/python /usr/local/basestation3/MakeDiveProfiles.py --mission_dir [MISSION_DIR] --verbose --force</code></p>
-</blockquote>
 
 
 </section>

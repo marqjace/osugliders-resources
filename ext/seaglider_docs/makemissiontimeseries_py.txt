@@ -1,0 +1,3 @@
+This script generates a whole-mission time series of the specified mission directory using the per-dive netcdf files.
+
+/opt/basestation/bin/python /usr/local/basestation3/MakeMissionTimeSeries.py --mission_dir [MISSION_DIR] --verbose --force

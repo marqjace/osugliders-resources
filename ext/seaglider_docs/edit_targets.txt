@@ -1,0 +1,9 @@
+How to edit the targets file.
+
+Go to the glider's current directory
+Type 'targedit' and hit Enter
+Type 'i' to enter editing mode
+Edit the lines you want to change
+Hit Esc
+Type ':wq' to write the file and quit the vi editor
+Type 'yes' to confirm, 'no' to reject, or 'edit' to keep editing and hit Enter

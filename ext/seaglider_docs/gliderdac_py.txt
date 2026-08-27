@@ -1,0 +1,3 @@
+Reprocess GliderDAC files within the glider's current directory:
+
+/opt/basestation/bin/python /usr/local/basestation3/GliderDAC.py --config  sgXXX.conf -m /home/jails/osugrg/gliderjail/home/sgXXX/current --verbose

@@ -312,7 +312,13 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#seaglider-basics" id="toc-seaglider-basics" class="nav-link active" data-scroll-target="#seaglider-basics">Seaglider Basics</a></li>
+  <li><a href="#seaglider-fundamentals" id="toc-seaglider-fundamentals" class="nav-link active" data-scroll-target="#seaglider-fundamentals">Seaglider Fundamentals</a>
+  <ul class="collapse">
+  <li><a href="#vbd" id="toc-vbd" class="nav-link" data-scroll-target="#vbd">VBD</a></li>
+  <li><a href="#mass-shifter" id="toc-mass-shifter" class="nav-link" data-scroll-target="#mass-shifter">Mass Shifter</a></li>
+  <li><a href="#glider-control" id="toc-glider-control" class="nav-link" data-scroll-target="#glider-control">Glider Control</a></li>
+  <li><a href="#run-phases" id="toc-run-phases" class="nav-link" data-scroll-target="#run-phases">Run Phases</a></li>
+  </ul></li>
   <li><a href="#seaglider-fundamentals-slides" id="toc-seaglider-fundamentals-slides" class="nav-link" data-scroll-target="#seaglider-fundamentals-slides">Seaglider Fundamentals Slides</a></li>
   </ul>
 </nav>
@@ -341,9 +347,10 @@ window.Quarto = {
 
 <div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/y2rNmAgqTt4?start=10" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
 <p>Seaglider Animation (credit robotoblog.com)</p>
-<section id="seaglider-basics" class="level2">
-<h2 class="anchored" data-anchor-id="seaglider-basics">Seaglider Basics</h2>
-<p>Seagliders are buoyancy-driven AUVs: they move through the water without an active thruster and are thus extremely energy efficient. Seaglider is designed for max energy efficiency. Main energy draw is buoyancy pump (~50%).</p>
+<p>https://gliders.ioos.us/erddap/status.html</p>
+<section id="seaglider-fundamentals" class="level2">
+<h2 class="anchored" data-anchor-id="seaglider-fundamentals">Seaglider Fundamentals</h2>
+<p>Seagliders are buoyancy-driven AUVs: they move through the water without an active thruster and are thus extremely energy efficient. Seaglider is designed for max energy efficiency. Main energy draw is variable buoyancy pump, referred to as the VBD (~50%).</p>
 <p>With a glider, some vertical motion is translated into horizontal motion by the wings. Vertical speed is ~10 cm/s. Glide slopes from ~1:1 to ~1:5, horizontal speed ~25 cm/s. The glider can control its pitch and roll by shifting its large internal battery. It uses roll to bank and turn so that it can maintain a specified heading.</p>
 <p><img src="../img/sg_schematic.png" class="img-fluid"></p>
 <p>Typical 1000 m ocean density is 1027.5 kg/m3. Shorthand notation for density: σ = (density - 1000) kg/m3 – so the typical 1000 m density is 27.5 in σ units (or σθ since density is measured based on potential temperature θ).</p>
@@ -351,19 +358,123 @@ window.Quarto = {
 <p>The most important formula in glider operations: <span class="math display">\[
 \rho = \frac{m}{V}
 \]</span></p>
-<p>VBD moves oil between an internal reservoir that is inside the glider’s pressure housing and a bladder that is external to the pressure housing, thereby changing the total volume of the glider and hence its density. Oil pumped from the reservoir to the bladder increases the glider’s volume and decreases its density, while oil pumped from the bladder to the reservoir decreases the glider’s volume and increases its density.</p>
-<p><img src="../img/buoyancy_plot.png" class="img-fluid"></p>
-<p>The glider can be ballasted (mass changed by adding or removing lead) for:</p>
+<section id="vbd" class="level3">
+<h3 class="anchored" data-anchor-id="vbd">VBD</h3>
+<p>Seagliders have 800 cc’s of volume change in their VBD.150 cc’s is needed to expose the antenna, and 250 cc’s is needed for negative thrust at the deepest density. This leaves 400 cc’s of available volume change to account for different density waters.</p>
+<p>SGX’s take ~70 cc’s/σT and SG takes ~50 cc’s/σT. This translates to an available density range of 5.5 σT for SGX and 8 σT for SG.</p>
+<p>The VBD is comprised of an internal reservoir, a rolling diaphragm called the bellofram, an external oil bladder, and a pumping system that pumps low-viscosity hydraulic oil between the internal and external reservoir/bladder. There is a low pressure boos pump that provides the pressure needed for the high-pressure hydraulic axial piston pump (the main pump). The boost pump is only used at depth and when trying to ascend. A magnetically latching “Skinner” solenoid valve controls the quantity of oil that is pumped. Three check valves control the direction and rate of flow within the VBD.</p>
+<p>The Seaglider’s buoyancy is controlled by the VBD by (a) pumping oil from the internal reservoir into the external bladder to increase the glider’s volume, and (b) allowing oil to bleed from the external bladder into the internal reservoir to decrease volume. The piston’s position is measured by two linear potentiometers in A/D counts. Larger A/D counts imply a larger internal reservoir volume, and thus a lower buoyancy for the Seaglider. $C_VBD is set to be the point at which the glider is neutrally buoyant relative to the densest water encountered on a mission. The VBD parameters enable the pilot to control the glider’s vertical velocity and glide slope.</p>
+</section>
+<section id="mass-shifter" class="level3">
+<h3 class="anchored" data-anchor-id="mass-shifter">Mass Shifter</h3>
+<p>Seaglider moves a mass inside the pressure hull to change its pitch and roll attitude. The main battery, plus 1100 g brass weight attached to the bottom, is mounted on the mass shifter assembly. The battery pack is shifted fore and aft to affect pitch and rotated to change vehicle roll. The maximum roll for SGX is 80 degrees and for SG it is 40 degrees.</p>
+<section id="pitch" class="level4">
+<h4 class="anchored" data-anchor-id="pitch">Pitch</h4>
+<p>Moving the main battery pack is don eby an electric motor that drives a worm gear in such a way that 1 A/D count equals 0.00413 cm of battery mass travel for SGX ($PITCH_CNV) (0.00313 cm/count SG). One centimeter of mass travel is roughly 15-20 degrees of pitch. $PITCH_GAIN controls this ratio and is tuned by the pilot. There are physical hardware limits on the mass position, as well as software limits to prevent damage to the mass shifter assembly. These are not adjusted while piloting.</p>
+<p>A/D counts are always positive, but deisplacement may be positive or negative depending on $C_PITCH. $C_PITCH is usually tuned so that 70% of the pitch travel is for pitching down and 30% is for pitching up. THis is to ensure a good surface position to fully expose the antenna.</p>
+</section>
+<section id="roll" class="level4">
+<h4 class="anchored" data-anchor-id="roll">Roll</h4>
+<p>The main battery pack is axially asymmetric and weighted on its ventral face. An electric motor and gear train rotate the mass such that $ROLL_CNV is 0.054945 degrees/count for SGX and 0.028270 for SG. Seagliders typically roll about 1/4 degree per 1 degree of battery pack rotation–and 1/2 degree for SG–but this varies depending on the trim lead.</p>
+<p>When a turn is indicated, Seaglider rolls to $ROLL_DEG (80 degrees for SGX, 40 degrees for SG) then back to neutral when the desired heading is reached. LIke pitch, there are hardware and software limits for roll. Different roll centers are used for the dive and climb because various asymmetries in form result in different roll trim on dives and climbs.</p>
+</section>
+</section>
+<section id="glider-control" class="level3">
+<h3 class="anchored" data-anchor-id="glider-control">Glider Control</h3>
+<p>The Seaglider flight control scheme has two guiding principles: (1) maintain constant vertical velocity and (2) minimize the total energy expenditure during a dive. The Seaglider samples its sensors evenly in time, so the constant vertical velocity implies the samples are equally spaced in depth.</p>
+<p>To acheive a desired vertical velocity, typically 10 cm/s, specify a target depth ($D_TGT) and time to complete a dive ($T_DIVE).</p>
+<p><span class="math display">\[
+W_{\text{D}} = \frac{2*\$D\_TGT*100 cm/s}{\$T\_DIVE*60 s/min}
+\]</span></p>
+<p>To acheive a W_{} of 10 cm/s, choose a $D_TGT that is 3 times the value of $T_DIVE. A typical first shallow test dive uses $D_TGT,45 and $T_DIVE,15. A full-depth dive uses $D_TGT,990 and $T_DIVE,330.</p>
+<p>The buoyancy and pitch used on any individual dive is chosen by the Seaglider operating software to acheive the best results on that dive. The software has to choose a buoyancy value between 0 (neutral) and $MAX_BUOY (the maximum negative buoyancy allowed on a dive), and a desired pitch angle between the stall angle and $GLIDE_SLOPE (the maximum glide slope allowed on a dive). The choice of these values is determined by the distance to the next waypoint. First, the pitch angle is chosen to acheive the desired horizontal distance: maximum if the waypoint is distant, minimum if the waypoint is close. Second, the buoyancy is chosen to acheive the desired vertical velocity in the deepest water (deepest depth).</p>
+<p>50% of the total energy budget goes to the VBD pump. The greatest energy draw is pumping oil into the external bladder at depth, where the pump has to overcome the seawater pressure acting on the bladder. Generally, pumping is allowed only as necessary to maintain vertical velocity. Pitch is essentially fixed at all phases with the exception of minor pitch maneuvers on the climb to compensate for changes in mass distribution and buoyancy due to pumping oil.</p>
+</section>
+<section id="run-phases" class="level3">
+<h3 class="anchored" data-anchor-id="run-phases">Run Phases</h3>
+<p>Data collection is continuously sampled during the dive, climb, and apogee phases of a run as specified in the science or scicon.sch file.</p>
+<p>G&amp;C intervals are set in the science file, and they specify the pitch, VBD, and roll adjustment times, in that order. Only one operation can happen at a time. When G&amp;C operations occur, the Seaglider is in active G&amp;C mode. When G&amp;C corrections are not being made, it is in passive $G&amp;C pode. Data acquisition is not affected by G&amp;G modes.</p>
+<section id="launch" class="level4">
+<h4 class="anchored" data-anchor-id="launch">Launch</h4>
+<p>The pilot has initiated launch proceedfure and all the launch dialogue is completed. In its surface position, the mass shifter is rolled to neutral, pitch fully forward, and the VBD is pumped to $SM_CC (usually nmax VMD for launch). It then acquires a GPS fix and initiates communications via Iridium salletite phone.</p>
+</section>
+<section id="surface" class="level4">
+<h4 class="anchored" data-anchor-id="surface">Surface</h4>
+<section id="surface-maneuver" class="level5">
+<h5 class="anchored" data-anchor-id="surface-maneuver">1: Surface Maneuver</h5>
+<ol type="a">
+<li>Pitched fully forward</li>
+<li>Rolled to neutral</li>
+<li>Pumped to $SM_CC</li>
+</ol>
+<p>Seaglider enters surface maneuever if: - At launch - Normal completion of a dive (reached $D_SURF) - In recovery mode - $T_MISSION is reached before $D_SURF</p>
+<p>*If VBD &gt; $SM_CC, VBD will not bleed down to $SM_CC.</p>
+</section>
+<section id="gps1" class="level5">
+<h5 class="anchored" data-anchor-id="gps1">2: GPS1</h5>
+<p>Once the desired surface position is attained, $GPS1 is acquired. The GPS receiver is turned on and turns off when $N_GPS HDOP &lt;= 2 (excellent GPS accuracy) or $T_GPS minutes have elapsed. The position is then accepted, otherwise the last position is accepted.</p>
+</section>
+<section id="communications" class="level5">
+<h5 class="anchored" data-anchor-id="communications">3: Communications</h5>
+<p>After $GPS1, Seaglider powers up the Iridium phone, waits a specified time for registration with the Iridium system, then attempts a data call to the basestation. It then logs in and transfers data, log, and engineering files to the basestation, and receives command, control, diagnostic, and special purpose files. If not all files were transferred, it waits $CALL_TRIES times and moves on if not successful, incrementing $N_NOCOMM.</p>
+</section>
+<section id="measure-surface-depth-and-angle" class="level5">
+<h5 class="anchored" data-anchor-id="measure-surface-depth-and-angle">4: Measure Surface Depth and Angle</h5>
 <ul>
-<li><p>A given range of water density</p></li>
-<li><p>Negative buoyancy (thrust), e.g., in strong currents</p></li>
-<li><p>Reserve buoyancy, e.g., in areas with low surface density like the Arctic, river plumes or Bay of Bengal (monsoon season).</p></li>
+<li>Averages 10 pressure readings and 10 pitch angles.</li>
+<li>Adds these values to the logfile for the next dive</li>
 </ul>
-<p><strong>Rule of thumb:</strong></p>
+</section>
+<section id="gps2" class="level5">
+<h5 class="anchored" data-anchor-id="gps2">5: GPS2</h5>
 <ul>
-<li><p>For Seaglider SG, a ~50 cc change in glider volume produces a 1 σθ density change</p></li>
-<li><p>For SGX, a ~70 cc change in volume produces a 1 σθ density change</p></li>
+<li>Acquires second GPS fix.</li>
+<li>This is the most recent GPS fix before the Seaglider dives.</li>
 </ul>
+</section>
+<section id="navigation-flight-calculations" class="level5">
+<h5 class="anchored" data-anchor-id="navigation-flight-calculations">6: Navigation &amp; Flight Calculations</h5>
+<ul>
+<li>Buoyancy, pitch angle, and heading calculations.</li>
+<li>Kalman Filter used if enabled (typically no).</li>
+<li>Digital bathymetry maps if enabled (typically yes).</li>
+<li>Next, a new dive phase (and profile) is started.</li>
+</ul>
+</section>
+</section>
+<section id="dive" class="level4">
+<h4 class="anchored" data-anchor-id="dive">Dive</h4>
+<p>At the start of the dive phase, the first G&amp;C operation only bleeds the VBD to get the glider as fast and deep as possible (pitch is still fully forward). Once $D_FLARE is reached, regular G&amp;C operations (pitch, VBD, roll) begin.</p>
+<p>If the glider is travelling faster than the desired vertical velocity, VBD pumping is not allowed. This is ultimately to conserve energy.</p>
+<p>In the dive phase, the Seaglider turns to starboard by banking to port.</p>
+</section>
+<section id="apogee" class="level4">
+<h4 class="anchored" data-anchor-id="apogee">Apogee</h4>
+<p>Apogee phase is initated when $D_TGT is reached. Two G&amp;C cycles are completed to ensure a smooth flight from the dive phase to the climb phase. Data sampling continues.</p>
+<p>Cycle 1:</p>
+<ul>
+<li><p>Pitched to $APOGEE_PITCH</p></li>
+<li><p>Rolled to neutral</p></li>
+<li><p>VBD pumped to 0 cc ($C_VBD)</p></li>
+<li><p>Course adjustment &amp; passive mode skipped</p></li>
+</ul>
+<p>Cycle 2:</p>
+<ul>
+<li><p>Pitched to inverse of dive</p></li>
+<li><p>VBD pumped to inverse of dive</p></li>
+</ul>
+</section>
+<section id="climb" class="level4">
+<h4 class="anchored" data-anchor-id="climb">Climb</h4>
+<p>At the start of the climb phase, the Seaglider is positively buoyant and pitched up, headed for teh surface at the same vertical rate as acheived on the dive phase. Data acquisition and G&amp;C continue at intervals specified in the science file.</p>
+<p>In the climb phase, the Seaglider turns to starboard by banking to starboard.</p>
+<p>When $D_SURF is reached, passive G&amp;C mode is on and data acquisition continues for <span class="math inline">\(D_SURF/(\)</span>(<span class="math inline">\(W_{\text{observed}}\)</span> m/s) or 50 data points.</p>
+</section>
+<section id="recovery" class="level4">
+<h4 class="anchored" data-anchor-id="recovery">Recovery</h4>
+<p>The recovery phase is entered either by command of the pilot or by an error detected by the Seaglider operating software. THe Seaglider stays on the surface and enters a loop of obtaining GPS fixes and communicating every $T_RSLEEP minutes. There are 2 minutes of overhead added to $T_RSLEEP, so actual call time is $T_RSLEEP + 2. Recovery is ended by sending a $RESUME in the cmdfile to continue diving.</p>
+</section>
+</section>
 </section>
 <section id="seaglider-fundamentals-slides" class="level2">
 <h2 class="anchored" data-anchor-id="seaglider-fundamentals-slides">Seaglider Fundamentals Slides</h2>

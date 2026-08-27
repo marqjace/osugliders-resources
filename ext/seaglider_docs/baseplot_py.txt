@@ -1,0 +1,7 @@
+Any of the plots may be generated outside of the normal logout processing.
+
+To generate all the plots for dive 100, generating stand-alone html files, in addition to the normal output:
+   /opt/basestation/bin/python /usr/local/basestation3/BasePlot.py \ --mission_dir <seaglider_home_directory>  --plot_types dives --full_html p0010100.nc
+
+To regenerate the whole mission plots:
+   /opt/basestation/bin/python /usr/local/basestation3/BasePlot.py \ --mission_dir <seaglider_home_directory>  --plot_types mission

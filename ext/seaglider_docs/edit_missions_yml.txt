@@ -1,0 +1,52 @@
+Instructions for how to edit and set up the missions.yml file in /home/jails/osugrg/gliderjail/home/
+
+Type 'vi missions.yml'
+Type 'i' to enter editing mode
+Make your desired changes
+Type Esc
+Type ':wq'
+Enter
+
+
+Example osugrg missions.yml file:
+
+---
+
+organization:
+ orglink: https://gliderfs2.ceoas.oregonstate.edu/gliderweb/
+ orgname: Oregon State University
+ contact: Jack Barth
+ email: jack.barth@oregonstate.edu
+ text: Oregon State University Glider Research Group Seaglider Data
+
+
+defaults: { link: https://gliderfs2.ceoas.oregonstate.edu/gliderweb/ }
+
+assets:
+  TH15: { type: fixed, lat: 41.0583, lon: -124.4758, marker: square, color: "#ff0000" }
+  TH35: { type: fixed, lat: 41.0583, lon: -124.9167, marker: square, color: "#ff0000" }
+  TH55: { type: fixed, lat: 41.0583, lon: -125.3575, marker: square, color: "#ff0000" }
+  TH75: { type: fixed, lat: 41.0583, lon: -125.8050, marker: square, color: "#ff0000" }
+  TH95: { type: fixed, lat: 41.0583, lon: -126.2458, marker: square, color: "#ff0000" }
+  TH115: { type: fixed, lat: 41.0583, lon: -126.6867, marker: square, color: "#ff0000" }
+  TH135: { type: fixed, lat: 41.0583, lon: -127.1275, marker: square, color: "#ff0000" }
+  TH175: { type: fixed, lat: 41.0583, lon: -128.0000, marker: square, color: "#ff0000" }
+  TH220: { type: fixed, lat: 41.0583, lon: -129.0000, marker: square, color: "#ff0000" }
+  TH265: { type: fixed, lat: 41.0583, lon: -130.0000, marker: square, color: "#ff0000" }
+  ST3: { type: fixed, lat: 41.0583, lon: -124.3417, marker: square, color: "#ff0000" }
+  CAMP: { type: fixed, lat: 41.0583, lon: -124.9167, marker: square, color: "#ff0000" }
+  E1: { type: fixed, lat: 40.8483, lon: -124.6667, marker: square, color: "#ff0000" }
+  E2: { type: fixed, lat: 40.8483, lon: -124.5167, marker: square, color: "#ff0000" }
+  E3: { type: fixed, lat: 40.8483, lon: -124.4533, marker: square, color: "#ff0000" }
+
+
+missions:
+
+ - { glider : 266, mission: 2026_02_26_newport_sea_trial, path: sg266/2026_02_26_newport_sea_trial, status: complete }
+ - { glider : 266, mission: 2026_03_14_TH_Line, path: sg266/2026_03_14_TH_Line }
+
+ - { glider : 685, mission: TH_Line_Dec24, path: sg685/TH_Line_Dec24, status: complete }
+ - { glider : 685, mission: 2024_10_14_basestation_test, path: sg685/2024_10_14_basestation_test, status: complete }
+
+ - { glider : 686, mission: 2026_08_21_pre_TH_tests, path: sg686/2026_08_21_pre_TH_tests, status: complete }
+ - { glider : 686, mission: 2026_08_24_Newport_sea_trial, path: sg686/2026_08_24_Newport_sea_trial }

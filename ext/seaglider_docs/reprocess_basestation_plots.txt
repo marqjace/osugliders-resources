@@ -1,0 +1,3 @@
+Reprocess basestation plots.
+
+/opt/basestation/bin/python /usr/local/basestation3/Reprocess.py  --mission_dir /home/jails/osugrg/gliderjail/home/sgXXX/current --force --reprocess_plots
