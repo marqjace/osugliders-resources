@@ -216,11 +216,11 @@
     ]
   },
   {
-    "objectID": "seagliders/refurbishment.html#refurbishment-instructions",
-    "href": "seagliders/refurbishment.html#refurbishment-instructions",
+    "objectID": "seagliders/refurbishment.html#refurbishment-manual",
+    "href": "seagliders/refurbishment.html#refurbishment-manual",
     "title": "Refurbishment",
-    "section": "Refurbishment Instructions",
-    "text": "Refurbishment Instructions",
+    "section": "Refurbishment Manual",
+    "text": "Refurbishment Manual",
     "crumbs": [
       "Seagliders",
       "Refurbishment"
@@ -231,7 +231,18 @@
     "href": "seagliders/mission-planning.html",
     "title": "Mission Planning",
     "section": "",
-    "text": "Seagliders\n\n\n\n\nOverview\n\n\nDescription goes here.\n\n\n\n\nData\n\n\nInformation about datasets.\n\n\n\n\nMissions\n\n\nDeployment summaries.",
+    "text": "[] Put the glider in travel mode and shut it down remotely. See Remote travel mode and shutdown for instructions.\n[] Notify NaNOOS/CeNCOOS that the glider has been recovered and/or a new glider has been deployed.\n[] Mark the deployment as ‘complete’ in missions.yml. See Edit missions.yml for instructions.\n[] Verify that /grg has a complete basestation copy.\n[] Verify that /grg has a complete gliderdac_proc directory with the processed GliderDAC files.\n[] Fix any issues with data processing pipeline and reprocess the data if necessary.\n[] Do a post-recovery self-test to make sure all systems are working properly.\n[] Open the glider up and check for any damage, corrosion, or other issues.\n[] Eject the mainboard and tailboard microSD cards and copy the data to /grg/seaglider-raw/YYYYMMDD_sgXXX/post-recovery/.\n[] Do a post-deployment calibration of all of the sensors.\n[] Run post-processing scripts to correct any bad data, such as sensor drift, biofouling, etc..",
+    "crumbs": [
+      "Seagliders",
+      "Mission Planning"
+    ]
+  },
+  {
+    "objectID": "seagliders/mission-planning.html#post-recovery-to-do-list",
+    "href": "seagliders/mission-planning.html#post-recovery-to-do-list",
+    "title": "Mission Planning",
+    "section": "",
+    "text": "[] Put the glider in travel mode and shut it down remotely. See Remote travel mode and shutdown for instructions.\n[] Notify NaNOOS/CeNCOOS that the glider has been recovered and/or a new glider has been deployed.\n[] Mark the deployment as ‘complete’ in missions.yml. See Edit missions.yml for instructions.\n[] Verify that /grg has a complete basestation copy.\n[] Verify that /grg has a complete gliderdac_proc directory with the processed GliderDAC files.\n[] Fix any issues with data processing pipeline and reprocess the data if necessary.\n[] Do a post-recovery self-test to make sure all systems are working properly.\n[] Open the glider up and check for any damage, corrosion, or other issues.\n[] Eject the mainboard and tailboard microSD cards and copy the data to /grg/seaglider-raw/YYYYMMDD_sgXXX/post-recovery/.\n[] Do a post-deployment calibration of all of the sensors.\n[] Run post-processing scripts to correct any bad data, such as sensor drift, biofouling, etc..",
     "crumbs": [
       "Seagliders",
       "Mission Planning"

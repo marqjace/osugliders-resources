@@ -283,7 +283,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#seagliders" id="toc-seagliders" class="nav-link active" data-scroll-target="#seagliders">Seagliders</a></li>
+  <li><a href="#post-recovery-to-do-list" id="toc-post-recovery-to-do-list" class="nav-link active" data-scroll-target="#post-recovery-to-do-list">Post Recovery To-Do List</a></li>
   </ul>
 </nav>
     </div>
@@ -309,37 +309,24 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="seagliders" class="level1 hero-1">
-<h1>Seagliders</h1>
+<section id="post-recovery-to-do-list" class="level2">
+<h2 class="anchored" data-anchor-id="post-recovery-to-do-list">Post Recovery To-Do List</h2>
+<ul>
+<li>[] Put the glider in travel mode and shut it down remotely. See <a href="../ext/seaglider_docs/remote_power_down.txt">Remote travel mode and shutdown</a> for instructions.</li>
+<li>[] Notify NaNOOS/CeNCOOS that the glider has been recovered and/or a new glider has been deployed.</li>
+<li>[] Mark the deployment as ‘complete’ in missions.yml. See <a href="../ext/seaglider_docs/edit_missions_yml.txt">Edit missions.yml</a> for instructions.</li>
+<li>[] Verify that /grg has a complete basestation copy.</li>
+<li>[] Verify that /grg has a complete gliderdac_proc directory with the processed GliderDAC files.</li>
+<li>[] Fix any issues with data processing pipeline and reprocess the data if necessary.</li>
+<li>[] Do a post-recovery self-test to make sure all systems are working properly.</li>
+<li>[] Open the glider up and check for any damage, corrosion, or other issues.</li>
+<li>[] Eject the mainboard and tailboard microSD cards and copy the data to /grg/seaglider-raw/YYYYMMDD_sgXXX/post-recovery/.</li>
+<li>[] Do a post-deployment calibration of all of the sensors.</li>
+<li>[] Run post-processing scripts to correct any bad data, such as sensor drift, biofouling, etc..</li>
+</ul>
+
+
 </section>
-<div class="grid">
-<div class="card">
-<h3 class="anchored">
-Overview
-</h3>
-<p>
-Description goes here.
-</p>
-</div>
-<div class="card">
-<h3 class="anchored">
-Data
-</h3>
-<p>
-Information about datasets.
-</p>
-</div>
-<div class="card">
-<h3 class="anchored">
-Missions
-</h3>
-<p>
-Deployment summaries.
-</p>
-</div>
-</div>
-
-
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
