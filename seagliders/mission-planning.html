@@ -283,7 +283,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#post-recovery-to-do-list" id="toc-post-recovery-to-do-list" class="nav-link active" data-scroll-target="#post-recovery-to-do-list">Post Recovery To-Do List</a></li>
+  <li><a href="#post-recovery-checklist" id="toc-post-recovery-checklist" class="nav-link active" data-scroll-target="#post-recovery-checklist">Post Recovery Checklist</a></li>
   </ul>
 </nav>
     </div>
@@ -309,20 +309,21 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="post-recovery-to-do-list" class="level2">
-<h2 class="anchored" data-anchor-id="post-recovery-to-do-list">Post Recovery To-Do List</h2>
-<ul>
-<li>[] Put the glider in travel mode and shut it down remotely. See <a href="../ext/seaglider_docs/remote_power_down.txt">Remote travel mode and shutdown</a> for instructions.</li>
-<li>[] Notify NaNOOS/CeNCOOS that the glider has been recovered and/or a new glider has been deployed.</li>
-<li>[] Mark the deployment as ‘complete’ in missions.yml. See <a href="../ext/seaglider_docs/edit_missions_yml.txt">Edit missions.yml</a> for instructions.</li>
-<li>[] Verify that /grg has a complete basestation copy.</li>
-<li>[] Verify that /grg has a complete gliderdac_proc directory with the processed GliderDAC files.</li>
-<li>[] Fix any issues with data processing pipeline and reprocess the data if necessary.</li>
-<li>[] Do a post-recovery self-test to make sure all systems are working properly.</li>
-<li>[] Open the glider up and check for any damage, corrosion, or other issues.</li>
-<li>[] Eject the mainboard and tailboard microSD cards and copy the data to /grg/seaglider-raw/YYYYMMDD_sgXXX/post-recovery/.</li>
-<li>[] Do a post-deployment calibration of all of the sensors.</li>
-<li>[] Run post-processing scripts to correct any bad data, such as sensor drift, biofouling, etc..</li>
+<section id="post-recovery-checklist" class="level2">
+<h2 class="anchored" data-anchor-id="post-recovery-checklist">Post Recovery Checklist</h2>
+<ul class="task-list">
+<li><p><label><input type="checkbox">Put the glider in travel mode and shut it down remotely. See <a href="../ext/seaglider_docs/remote_power_down.txt">Remote travel mode and shutdown</a> for instructions.</label></p></li>
+<li><p><label><input type="checkbox">Notify NaNOOS/CeNCOOS that the glider has been recovered and/or a new glider has been deployed.</label></p></li>
+<li><p><label><input type="checkbox">Mark the deployment as ‘complete’ in missions.yml. See <a href="../ext/seaglider_docs/edit_missions_yml.txt">Edit missions.yml</a> for instructions.</label></p></li>
+<li><p><label><input type="checkbox">Verify that /grg has a complete basestation copy.</label></p></li>
+<li><p><label><input type="checkbox">Verify that /grg has a complete gliderdac_proc directory with the processed GliderDAC files.</label></p></li>
+<li><p><label><input type="checkbox">Mark ‘Complete’ and submit the deployment on the <a href="https://gliders.ioos.us/providers/users/osugliders/deployments">GliderDAC</a>.</label></p></li>
+<li><p><label><input type="checkbox">Fix any issues with data processing pipeline and reprocess the data if necessary.</label></p></li>
+<li><p><label><input type="checkbox">Do a post-recovery self-test to make sure all systems are working properly.</label></p></li>
+<li><p><label><input type="checkbox">Open the glider up and check for any damage, corrosion, or other issues.</label></p></li>
+<li><p><label><input type="checkbox">Eject the mainboard and tailboard microSD cards and copy the data to <em>/grg/seaglider-raw/YYYYMMDD_sgXXX/post-recovery/</em>.</label></p></li>
+<li><p><label><input type="checkbox">Do a post-deployment calibration of all of the sensors.</label></p></li>
+<li><p><label><input type="checkbox">Run post-processing scripts to correct any bad data, such as sensor drift, biofouling, etc..</label></p></li>
 </ul>
 
 

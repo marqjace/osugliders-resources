@@ -1,0 +1,10 @@
+How to check the set of yml files for GliderDAC processing on the basestation.
+
+The set of yml files you need are:
+- sgXXX/current/sgXXX.conf
+- sgXXX/current/sgXXX.yml
+- sgXXX/seaglider.yml
+- sgXXX/project.yml
+
+Run the following line to run the checker from the CLI:
+/opt/basestation/bin/python /usr/local/basestation3/GliderDACModel.py --verbose check_merged --config /home/jails/osugrg/gliderjail/home/sg686/2026_09_18_TH_Line/sg686.conf
